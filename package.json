@@ -4,30 +4,31 @@
   "private": true,
   "scripts": {
     "start": "gulp",
-        "tsc": "tsc",
-        "tsc:w": "tsc -w",
-        "typings": "typings",
-        "postinstall": "typings install"
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings",
+    "postinstall": "typings install"
   },
   "dependencies": {
-    "express": "^4.13.3",
-    "serve-favicon": "^2.3.0",
-    "morgan": "^1.6.1",
-    "cookie-parser": "^1.3.3",
+    "angular2": "2.0.0-beta.7",
     "body-parser": "^1.13.3",
     "compression": "^1.5.2",
-    "method-override": "^2.3.0",
-    "glob": "^6.0.4",
-    "mongoose": "^4.1.2",
-    "jade": "^1.11.0",
-    "angular2": "2.0.0-beta.7",
-    "systemjs": "0.19.22",
+    "connect-multiparty": "latest",
+    "cookie-parser": "^1.3.3",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
+    "express": "^4.13.3",
+    "glob": "^6.0.4",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.0",
+    "mongoose": "^4.1.2",
+    "morgan": "^1.6.1",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
-    "zone.js": "0.5.15",
-    "connect-multiparty": "latest"
+    "serve-favicon": "^2.3.0",
+    "socket.io": "^1.4.8",
+    "systemjs": "0.19.22",
+    "zone.js": "0.5.15"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -39,6 +40,6 @@
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",
     "typescript": "^1.8.10",
-    "typings":"^0.7.12"
+    "typings": "^0.7.12"
   }
 }
