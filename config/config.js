@@ -8,7 +8,7 @@ var config = {
     app: {
       name: 'kitty-project'
     },
-    port: process.env.PORT || 8080,
+    port: process.env.PORT || 80,
     db: 'mongodb://localhost/kitty-project-development'
   },
 
