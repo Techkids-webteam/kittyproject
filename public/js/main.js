@@ -7,6 +7,7 @@ tinymce.init({
 	// INCLUDE THE PLUGIN
 	// ===========================================
 
+
   	plugins: [
     	"advlist autolink lists link image charmap print preview anchor",
     	"searchreplace visualblocks code fullscreen",
