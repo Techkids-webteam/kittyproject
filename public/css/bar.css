@@ -1,0 +1,70 @@
+.register-bar{
+	position: fixed;
+	bottom: -1000px;
+	left: 0;
+	width: 100%;
+	background: #ffffff;
+	padding: 15px 20px;
+	z-index: 1;
+	border-top: 5px solid #00ffff;
+	text-align: center;
+	display: none;
+	transition: all 0.8s ease-in-out;	
+}
+
+.register-bar.close{
+	display: none;
+}
+
+.register-bar button{
+	cursor: pointer;
+	border: 0 none;
+	outline: 0 none;
+	background: #ff803c;
+	color: #ffffff;
+	float: right;
+}
+
+.fa{	
+	font-size: 20px;
+}
+
+.bar-content{
+	display: inline-block;
+	font-weight: 600;
+	font-size: 20px;
+	position: relative;
+	height: 45px;
+	padding: 10px;
+}
+
+.button-register{
+	font-weight: 100;
+	font-size: 18px;
+	width: 190px;
+	border-radius: 10px;
+	text-align: center;
+	margin-left: 30px;
+	background: #ff803c;
+	color: #ffffff;
+	padding: 12px 20px;
+	text-decoration: none;
+}
+
+a.button-register:hover{
+	color: #ffffff;
+}
+
+.button-close{
+	height: 42px;
+	width: 42px;
+	font-size: 24px; 
+	color: #ffffff;
+	float: right
+}
+
+@media(min-width: 720px){
+	.register-bar{
+		display: block;
+	}
+}
