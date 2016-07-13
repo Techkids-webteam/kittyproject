@@ -2,293 +2,299 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width = device-width, initial-scale = 1">
-    <title>Techkids Connect</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <title>Techkids Connect</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300|Open+Sans:700,800,300|Source+Sans+Pro:400,900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="/Techkids Connect/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="/Techkids Connect/css/rolling.css">
-    <link rel="stylesheet" type="text/css" href="/Techkids Connect/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="/Techkids Connect/css/stylesheet.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300|Open+Sans:700,800,300|Source+Sans+Pro:400,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/Techkids Connect/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/Techkids Connect/css/rolling.css">
+  <link rel="stylesheet" type="text/css" href="/Techkids Connect/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="/Techkids Connect/css/stylesheet.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="/Techkids Connect/slick/slick.min.js"></script>
-    <script type="text/javascript" src="/Techkids Connect/js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" src="/Techkids Connect/slick/slick.min.js"></script>
+  <script type="text/javascript" src="/Techkids Connect/js/main.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="/Techkids Connect/angular/app.js"></script>
+  <script src="/Techkids Connect/angular/jobService.js"></script>
+  <script src="/Techkids Connect/angular/jobCtrl.js"></script>
+
 </head>
 
 <body>
-    <header class="header padding-header invisible">
+  <header class="header padding-header invisible">
 
-        <img class="logo" src="/Techkids Connect/img/logo.png">
+    <img class="logo" src="/Techkids Connect/img/logo.png">
 
-        <nav class="mobile-nav">
-            <div class="nav-wrap">
-                <a href="#">APPLY NOW</a>
-                <a href="#" class="dropdown-button">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </a>
-            </div>
+    <nav class="mobile-nav">
+      <div class="nav-wrap">
+        <a href="#">APPLY NOW</a>
+        <a href="#" class="dropdown-button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </a>
+      </div>
 
-            <nav class="dropdown-menu">
-                <a href="#">PROGRAM</a>
-                <a href="#">JOBS</a>
-                <a href="#">PARTNERS</a>
-            </nav>
+      <nav class="dropdown-menu">
+        <a href="#">PROGRAM</a>
+        <a href="#">JOBS</a>
+        <a href="#">PARTNERS</a>
+      </nav>
 
-        </nav>
-
-
-        <nav class="desktop-nav">
-            <a href="#">OUR PROGRAM</a>
-            <a href="#">JOBS</a>
-            <a href="#">PARTNERS</a>
-            <a href="#">APPLY NOW</a>
-        </nav>
-
-    </header>
-    <header class="header" id="header">
-
-        <img class="logo" src="/Techkids Connect/img/logo.png">
-
-        <nav class="mobile-nav">
-            <div class="nav-wrap">
-                <a href="#apply">APPLY NOW</a>
-                <a href="#" class="dropdown-button" id="dropdown-button">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </a>
-            </div>
-
-            <nav class="dropdown-menu" id="dropdown-menu">
-                <a href="#program">PROGRAM</a>
-                <a href="#job">JOBS</a>
-                <a href="#partner">PARTNERS</a>
-            </nav>
-        </nav>
-
-        <nav class="desktop-nav">
-            <a href="#program">PROGRAM</a>
-            <a href="#job">JOBS</a>
-            <a href="#partner">PARTNERS</a>
-            <a href="#apply">APPLY NOW</a>
-        </nav>
-
-    </header>
+    </nav>
 
 
-    <section class="img-bg introduction-block">
-        <div class="page-block">
-            <h1 class="source-san-black">CONNECT THE KIDS PROGRAM</h1>
-            <h3 class="source-san-black">CHƯƠNG TRÌNH KẾT NỐI VIỆC LÀM</h3>
-            <h3>dành cho sinh viên IT</h3>
-            <button id="button_home" class="btn btn-home">Tham gia</button>
+    <nav class="desktop-nav">
+      <a href="#">OUR PROGRAM</a>
+      <a href="#">JOBS</a>
+      <a href="#">PARTNERS</a>
+      <a href="#">APPLY NOW</a>
+    </nav>
+
+  </header>
+  <header class="header" id="header">
+
+    <img class="logo" src="/Techkids Connect/img/logo.png">
+
+    <nav class="mobile-nav">
+      <div class="nav-wrap">
+        <a href="#apply">APPLY NOW</a>
+        <a href="#" class="dropdown-button" id="dropdown-button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </a>
+      </div>
+
+      <nav class="dropdown-menu" id="dropdown-menu">
+        <a href="#program">PROGRAM</a>
+        <a href="#job">JOBS</a>
+        <a href="#partner">PARTNERS</a>
+      </nav>
+    </nav>
+
+    <nav class="desktop-nav">
+      <a href="#program">PROGRAM</a>
+      <a href="#job">JOBS</a>
+      <a href="#partner">PARTNERS</a>
+      <a href="#apply">APPLY NOW</a>
+    </nav>
+
+  </header>
+
+
+  <section class="img-bg introduction-block">
+    <div class="page-block">
+      <h1 class="source-san-black">CONNECT THE KIDS PROGRAM</h1>
+      <h3 class="source-san-black">CHƯƠNG TRÌNH KẾT NỐI VIỆC LÀM</h3>
+      <h3>dành cho sinh viên IT</h3>
+      <button id="button_home" class="btn btn-home">Tham gia</button>
+    </div>
+
+  </section>
+  <section class="program-block" id="program">
+    <div class="page-block">
+      <h2 class="open-san-bold">CHƯƠNG TRÌNH KẾT NỐI</h2>
+      <div class="content-block">
+        <div class="column-block">
+          <img src="/Techkids Connect/img/sinhvien.png">
+          <h4 class="open-san-bold">SINH VIÊN</h4>
+          <p>Ứng tuyển thông qua website của chương trình và Techkids sẽ tìm kiếm công việc phù hợp nhất dành cho bạn.</p>
         </div>
-
-    </section>
-    <section class="program-block" id="program">
-        <div class="page-block">
-            <h2 class="open-san-bold">CHƯƠNG TRÌNH KẾT NỐI</h2>
-            <div class="content-block">
-                <div class="column-block">
-                    <img src="/Techkids Connect/img/sinhvien.png">
-                    <h4 class="open-san-bold">SINH VIÊN</h4>
-                    <p>Ứng tuyển thông qua website của chương trình và Techkids sẽ tìm kiếm công việc phù hợp nhất dành cho bạn.</p>
-                </div>
-                <div class="column-block">
-                    <img class="middle-image" src="/Techkids Connect/img/test.png">
-                    <h4 class="open-san-bold">TÌM KIẾM VÀ KẾT NỐI</h4>
-                    <p>Techkids giúp sinh viên và doanh nghiệp tìm kiếm và kết nối với nhau nhanh chóng và chính xác.</p>
-                </div>
-                <div class="column-block">
-                    <img src="/Techkids Connect/img/doanhnghiep.png">
-                    <h4 class="open-san-bold">DOANH NGHIỆP</h4>
-                    <p>Gửi thông tin và yêu cầu vị trí công việc, Techkids sẽ kết nối đến với ứng viên phù hợp.</p>
-                </div>
-            </div>
+        <div class="column-block">
+          <img class="middle-image" src="/Techkids Connect/img/test.png">
+          <h4 class="open-san-bold">TÌM KIẾM VÀ KẾT NỐI</h4>
+          <p>Techkids giúp sinh viên và doanh nghiệp tìm kiếm và kết nối với nhau nhanh chóng và chính xác.</p>
         </div>
-
-    </section>
-    <section class="blue-bg job-block" id="job">
-        <div class="page-block">
-            <h2 class="open-san-bold">CÁC CÔNG VIỆC MỚI NHẤT</h2>
-            <div class="job-list">
-                <ul class="job-list-item">
-                    <li>
-                        <h5>Thực tập sinh Java, PHP</h5>
-                        <p>EWAY Vietnam</p>
-                    </li>
-                    <li>
-                        <h5>iOS developer</h5>
-                        <p>FSoft</p>
-                    </li>
-                    <li>
-                        <h5>Lập trình viên PHP fulltime</h5>
-                        <p>Enkulu.vn</p>
-                    </li>
-                    <li>
-                        <h5>Lập trình viên iOS fulltime</h5>
-                        <p>Enkulu.vn</p>
-                    </li>
-                    <li>
-                        <h5>Web developer (PHP, JavaScript, HTML5)</h5>
-                        <p>Akira</p>
-                    </li>
-                </ul>
-                <ul class="job-list-item">
-                    <li>
-                        <h5>App developer (iOS or Android)</h5>
-                        <p>Akira</p>
-                    </li>
-                    <li>
-                        <h5>Thực tập sinh CNTT, phát triển sản phẩm và dịch vụ CNTT</h5>
-                        <p>HiNet</p>
-                    </li>
-                    <li>
-                        <h5>Thực tập lập trình .Net, MVC</h5>
-                        <p>Công ty NAVISOFT</p>
-                    </li>
-                    <li>
-                        <h5>Thực tập sinh PHP</h5>
-                        <p>Sunnet</p>
-                    </li>
-                    <li>
-                        <h5>Thực tập sinh iOS</h5>
-                        <p>Sunnet</p>
-                    </li>
-                </ul>
-                <ul class="job-list-item">
-                    <li>
-                        <h5>Lập trình viên Java</h5>
-                        <p>Công ty Cổ phần NTQ Solution</p>
-                    </li>
-                    <li>
-                        <h5>Xamarin Developer</h5>
-                        <p>Play Fury</p>
-                    </li>
-                    <li>
-                        <h5>Hạt giống đỏ .NET</h5>
-                        <p>SmartOSC</p>
-                    </li>
-                    <li>
-                        <h5>Lập trình viên Java; PHP</h5>
-                        <p>Công ty cổ phần INET</p>
-                    </li>
-                    <li>
-                        <h5>Lập trình viên Mobile, Java, .Net</h5>
-                        <p>Công ty Softdreams</p>
-                    </li>
-                </ul>
-                <ul class="job-list-item">
-                    <li>
-                        <h5>Lập trình viên ASP MVC</h5>
-                        <p>Công ty TNHH Eworld</p>
-                    </li>
-                    <li>
-                        <h5>Lập trình viên</h5>
-                        <p>Công ty cổ phần Telsoft</p>
-                    </li>
-                    <li>
-                        <h5>Lập trình viên</h5>
-                        <p>Công ty công nghệ Kim Cương</p>
-                    </li>
-                    <li>
-                        <h5>Thiết kế đồ họa</h5>
-                        <p>Công ty BHmedia</p>
-                    </li>
-                    <li>
-                        <h5>Thực tập sinh PHP</h5>
-                        <p>Công ty Cổ phần Ominext</p>
-                    </li>
-                </ul>
-                <ul class="job-list-item">
-                    <li>
-                        <h5>Lập trình viên</h5>
-                        <p>Công ty Cổ phần 1LINK</p>
-                    </li>
-                    <li>
-
-                    </li>
-                </ul>
-                <ul class="job-list-item">
-                </ul>
-            </div>
-            <div class="job-list-dots"></div>
+        <div class="column-block">
+          <img src="/Techkids Connect/img/doanhnghiep.png">
+          <h4 class="open-san-bold">DOANH NGHIỆP</h4>
+          <p>Gửi thông tin và yêu cầu vị trí công việc, Techkids sẽ kết nối đến với ứng viên phù hợp.</p>
         </div>
+      </div>
+    </div>
 
-    </section>
-    <section class="white-bg form-block" id="apply">
-        <div class="page-block">
-            <h2 class="open-san-bold">THAM GIA MẠNG LƯỚI KẾT NỐI VIỆC LÀM</h2>
-            <form class="form-group" id="register-form">
-                <div class="form-info">
-                    <input type="text" name="name" placeholder="Họ và tên" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="text" name="tel" placeholder="Số điện thoại" required>
-                    <input type="text" name="school" placeholder="Trường đang theo học" required>
-                </div>
-                <textarea name="job" placeholder="Vị trí quan tâm" id="position" required></textarea>
+  </section>
+  <section class="blue-bg job-block" id="job">
+    <div class="page-block">
+      <h2 class="open-san-bold">CÁC CÔNG VIỆC MỚI NHẤT</h2>
+      <div class="job-list">
+        <ul class="job-list-item">
+          <li>
+            <h5>Thực tập sinh Java, PHP</h5>
+            <p>EWAY Vietnam</p>
+          </li>
+          <li>
+            <h5>iOS developer</h5>
+            <p>FSoft</p>
+          </li>
+          <li>
+            <h5>Lập trình viên PHP fulltime</h5>
+            <p>Enkulu.vn</p>
+          </li>
+          <li>
+            <h5>Lập trình viên iOS fulltime</h5>
+            <p>Enkulu.vn</p>
+          </li>
+          <li>
+            <h5>Web developer (PHP, JavaScript, HTML5)</h5>
+            <p>Akira</p>
+          </li>
+        </ul>
+        <ul class="job-list-item">
+          <li>
+            <h5>App developer (iOS or Android)</h5>
+            <p>Akira</p>
+          </li>
+          <li>
+            <h5>Thực tập sinh CNTT, phát triển sản phẩm và dịch vụ CNTT</h5>
+            <p>HiNet</p>
+          </li>
+          <li>
+            <h5>Thực tập lập trình .Net, MVC</h5>
+            <p>Công ty NAVISOFT</p>
+          </li>
+          <li>
+            <h5>Thực tập sinh PHP</h5>
+            <p>Sunnet</p>
+          </li>
+          <li>
+            <h5>Thực tập sinh iOS</h5>
+            <p>Sunnet</p>
+          </li>
+        </ul>
+        <ul class="job-list-item">
+          <li>
+            <h5>Lập trình viên Java</h5>
+            <p>Công ty Cổ phần NTQ Solution</p>
+          </li>
+          <li>
+            <h5>Xamarin Developer</h5>
+            <p>Play Fury</p>
+          </li>
+          <li>
+            <h5>Hạt giống đỏ .NET</h5>
+            <p>SmartOSC</p>
+          </li>
+          <li>
+            <h5>Lập trình viên Java; PHP</h5>
+            <p>Công ty cổ phần INET</p>
+          </li>
+          <li>
+            <h5>Lập trình viên Mobile, Java, .Net</h5>
+            <p>Công ty Softdreams</p>
+          </li>
+        </ul>
+        <ul class="job-list-item">
+          <li>
+            <h5>Lập trình viên ASP MVC</h5>
+            <p>Công ty TNHH Eworld</p>
+          </li>
+          <li>
+            <h5>Lập trình viên</h5>
+            <p>Công ty cổ phần Telsoft</p>
+          </li>
+          <li>
+            <h5>Lập trình viên</h5>
+            <p>Công ty công nghệ Kim Cương</p>
+          </li>
+          <li>
+            <h5>Thiết kế đồ họa</h5>
+            <p>Công ty BHmedia</p>
+          </li>
+          <li>
+            <h5>Thực tập sinh PHP</h5>
+            <p>Công ty Cổ phần Ominext</p>
+          </li>
+        </ul>
+        <ul class="job-list-item">
+          <li>
+            <h5>Lập trình viên</h5>
+            <p>Công ty Cổ phần 1LINK</p>
+          </li>
+          <li>
 
-                <button id="submit-button" class="btn btn-form" type="submit"><span id="submit-text">Đăng ký ngay</span></button>
-                <h4 id="notification" class="notification"></h4>
-                <div id="form-loader" class='uil-rolling-css'>
-                    <div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </form>
+          </li>
+        </ul>
+        <ul class="job-list-item">
+        </ul>
+      </div>
+      <div class="job-list-dots"></div>
+    </div>
+  </section>
 
+  <section class="white-bg form-block" id="apply">
+    <div class="page-block">
+      <h2 class="open-san-bold">THAM GIA MẠNG LƯỚI KẾT NỐI VIỆC LÀM</h2>
+      <form class="form-group" id="register-form">
+        <div class="form-info">
+          <input type="text" name="name" placeholder="Họ và tên" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="tel" placeholder="Số điện thoại" required>
+          <input type="text" name="school" placeholder="Trường đang theo học" required>
         </div>
+        <textarea name="job" placeholder="Vị trí quan tâm" id="position" required></textarea>
 
-    </section>
-    <section class="blue-bg partner-block" id="partner">
-        <div class="page-block">
-            <h2 class="open-san-bold">ĐỐI TÁC</h2>
-            <ul class="partner-list">
-                <li><img src='/Techkids Connect/img/BKAV.png' alt="BKAV"></img>
-                </li>
-                <li><img src='/Techkids Connect/img/Fpt.png' alt="FPT"></img>
-                </li>
-                <li><img src='/Techkids Connect/img/TinhVan.png' alt="TinhVan"></img>
-                </li>
-                <li><img src='/Techkids Connect/img/Samsung.png' alt="Samsung"></img>
-                </li>
-                <li><img src='/Techkids Connect/img/Topica.png' alt="Topica"></img>
-                </li>
-                <li><img src='/Techkids Connect/img/Viettel.png' alt="Viettel"></img>
-                </li>
-            </ul>
+        <button id="submit-button" class="btn btn-form" type="submit"><span id="submit-text">Đăng ký ngay</span></button>
+        <h4 id="notification" class="notification"></h4>
+        <div id="form-loader" class='uil-rolling-css'>
+          <div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
-    </section>
+      </form>
 
-    <footer class="footer grey-bg">
-        <div class="page-block footer-group">
-            <div class="logo-footer">
-                <a href="http://www.techkids.vn" target="_blank"><img src="/Techkids Connect/img/techkid_logo.png"></a>
-            </div>
-            <div class="contact">
-                <h4>Kết nối với chúng tôi</h4>
-                <div>Email: <a href="mailto:techkidsvn@gmail.com">techkidsvn@gmail.com</a></div>
-                <div>Số điện thoại: <a href="tel:01653005670">01653005670</a> (Ms Hà)</div>
-                <div>Địa chỉ:</div>
-                <div>Techhub 1: số 28/10, ngõ 121 chùa Láng</div>
-                <div>Techhub 2: số 101D, ngõ 95 chùa Bộc</div>
-            </div>
-            <div>
-                <h4>Đến thăm chúng tôi</h4>
-                <div class="social-list">
-                    <a href="http://www.techkids.vn"><img src="/Techkids Connect/img/icon_web.png"></a>
-                    <a href="https://www.facebook.com/Techkids.Code.the.Change/"><img src="/Techkids Connect/img/icon_fb.png"></a>
-                    <a href="#"><img src="/Techkids Connect/img/icon_youtube.png"></a>
-                </div>
-            </div>
+    </div>
+
+  </section>
+  <section class="blue-bg partner-block" id="partner">
+    <div class="page-block">
+      <h2 class="open-san-bold">ĐỐI TÁC</h2>
+      <ul class="partner-list">
+        <li><img src='/Techkids Connect/img/BKAV.png' alt="BKAV"></img>
+        </li>
+        <li><img src='/Techkids Connect/img/Fpt.png' alt="FPT"></img>
+        </li>
+        <li><img src='/Techkids Connect/img/TinhVan.png' alt="TinhVan"></img>
+        </li>
+        <li><img src='/Techkids Connect/img/Samsung.png' alt="Samsung"></img>
+        </li>
+        <li><img src='/Techkids Connect/img/Topica.png' alt="Topica"></img>
+        </li>
+        <li><img src='/Techkids Connect/img/Viettel.png' alt="Viettel"></img>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer grey-bg">
+    <div class="page-block footer-group">
+      <div class="logo-footer">
+        <a href="http://www.techkids.vn" target="_blank"><img src="/Techkids Connect/img/techkid_logo.png"></a>
+      </div>
+      <div class="contact">
+        <h4>Kết nối với chúng tôi</h4>
+        <div>Email: <a href="mailto:techkidsvn@gmail.com">techkidsvn@gmail.com</a></div>
+        <div>Số điện thoại: <a href="tel:01653005670">01653005670</a> (Ms Hà)</div>
+        <div>Địa chỉ:</div>
+        <div>Techhub 1: số 28/10, ngõ 121 chùa Láng</div>
+        <div>Techhub 2: số 101D, ngõ 95 chùa Bộc</div>
+      </div>
+      <div>
+        <h4>Đến thăm chúng tôi</h4>
+        <div class="social-list">
+          <a href="http://www.techkids.vn"><img src="/Techkids Connect/img/icon_web.png"></a>
+          <a href="https://www.facebook.com/Techkids.Code.the.Change/"><img src="/Techkids Connect/img/icon_fb.png"></a>
+          <a href="#"><img src="/Techkids Connect/img/icon_youtube.png"></a>
         </div>
+      </div>
+    </div>
 
-    </footer>
+  </footer>
 
 </body>
 
