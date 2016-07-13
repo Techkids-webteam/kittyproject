@@ -227,97 +227,19 @@
   </section>
   <!-- ============================hiep========================== -->
 
-  <section class="blue-bg job-block" id="job" ng-app="routerApp" ng-controller="mainController as main">
-    <div ng-controller="companyController as company">{{company.message}}</div>
+  <section class="blue-bg job-block" id="job" ng-app="companyCtrl" ng-controller="companyController as company">
     <div class="page-block" >
-      <h2 class="open-san-bold">CÁC CÔNG VIỆC MỚI NHẤT {{main.bigMessage}}</h2>
+      <h2 class="open-san-bold">CÁC CÔNG VIỆC MỚI NHẤT</h2>
       <div class="job-list">
-        <ul class="job-list-item">
-
-          <li>
-            <tr ng-repeat="job in company.companies">
-            <td>{{job.job_title}}</td>
-            <td>{{job.company_name}}</td>
-            <td>{{job.job_description | limitTo:numLimit}}
-            </td>
-            </tr>
-          </li>
-
-        </ul>
-        <ul class="job-list-item">
-          <li>
-            <h5>App developer (iOS or Android)</h5>
-            <p>Akira</p>
-          </li>
-          <li>
-            <h5>Thực tập sinh CNTT, phát triển sản phẩm và dịch vụ CNTT</h5>
-            <p>HiNet</p>
-          </li>
-          <li>
-            <h5>Thực tập lập trình .Net, MVC</h5>
-            <p>Công ty NAVISOFT</p>
-          </li>
-          <li>
-            <h5>Thực tập sinh PHP</h5>
-            <p>Sunnet</p>
-          </li>
-          <li>
-            <h5>Thực tập sinh iOS</h5>
-            <p>Sunnet</p>
+        <ul class="job-list-item" ng-repeat='job in company.companies' ng-if="$index %5 == 0" ng-init="parentindex=$index">
+          <li ng-repeat="job in company.companies.slice(parentindex,parentindex+5)">
+            <h5>{{job.job_title}}</h5>
+            <p>{{job.company_name}}</p>
           </li>
         </ul>
         <ul class="job-list-item">
-          <li>
-            <h5>Lập trình viên Java</h5>
-            <p>Công ty Cổ phần NTQ Solution</p>
-          </li>
-          <li>
-            <h5>Xamarin Developer</h5>
-            <p>Play Fury</p>
-          </li>
-          <li>
-            <h5>Hạt giống đỏ .NET</h5>
-            <p>SmartOSC</p>
-          </li>
-          <li>
-            <h5>Lập trình viên Java; PHP</h5>
-            <p>Công ty cổ phần INET</p>
-          </li>
-          <li>
-            <h5>Lập trình viên Mobile, Java, .Net</h5>
-            <p>Công ty Softdreams</p>
-          </li>
         </ul>
         <ul class="job-list-item">
-          <li>
-            <h5>Lập trình viên ASP MVC</h5>
-            <p>Công ty TNHH Eworld</p>
-          </li>
-          <li>
-            <h5>Lập trình viên</h5>
-            <p>Công ty cổ phần Telsoft</p>
-          </li>
-          <li>
-            <h5>Lập trình viên</h5>
-            <p>Công ty công nghệ Kim Cương</p>
-          </li>
-          <li>
-            <h5>Thiết kế đồ họa</h5>
-            <p>Công ty BHmedia</p>
-          </li>
-          <li>
-            <h5>Thực tập sinh PHP</h5>
-            <p>Công ty Cổ phần Ominext</p>
-          </li>
-        </ul>
-        <ul class="job-list-item">
-          <li>
-            <h5>Lập trình viên</h5>
-            <p>Công ty Cổ phần 1LINK</p>
-          </li>
-          <li>
-
-          </li>
         </ul>
         <ul class="job-list-item">
         </ul>
@@ -326,6 +248,7 @@
     </div>
   </section>
   <!-- ============================hiep========================== -->
+
 
   <section class="white-bg form-block" id="apply">
     <div class="page-block">

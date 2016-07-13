@@ -1,7 +1,7 @@
 angular.module('companyCtrl', ['companyService'])
     .controller('companyController', function (Company) {
         var vm = this;
-        vm.message = "HELLOOOOOOOOOOOOOOOOOOOOOOOOOOO";
+        vm.message = "assadasdasd";
         vm.processing = true;
         Company.all()
             .success(function (data) {
