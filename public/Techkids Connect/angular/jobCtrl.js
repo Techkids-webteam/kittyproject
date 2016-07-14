@@ -1,7 +1,7 @@
 angular.module('companyCtrl', ['companyService'])
     .controller('companyController', function (Company) {
+        var monthDays = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
         var vm = this;
-        vm.message = "assadasdasd";
         vm.processing = true;
         Company.all()
             .success(function (data) {
@@ -46,6 +46,15 @@ angular.module('companyCtrl', ['companyService'])
 
         };
     })
+    .filter('array', function() {
+    return function(arrayLength) {
+        arrayLength = Math.ceil(arrayLength);
+        var arr = new Array(arrayLength), i = 0;
+        for (; i < arrayLength; i++) {
+            arr[i] = i;
+        }
+        return arr;
+    }})
     .controller('companyCreateController', function (Company, $location) {
         var vm = this;
         vm.type = 'create';

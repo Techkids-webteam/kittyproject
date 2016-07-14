@@ -118,7 +118,7 @@
     </div>
 
   </section>
-  <section class="blue-bg job-block" id="job">
+  <!-- <section class="blue-bg job-block" id="job">
     <div class="page-block">
       <h2 class="open-san-bold">CÁC CÔNG VIỆC MỚI NHẤT</h2>
       <div class="job-list">
@@ -224,18 +224,22 @@
       </div>
       <div class="job-list-dots"></div>
     </div>
-  </section>
+  </section> -->
   <!-- ============================hiep========================== -->
 
   <section class="blue-bg job-block" id="job" ng-app="companyCtrl" ng-controller="companyController as company">
     <div class="page-block" >
       <h2 class="open-san-bold">CÁC CÔNG VIỆC MỚI NHẤT</h2>
       <div class="job-list">
-        <ul class="job-list-item" ng-repeat='job in company.companies' ng-if="$index %5 == 0" ng-init="parentindex=$index">
+        <ul class="job-list-item" ng-repeat="job in company.companies" ng-if="$index %5 == 0" ng-init="parentindex=$index">
           <li ng-repeat="job in company.companies.slice(parentindex,parentindex+5)">
             <h5>{{job.job_title}}</h5>
             <p>{{job.company_name}}</p>
           </li>
+        </ul>
+        <ul class="job-list-item">
+        </ul>
+        <ul class="job-list-item">
         </ul>
         <ul class="job-list-item">
         </ul>
