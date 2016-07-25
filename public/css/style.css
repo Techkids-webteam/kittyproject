@@ -15,7 +15,9 @@ a:focus{
 	outline: 0 none;
 	color: #02BBE9;
 }
-
+.center, .center-align {
+  text-align: center;
+}
 .btn{
 	border-radius: 4px;
 	border: 0 none;
@@ -894,3 +896,85 @@ section.stars .section_title:after{
 		max-width: 20%;
 	}
 }
+/*
+.form-container {
+    display: block;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 10px #888888;
+}
+.card {
+    position: relative;
+    margin: 0.5rem 0 1rem 0;
+    background-color: #ffffff;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    font-size: 15px;
+}
+.card .card-content {
+    padding: 20px;
+    border-radius: 0 0 2px 2px;
+}
+.card .card-title {
+    font-size: 24px;
+    font-weight: 300;
+}
+select#id_gender,
+select#id_occupation {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    height: 3rem;
+}
+.row .col.s12 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+.row .col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+}
+.input-field {
+    position: relative;
+    margin-top: 1rem;
+}
+.transparent_input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+    line-height: normal;
+    color: inherit;
+    font: inherit;
+}
+.input-field label {
+    color: #9e9e9e;
+    position: absolute;
+    top: 0.8rem;
+    left: 0.75rem;
+    font-size: 1rem;
+    cursor: text;
+    transition: .2s ease-out;
+}
+textarea.materialize-textarea {
+    overflow-y: hidden;
+    padding: 1.6rem 0;
+    resize: none;
+    min-height: 3rem;
+    overflow: auto;
+}*/

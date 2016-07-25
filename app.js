@@ -74,103 +74,105 @@ app.use(bodyParser.urlencoded({
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var allTanks = [];
-var tankById = function(id, killOnSight){
-  for(var i=0;i<allTanks.length;i++){
-    if(allTanks[i].id == id){
-      return killOnSight ? allTanks.splice(i, 1)[0] : allTanks[i];
+var tankById = function (id, killOnSight) {
+    for (var i = 0; i < allTanks.length; i++) {
+        if (allTanks[i].id == id) {
+            return killOnSight ? allTanks.splice(i, 1)[0] : allTanks[i];
+        }
     }
-  }
 
-  return null;
+    return null;
 }
 
-function compare(a,b) {
-  if (a.score < b.score)
-    return 1;
-  if (a.score > b.score)
-    return -1;
-  return 0;
+function compare(a, b) {
+    if (a.score < b.score)
+        return 1;
+    if (a.score > b.score)
+        return -1;
+    return 0;
 }
 
-app.get('/games/tanks', function(req, res){
-  res.sendFile(__dirname + '/games/tanks/index.html');
+app.get('/games/tanks', function (req, res) {
+    res.sendFile(__dirname + '/games/tanks/index.html');
 });
 
-io.on('connection', function(socket){
-  console.log('user connected');
-  
-  socket.emit('connected', {
-    enemies : allTanks.slice()
-  });
-  
-  socket.on('login', function(msg){
-    var response = {
-      score: 0,
-      username : msg,
-      position : {
-        x : Math.random()*3200,
-        y : Math.random()*600,
-      },
-      id : socket.id
-    }
-    response.top3 = allTanks.slice(0,3);
-    socket.emit('loggedIn', response);
-    socket.broadcast.emit('newPlayerJoined', response);
-    response.top3 = undefined;
-  
-    allTanks.push(response);
-  });
-  
-  socket.on('tankMove', function(msg){
-    var tank = tankById(socket.id);
-    if(tank){
-      tank.position.x = msg.position.x;
-      tank.position.y = msg.position.y;
-    }
-    
-    socket.broadcast.emit('tankMoved', msg);
-  });
+io.on('connection', function (socket) {
+    console.log('user connected');
 
-  socket.on('tankFire', function(msg){
-    socket.broadcast.emit('tankFired', msg);
-  });
-
-  socket.on('tankDie', function(msg){
-    var killer = tankById(msg.killerId);
-    if(killer){
-      killer.score += 1;
-    }
-    
-    allTanks.sort(compare);
-    msg.top3 = allTanks.slice(0,3);
-    socket.broadcast.emit('tankDied', msg);
-  });
-  
-  socket.on('playerAfk', function(msg){
-    socket.broadcast.emit('playerAfk', msg);
-    var player = tankById(msg.id);
-    if(player) player.afk = true;
-  });
-  
-  socket.on('playerReturn', function(msg){
-    socket.broadcast.emit('playerReturn', msg);
-    var player = tankById(msg.id);
-    if(player) player.afk = false;
-  });
-
-  socket.on('disconnect', function(){
-    console.log('user disconnected: ' + socket.id);
-    if(tankById(socket.id, true)){
-      socket.broadcast.emit('playerDisconnected', {id : socket.id});
-    }
-  });
-  
-  socket.on('aPing', function(msg){
-    socket.emit('aPong', {
-      ping: msg,
-      top3: allTanks.slice(0,3)
+    socket.emit('connected', {
+        enemies: allTanks.slice()
     });
-  });
+
+    socket.on('login', function (msg) {
+        var response = {
+            score: 0,
+            username: msg,
+            position: {
+                x: Math.random() * 3200,
+                y: Math.random() * 600,
+            },
+            id: socket.id
+        }
+        response.top3 = allTanks.slice(0, 3);
+        socket.emit('loggedIn', response);
+        socket.broadcast.emit('newPlayerJoined', response);
+        response.top3 = undefined;
+
+        allTanks.push(response);
+    });
+
+    socket.on('tankMove', function (msg) {
+        var tank = tankById(socket.id);
+        if (tank) {
+            tank.position.x = msg.position.x;
+            tank.position.y = msg.position.y;
+        }
+
+        socket.broadcast.emit('tankMoved', msg);
+    });
+
+    socket.on('tankFire', function (msg) {
+        socket.broadcast.emit('tankFired', msg);
+    });
+
+    socket.on('tankDie', function (msg) {
+        var killer = tankById(msg.killerId);
+        if (killer) {
+            killer.score += 1;
+        }
+
+        allTanks.sort(compare);
+        msg.top3 = allTanks.slice(0, 3);
+        socket.broadcast.emit('tankDied', msg);
+    });
+
+    socket.on('playerAfk', function (msg) {
+        socket.broadcast.emit('playerAfk', msg);
+        var player = tankById(msg.id);
+        if (player) player.afk = true;
+    });
+
+    socket.on('playerReturn', function (msg) {
+        socket.broadcast.emit('playerReturn', msg);
+        var player = tankById(msg.id);
+        if (player) player.afk = false;
+    });
+
+    socket.on('disconnect', function () {
+        console.log('user disconnected: ' + socket.id);
+        if (tankById(socket.id, true)) {
+            socket.broadcast.emit('playerDisconnected', {
+                id: socket.id
+            });
+        }
+    });
+
+    socket.on('aPing', function (msg) {
+        socket.emit('aPong', {
+            ping: msg,
+            top3: allTanks.slice(0, 3)
+        });
+    });
 });
 
 //end server game tanks
@@ -271,6 +273,12 @@ app.get('/connect', function (req, res) {
     res.sendFile(__dirname + '/public/Techkids Connect/index.html');
 });
 
+app.get('/register', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/index.html');
+});
+//app.get('/register', function (req, res) {
+//    res.render('register-page');
+//});
 app.get('/chia-se/tai-lieu/chia-se-sach-cho-dan-lap-trinh-vien', function (req, res) {
     res.render('articles-1');
 });
@@ -463,27 +471,50 @@ router_courses.get('/4', function (req, res) {
 router_courses.get('/code-for-everyone', function (req, res) {
     res.render('courses-1');
 });
-
+router_courses.get('/code-for-everyone/register', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/c4e-register.html');
+});
+router_courses.get('/code-for-everyone/register', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/c4e-register-sucessful.html');
+});
 router_courses.get('/iOS', function (req, res) {
     res.render('courses-2');
 });
-
 router_courses.get('/android', function (req, res) {
     res.render('courses-3');
+});
+router_courses.get('/mobile/register', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/mobile-register.html');
+});
+router_courses.get('/mobile/register-successful', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/mobile-register-sucessful.html');
 });
 
 router_courses.get('/web-fullstack', function (req, res) {
     res.render('courses-4');
 });
-
+router_courses.get('/web-fullstack/register', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/web-register.html');
+});
+router_courses.get('/mobile/register', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/web-register-sucessful.html');
+});
 router_courses.get('/code-for-kids', function (req, res) {
     res.render('courses-5');
 });
-
+router_courses.get('/code-for-kids/register', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/c4k-register.html');
+});
+router_courses.get('/mobile/register', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/c4k-register-sucessful.html');
+});
 router_courses.get('/test', function (req, res) {
     res.render('test');
 });
-
+// register form single page
+router_courses.get('/', function (req, res) {
+    res.render('test');
+});
 // Đường dẫn tới thư mục pulic, static file cho instructor
 router_courses.use('/cms/', express.static(__dirname + '/public/'));
 

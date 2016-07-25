@@ -1,0 +1,195 @@
+.white-bg{
+  background-color: #ffffff;
+}
+.navbar{
+	background-image: none;
+	transition: background-color .3s, border-color .2s;
+	border-bottom: 0 none;
+	box-shadow: none;
+}
+
+.navbar-fixed-top{
+	letter-spacing: 1.5px;
+	font-size: 1.8rem;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.navbar-fixed-top>.container ul li a{
+	font-weight: 300;
+}
+
+.navbar-fixed-top .dropdown ul{
+	padding: 0;
+	border-radius: 0;
+}
+.navbar-fixed-top .dropdown ul li a{
+	font-size: 1.6rem;
+}
+.navbar-fixed-top .dropdown ul li a:hover,
+.navbar-fixed-top .dropdown ul li a:focus{
+	color: #fff;
+	background-color: #00A0C6;
+}
+
+.navbar-fixed-top .collapse .navbar-nav>li>a{
+	color: #333;
+}
+
+.navbar-fixed-top .collapse .navbar-nav>li>a:hover,
+.navbar-fixed-top .collapse .navbar-nav>li>a:focus{
+	color: #02BBE9;
+}
+
+.navbar_secondary {
+	margin-bottom: 0;
+	border-radius: 0;
+	font-size: 0.6em;
+	min-height: 0;
+	font-weight: 700;
+}
+
+.navbar_secondary input{
+	font-weight: 300;
+}
+
+.navbar_at_top .navbar_secondary{
+	background-color: rgba(34,34,34,0.5);
+}
+
+.navbar_secondary .navbar-nav li a{
+	padding: 10px 15px 10px 15px;
+}
+
+.navbar_secondary .form-control {
+	font-size: 1em;
+	height: 24px;
+}
+
+.visible-xs-block ul.navbar-nav{
+	display: flex;
+}
+
+.visible-xs-block ul.navbar-nav li{
+	flex-grow: 1;
+	text-align: center;
+	font-size: 0.6em;
+}
+
+.navbar-brand{
+	height: auto;
+	padding: 10px 15px;
+}
+
+.brand_logo{
+	display: block;
+	height: 30px;
+	background: transparent url('../img/TechkidBrandColor.png') center center no-repeat;
+	background-size: contain;
+}
+
+.brand_logo img{
+	display: block;
+	visibility: hidden;
+	height: 100%;
+}
+
+.navbar-fixed-top.navbar_at_top{
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar_at_top .collapse .navbar-nav>li>a{
+  color: #fff;
+}
+
+.navbar_at_top .collapse .navbar-nav>li:hover>a,
+.navbar_at_top .collapse .navbar-nav>li:focus>a{
+  color: #00A0C6;
+}
+
+.navbar_at_top .brand_logo{
+  background-image: url('../img/TechkidBrandWhite.png')
+}
+
+.navbar .dropdown.open>a{
+  background: transparent;
+}
+
+.dropdown.open:not(:hover) ul{
+  display: none;
+}
+
+li.dropdown:hover .dropdown-menu{
+  display: block;
+  top: 90%;
+}
+
+li.dropdown .dropdown-menu{
+  width: 15em;
+}
+
+li.dropdown .dropdown-menu li a{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  white-space: normal;
+}
+
+li.dropdown .dropdown-menu li a:focus,
+li.dropdown .dropdown-menu li a:hover{
+  background-image: none;
+}
+.btn_button_orange {
+  background-color: #F47930;
+  color: #ffffff;
+}
+.btn_button_orange:hover {
+  background-color: #F05000;
+  color: #000000;
+}
+@media only screen and (max-width: 992px) {}
+@media only screen and (max-width: 600px) {}
+section.stars {
+  color: #fff;
+  background-size: cover;
+  background-clip: border-box;
+  background-attachment: fixed;
+  background-color: #1D232E;
+  background-image: url("../img/Background.jpg");
+}
+section.stars .section_title {
+  color: #fff;
+}
+.section_title {
+  font-size: 2.3rem;
+  margin: 40px auto;
+  float: none;
+  display: table;
+  position: relative;
+  white-space: nowrap;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+blockquote footer {
+  color: #000000;
+  font-size: 1.8rem;
+}
+footer.footer {
+  padding: 100px 0;
+  font-size: 1.4rem;
+  background-color: #f7f7f7;
+}
+.footer_logo {
+  margin: 15px 0;
+}
+.footer h5 {
+  font-size: 1.8rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #cccccc;
+}
+.footer ul {
+  padding-left: 20px;
+}
+.footer .socials_list {
+  font-size: 2.3rem;
+}
