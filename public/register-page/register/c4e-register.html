@@ -12,6 +12,8 @@
     <link href="/register-page/maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="/register-page/static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/register-page/static/css/navbar.less" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/register-page/static/css/drop-down.less" type="text/css" rel="stylesheet" media="screen,projection" />
     <!-- Hotjar Tracking Code for http://www.techkids.vn/ -->
     <script>
         (function(h, o, t, j, a, r) {
@@ -62,64 +64,63 @@
 
 <body>
 
-    <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="/" class="brand-logo">
-                <img id="header-logo" alt="TechKids Logo" src="/register-page/static/img/TechkidBrandColor.png">
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li class="dropdown"><a href="/summer-code-camp" class="dropdown-toggle">Summer Code Camp 2016</a></li>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="/ve-chung-toi"></a>
-                    </li>
-
-                </ul>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li class="dropdown"><a href="/chuong-trinh" class="dropdown-toggle">Các Sự Kiện</a></li>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li class="dropdown"><a href="/khoa-hoc" class="dropdown-toggle">Các Khóa Học</a></li>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li class="dropdown"><a href="/ve-chung-toi" class="dropdown-toggle">Về Chúng Tôi</a></li>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li class="dropdown"><a href="http://techkids.vn/" class="dropdown-toggle">Trang chủ</a></li>
-            </ul>
-
-
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="/summer-code-camp">Summer Code Camp 2016</a></li>
-                <li><a href="/chuong-trinh">Các Sự Kiện</a></li>
-                <li><a href="/khoa-hoc">Các Khóa Học</a></li>
-                <li><a href="/ve-chung-toi">Về Chúng Tôi</a></li>
-                <li>
-                    <a href="/">Trang chủ</a></li>
-            </ul>
-
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-
-        </div>
-    </nav>
-
-
-    <div id="load_screen">
-        <div class="progress" style="margin:0px; height:5px;">
-            <div class="indeterminate"></div>
-        </div>
+<nav id="main_nav" class="navbar navbar-default navbar-fixed-top block nav_optional endblock {% %}{% %}">
+   <nav class="navbar navbar-inverse navbar_secondary hidden-xs">
+      <div class="container">
+         <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">TRANG CHỦ</a></li>
+            <li><a href="/lien-he">LIÊN HỆ</a></li>
+            <li></li>
+         </ul>
+      </div>
+   </nav>
+ <div class="container" class="white-bg">
+    <!-- Brand and toggle get grouped for better mobile display-->
+    <div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <a href="/" class="navbar-brand"><span class="brand_logo"><img src="/cms/img/TechkidBrandColor.png" alt="TechKids"></span></a></div>
+    <!-- Collect the nav links, forms, and other content for toggling-->
+    <div class="container">
+    <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+       <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+             <a href="/ve-chung-toi" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle disabled">Về Chúng Tôi<span class="visible-xs-inline-block caret"></span></a>
+             <ul class="dropdown-menu">
+                <li><a href="/ve-chung-toi">Giới thiệu  chung</a></li>
+                <li><a href="/ve-chung-toi#sumenh-tamnhin">Sứ mệnh, tầm nhìn, giá trị cốt lõi</a></li>
+             </ul>
+          </li>
+          <li class="dropdown">
+             <a href="/khoa-hoc" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle disabled">Các Khóa Học<span class="visible-xs-inline-block caret"></span></a>
+             <ul class="dropdown-menu">
+                <li><a href="/khoa-hoc/iOS">Lập Trình iOS</a></li>
+                <li><a href="/khoa-hoc/android">Lập Trình Android</a></li>
+                <li><a href="/khoa-hoc/web-fullstack">Lập trình Full-stack Web</a></li>
+                <li><a href="/khoa-hoc/code-for-everyone">Code For Everyone</a></li>
+                <li><a href="/khoa-hoc/code-for-kids">Code For Kids </a></li>
+             </ul>
+          </li>
+          <li class="dropdown"><a href="/chuong-trinh/" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle disabled">Các Sự Kiện<span class="visible-xs-inline-block caret"></span></a></li>
+          <li class="dropdown"><a href="/summer-code-camp" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle disabled">Summer Code Camp 2016<span class="visible-xs-inline-block caret"></span></a></li>
+       </ul>
+       <div class="visible-xs-block">
+          <form role="search" class="navbar-form navbar-right visible-xs-block">
+             <div class="form-group"><input placeholder="Search" class="form-control" type="text"></div>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+             <li><a href="/">TRANG CHỦ</a></li>
+             <li><a href="/ve-chung-toi">VỀ CHÚNG TÔI</a></li>
+             <li><a href="/lien-he">LIÊN HỆ</a></li>
+          </ul>
+       </div>
     </div>
-
+  </div>
+ </div>
+</nav>
 
     <div class="row">
-
-
         <div class="col l6 m8 s12 darken-1 offset-l3 offset-m2 ">
-
-            <div class="responsive-img center" style="margin-top:50px;margin-bottom:50px">
+            <div class="center" style="margin-top:150px">
                 <img src="/register-page/static/img/big_banner.png" class="responsive-img" alt="Mountain View" style="height: 70%; width:70%;">
-
             </div>
             <div class="card">
                 <form method="POST" action="#" id="register-form">
@@ -183,12 +184,12 @@
                                 <label for="id_company">Nghề nghiệp và nơi học tập/công tác của bạn<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
                             </div>
                         </div>
+                        <p style="color:white;">ahihihi</p>
                         <div class="row">
                             <div class="input-field col s12">
-                                <!-- <i class="material-icons prefix">mode_edit</i> -->
                                 <textarea class="materialize-textarea" cols="80" id="id_prglanguage" maxlength="1000" name="Bạn đã biết dùng ngôn ngữ lập trình nào? Và mức độ sử dụng thành thạo của ngôn ngữ đó (Mức độ từ 1,2,3,4,5) " rows="10">
                                 </textarea>
-                                <label for="id_prglanguage">Bạn đã biết dùng ngôn ngữ lập trình nào? Và mức độ sử dụng thành thạo của ngôn ngữ đó (Mức độ từ 1,2,3,4,5)<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
+                                <label for="id_prglanguage">Tại sao bạn muốn đi học Lập trình?<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
                             </div>
                         </div>
                         <div class="row">

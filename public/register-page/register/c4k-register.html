@@ -12,6 +12,8 @@
     <link href="/register-page/maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="/register-page/static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/register-page/static/css/navbar.less" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/register-page/static/css/drop-down.less" type="text/css" rel="stylesheet" media="screen,projection" />
     <!-- Hotjar Tracking Code for http://www.techkids.vn/ -->
     <script>
         (function(h, o, t, j, a, r) {
@@ -62,223 +64,139 @@
 
 <body>
 
-    <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="/" class="brand-logo">
-                <img id="header-logo" alt="TechKids Logo" src="/register-page/static/img/TechkidBrandColor.png">
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li class="dropdown"><a href="/summer-code-camp" class="dropdown-toggle">Summer Code Camp 2016</a></li>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="/ve-chung-toi"></a>
-                    </li>
-
-                </ul>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li class="dropdown"><a href="/chuong-trinh" class="dropdown-toggle">Các Sự Kiện</a></li>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li class="dropdown"><a href="/khoa-hoc" class="dropdown-toggle">Các Khóa Học</a></li>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li class="dropdown"><a href="/ve-chung-toi" class="dropdown-toggle">Về Chúng Tôi</a></li>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-                <li class="dropdown"><a href="http://techkids.vn/" class="dropdown-toggle">Trang chủ</a></li>
-            </ul>
-
-
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="/summer-code-camp">Summer Code Camp 2016</a></li>
-                <li><a href="/chuong-trinh">Các Sự Kiện</a></li>
-                <li><a href="/khoa-hoc">Các Khóa Học</a></li>
-                <li><a href="/ve-chung-toi">Về Chúng Tôi</a></li>
-                <li>
-                    <a href="/">Trang chủ</a></li>
-            </ul>
-
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-
-        </div>
-    </nav>
-
-
-    <div id="load_screen">
-        <div class="progress" style="margin:0px; height:5px;">
-            <div class="indeterminate"></div>
-        </div>
+<nav id="main_nav" class="navbar navbar-default navbar-fixed-top block nav_optional endblock {% %}{% %}">
+   <nav class="navbar navbar-inverse navbar_secondary hidden-xs">
+      <div class="container">
+         <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">TRANG CHỦ</a></li>
+            <li><a href="/lien-he">LIÊN HỆ</a></li>
+            <li></li>
+         </ul>
+      </div>
+   </nav>
+ <div class="container" class="white-bg">
+    <!-- Brand and toggle get grouped for better mobile display-->
+    <div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <a href="/" class="navbar-brand"><span class="brand_logo"><img src="/cms/img/TechkidBrandColor.png" alt="TechKids"></span></a></div>
+    <!-- Collect the nav links, forms, and other content for toggling-->
+    <div class="container">
+    <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+       <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+             <a href="/ve-chung-toi" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle disabled">Về Chúng Tôi<span class="visible-xs-inline-block caret"></span></a>
+             <ul class="dropdown-menu">
+                <li><a href="/ve-chung-toi">Giới thiệu  chung</a></li>
+                <li><a href="/ve-chung-toi#sumenh-tamnhin">Sứ mệnh, tầm nhìn, giá trị cốt lõi</a></li>
+             </ul>
+          </li>
+          <li class="dropdown">
+             <a href="/khoa-hoc" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle disabled">Các Khóa Học<span class="visible-xs-inline-block caret"></span></a>
+             <ul class="dropdown-menu">
+                <li><a href="/khoa-hoc/iOS">Lập Trình iOS</a></li>
+                <li><a href="/khoa-hoc/android">Lập Trình Android</a></li>
+                <li><a href="/khoa-hoc/web-fullstack">Lập trình Full-stack Web</a></li>
+                <li><a href="/khoa-hoc/code-for-everyone">Code For Everyone</a></li>
+                <li><a href="/khoa-hoc/code-for-kids">Code For Kids </a></li>
+             </ul>
+          </li>
+          <li class="dropdown"><a href="/chuong-trinh/" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle disabled">Các Sự Kiện<span class="visible-xs-inline-block caret"></span></a></li>
+          <li class="dropdown"><a href="/summer-code-camp" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle disabled">Summer Code Camp 2016<span class="visible-xs-inline-block caret"></span></a></li>
+       </ul>
+       <div class="visible-xs-block">
+          <form role="search" class="navbar-form navbar-right visible-xs-block">
+             <div class="form-group"><input placeholder="Search" class="form-control" type="text"></div>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+             <li><a href="/">TRANG CHỦ</a></li>
+             <li><a href="/ve-chung-toi">VỀ CHÚNG TÔI</a></li>
+             <li><a href="/lien-he">LIÊN HỆ</a></li>
+          </ul>
+       </div>
     </div>
-
+  </div>
+ </div>
+</nav>
 
     <div class="row">
-
-
         <div class="col l6 m8 s12 darken-1 offset-l3 offset-m2 ">
-
-            <div class="responsive-img center" style="margin-top:50px;margin-bottom:50px">
+            <div class="center" style="margin-top:150px">
                 <img src="/register-page/static/img/big_banner.png" class="responsive-img" alt="Mountain View" style="height: 70%; width:70%;">
-
             </div>
             <div class="card">
                 <form method="POST" action="#" id="register-form">
                     <div class="card-content">
                         <h5 class="center card-title grey-text text-darken-2">Đăng ký</h5>
-                        <h3 class="center card-title grey-text text-darken-2">Code for Kids</h3>
+                        <h3 class="center card-title grey-text text-darken-2">Code For Kids (CEK)</h3>
                         <p style="text-align:center"><span id="fieldRequire" style="color:#00a0c6">(*) Phần bắt buộc</span></p>
                         <p style="text-align:center"><span id="fieldRequire" style="color:#00a0c6">(**) Bạn nên sử dụng email là Gmail</span></p>
                         <h6></h6>
                         <div class="row">
                             <div class="input-field col s12">
                                 <!-- <i class="material-icons prefix">mode_edit</i> -->
-                                <input class="validate" id="id_fist_name" maxlength="120" name="First name" required="&quot;&quot;" type="text" />
-                                <label for="id_fist_name">First name<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
+                                <input class="validate" maxlength="120" name="Họ và tên học sinh" required="&quot;&quot;" type="text" />
+                                <label for="id_fist_name">Họ và tên học sinh<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <!-- <i class="material-icons prefix">mode_edit</i> -->
-                                <input class="validate" id="id_last_name" maxlength="120" name="Last name" required="&quot;&quot;" type="text" />
-                                <label for="id_last_name">Last name<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <!--
-							<i class="material-icons prefix">account_circle</i> -->
-                                <input class="validate" id="id_email" maxlength="120" name="Email address của bạn" required="&quot;&quot;" type="email" />
-                                <label for="email" data-error="Email phải có '@'">Email của bạn<span id="fieldRequire" style="color:#00a0c6"> (**)</span></label>
-                            </div>
-                            <!-- <label>Browser Select</label> -->
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <!-- <i class="material-icons prefix">mode_edit</i> -->
-                                <input class="validate" id="id_birthday" maxlength="120" name="Ngày tháng năm sinh" required="&quot;&quot;" type="text" />
-                                <label for="id_birthday">Ngày tháng năm sinh<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
+                                <input class="validate" maxlength="120" name="Em đang học lớp mấy, tại trường nào" required="&quot;&quot;" type="text" />
+                                <label for="id_last_name">Em đang học lớp mấy, tại trường nào<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <!-- <i class="material-icons prefix">account_circle</i> -->
-                                <input class="validate" id="id_phoneNumber" maxlength="120" name="Số điện thoại" required="&quot;&quot;" type="number" />
-                                <label for="id_phoneNumber">Số điện thoại</label>
+                                <input class="validate" id="id_phoneNumber" maxlength="120" name="Số điện thoại của học sinh (nếu có)" required="&quot;&quot;" type="number" />
+                                <label for="id_phoneNumber">Số điện thoại của học sinh (nếu có)</label>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="input-field col s12">
                                 <!-- <i class="material-icons prefix">account_circle</i> -->
-                                <input class="validate" id="id_facebook" maxlength="200" name="Địa chỉ facebook" required="&quot;&quot;" type="text" />
-                                <label for="Địa chỉ facebook">Facebook của bạn<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <!-- <i class="material-icons prefix">mode_edit</i> -->
-                                <input class="validate" id="id_company" maxlength="120" name="Nghề nghiệp và nơi học tập/công tác của bạn" required="&quot;&quot;" type="text" />
-                                <label for="id_company">Nghề nghiệp và nơi học tập/công tác của bạn<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <!-- <i class="material-icons prefix">mode_edit</i> -->
-                                <textarea class="materialize-textarea" cols="80" id="id_prglanguage" maxlength="1000" name="Bạn đã biết dùng ngôn ngữ lập trình nào? Và mức độ sử dụng thành thạo của ngôn ngữ đó (Mức độ từ 1,2,3,4,5) " rows="10">
-                                </textarea>
-                                <label for="id_prglanguage">Bạn đã biết dùng ngôn ngữ lập trình nào? Và mức độ sử dụng thành thạo của ngôn ngữ đó (Mức độ từ 1,2,3,4,5)<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <!-- <i class="material-icons prefix">mode_edit</i> -->
-                                <input class="validate" id="id_whychooseus" maxlength="120" name="Tại sao bạn chọn TechKids" required="&quot;&quot;" type="text" />
-                                <label for="id_whychooseus">Tại sao bạn chọn TechKids<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <!--
-							<i class="material-icons prefix">account_circle</i> -->
-                                <input class="validate" id="id_events_goer" maxlength="120" name="Bạn đã từng học hay tham gia sự kiện gì của TechKids chưa?" required="&quot;&quot;" type="text" />
-                                <label for="id_events_goer">Bạn đã từng học hay tham gia sự kiện gì của TechKids chưa?</label>
-                            </div>
-                        </div>
-
-                        <!--
-                        <div class="row">
-                            <div class="input-field col s12">
-
-							<i class="material-icons prefix">account_circle</i>
-                                <p for="gender" style="color:#9E9E9E">Giới tính<span id="fieldRequire" style="color:#00a0c6"> (*)</span></p>
-                                <select class="browser-default" id="id_gender" name="gender" required="&quot;&quot;">
-                                    <option value="m" selected="selected">Nam</option>
-                                    <option value="fm">Nữ</option>
-                                </select>
-                            </div>
-                        </div>
--->
-                        <!--
-                        <div class="row">
-                            <div class="input-field col s12">
-
-							<i class="material-icons prefix">account_circle</i>
-                                <p for="occupation" style="color:#9E9E9E" style="color:#00a0c6">Nghề nghiệp <span id="fieldRequire" style="color:#00a0c6"> (*)</span></p>
-                                <select class="browser-default" id="id_occupation" name="occupation" required="&quot;&quot;">
-                                    <option value="dev" selected="selected">Lập trình viên</option>
-                                    <option value="pm">PM</option>
-                                    <option value="std">Sinh viên</option>
-                                    <option value="gg_fan">Google Fan</option>
-                                    <option value="oth">Khác</option>
-                                </select>
-                            </div>
-                        </div>
--->
-
-
-
-                        <!--
-                        <div class="row">
-    <div class="input-field col s12">
-
-        <i class="material-icons prefix">account_circle</i>
-        <input class="validate" id="id_company" maxlength="120" name="company" required="&quot;&quot;" type="text" />
-        <label for="company">Nơi công tác<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
-    </div>
-</div>
--->
-
-                        <!--
-                        <div class="row">
-                            <div class="input-field col s12">
-
-							<i class="material-icons prefix">account_circle</i>
-                                <input class="validate" id="id_yearOfExperiences" maxlength="120" name="yearOfExperiences" required="&quot;&quot;" type="text" />
-                                <label for="yearOfExperiences">Số năm kinh nghiệm<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
-                            </div>
-                        </div>
--->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <!-- <i class="material-icons prefix">account_circle</i> -->
-                                <p for="linkSource" style="color:#9E9E9E" style="color:#00a0c6">Bạn biết TechKids qua những kênh nào?<span id="fieldRequire" style="color:#00a0c6"> (*)</span></p>
+                                <p for="linkSource" style="color:#9E9E9E" style="color:#00a0c6">Người đại diện<span id="fieldRequire" style="color:#00a0c6"> (*)</span></p>
                                 <select name='Bạn biết TechKids qua những kênh nào?' class="browser-default" id="id_occupation" name="linkSource" required="&quot;&quot;">
-                                    <option value="Fanpage của TechKids" selected="selected">Fanpage của TechKids</option>
-                                    <option value="Website của TechKids">Website của TechKids</option>
-                                    <option value="Các fanpage, group, website khác">Các fanpage, group, website khác</option>
-                                    <option value="Sự kiện tuyển sinh của Techkids">Sự kiện tuyển sinh của Techkids</option>
-                                    <option value="Bạn bè, người thân giới thiệu">Bạn bè, người thân giới thiệu</option>
+                                    <option value="Bố" selected="selected">Bố</option>
+                                    <option value="Mẹ">Mẹ</option>
+                                    <option value="Anh/chị">Anh/chị</option>
                                     <option value="Khác">Khác</option>
                                 </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea class="materialize-textarea" cols="80" id="id_question" maxlength="1000" name="Nếu được bạn bè, người thân giới thiệu, ai đã giới thiệu bạn?" rows="10">
+                                <!-- <i class="material-icons prefix">mode_edit</i> -->
+                                <input class="validate" id="id_company" maxlength="120" name="Tên của người đại diện" required="&quot;&quot;" type="text" />
+                                <label for="id_company">Tên của người đại diện<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <!--
+							<i class="material-icons prefix">account_circle</i> -->
+                                <input class="validate" id="id_email" maxlength="120" name="Địa chỉ email" required="&quot;&quot;" type="email" />
+                                <label for="email" data-error="Email phải có '@'">Địa chỉ email<span id="fieldRequire" style="color:#00a0c6"> (**)</span></label>
+                            </div>
+                            <!-- <label>Browser Select</label> -->
+                        </div>
+
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <!-- <i class="material-icons prefix">account_circle</i> -->
+                                <input class="validate" id="id_facebook" maxlength="200" name="Nơi học tập/công tác" required="&quot;&quot;" type="text" />
+                                <label for="Địa chỉ facebook">Nơi học tập/công tác<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea class="materialize-textarea" cols="80" id="id_question" maxlength="1000" name="Câu hỏi dành cho TechKids" rows="10">
                                 </textarea>
-                                <label for="Nếu được bạn bè, người thân giới thiệu, ai đã giới thiệu bạn?">Nếu được bạn bè, người thân giới thiệu, ai đã giới thiệu bạn?</label>
+                                <label for="Câu hỏi dành cho TechKids">Câu hỏi dành cho TechKids</label>
                             </div>
                         </div>
 

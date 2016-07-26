@@ -474,7 +474,7 @@ router_courses.get('/code-for-everyone', function (req, res) {
 router_courses.get('/code-for-everyone/register', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/c4e-register.html');
 });
-router_courses.get('/code-for-everyone/register', function (req, res) {
+router_courses.get('/code-for-everyone/register-successful', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/c4e-register-sucessful.html');
 });
 router_courses.get('/iOS', function (req, res) {
@@ -496,7 +496,7 @@ router_courses.get('/web-fullstack', function (req, res) {
 router_courses.get('/web-fullstack/register', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/web-register.html');
 });
-router_courses.get('/mobile/register', function (req, res) {
+router_courses.get('/web-fullstack/register-successful', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/web-register-sucessful.html');
 });
 router_courses.get('/code-for-kids', function (req, res) {
@@ -505,7 +505,7 @@ router_courses.get('/code-for-kids', function (req, res) {
 router_courses.get('/code-for-kids/register', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/c4k-register.html');
 });
-router_courses.get('/mobile/register', function (req, res) {
+router_courses.get('/code-for-kids/register-successful', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/c4k-register-sucessful.html');
 });
 router_courses.get('/test', function (req, res) {
