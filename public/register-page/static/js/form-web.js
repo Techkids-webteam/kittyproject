@@ -4,13 +4,14 @@ function formSubmit() {
     $('#submit-text').css('display', 'none');
     $('#submit-button').attr('disabled', 'true');
 
-    var url = 'https://script.google.com/macros/s/AKfycbxCsm9rkoVDLfJ1kyb3uElq2lFaGOUkjCfqc61BjfQ/dev';
+    var url = 'https://script.google.com/macros/s/AKfycbxiRvjmrfKHzSTsNVESZ38EOYlW88-B2y35Y31PWONOglDAP0xA/exec';
 
     var jqxhr = $.post(url, $('#register-form').serialize(), function (data) {
         $('#form-loader').css('display', 'none');
         $('#notification').css('display', 'block');
-        $('#notification').html('Cảm ơn bạn đã quan tâm tới các chương trình của TechKids. Chúng tôi sẽ liên hệ với bạn sớm nhất có thể');
-        $('#notification').attr("href", "/mobile/register");
+        setTimeout(function() {
+          window.location.href = "register-successful";
+        }, 2000);
         console.log("Success! Data: " + data.statusText);
     });
 

@@ -480,14 +480,20 @@ router_courses.get('/code-for-everyone/register-successful', function (req, res)
 router_courses.get('/iOS', function (req, res) {
     res.render('courses-2');
 });
+router_courses.get('/iOS/register', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/iOS-register.html');
+});
+router_courses.get('/iOS/register-successful', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/iOS-register-sucessful.html');
+});
 router_courses.get('/android', function (req, res) {
     res.render('courses-3');
 });
-router_courses.get('/mobile/register', function (req, res) {
-    res.sendFile(__dirname + '/public/register-page/register/mobile-register.html');
+router_courses.get('/android/register', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/android-register.html');
 });
-router_courses.get('/mobile/register-successful', function (req, res) {
-    res.sendFile(__dirname + '/public/register-page/register/mobile-register-sucessful.html');
+router_courses.get('/android/register-successful', function (req, res) {
+    res.sendFile(__dirname + '/public/register-page/register/android-register-sucessful.html');
 });
 
 router_courses.get('/web-fullstack', function (req, res) {
