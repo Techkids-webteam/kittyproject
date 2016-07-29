@@ -67,9 +67,9 @@ $(document).ready(function() {
         grecaptcha.reset();
         captcha.style.display = "none";
         button_complete.style.display = "none";
-        $('#thong_bao').empty();
-        $('#thong_bao').append("Đăng kí thành công!");
-        $('#thank').append("Cảm ơn bạn đã quan tâm!");
+        setTimeout(function() {
+          window.location.href = "register-successful";
+        }, 1000);
         console.log("Success! Data: " + data.statusText);
       });
     }
