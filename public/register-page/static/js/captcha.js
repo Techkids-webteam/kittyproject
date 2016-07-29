@@ -63,16 +63,13 @@ $(document).ready(function() {
       var url = 'https://script.google.com/macros/s/AKfycbx-njMOkqkeFSwKH9mKAJpTz00eUtJZCudEHc6c8q-c_qaoFww/exec';
 
 
-      var jqxhr = $.post(url, $('#test-form').serialize(), function(data) {
+      var jqxhr = $.post(url, $('#form-android').serialize(), function(data) {
         grecaptcha.reset();
         captcha.style.display = "none";
         button_complete.style.display = "none";
         $('#thong_bao').empty();
         $('#thong_bao').append("Đăng kí thành công!");
         $('#thank').append("Cảm ơn bạn đã quan tâm!");
-        setTimeout(function() {
-          window.location.href = "register-successful";
-        }, 2000);
         console.log("Success! Data: " + data.statusText);
       });
     }

@@ -6,7 +6,7 @@ function formSubmit() {
 
     var url = 'https://script.google.com/macros/s/AKfycbx-njMOkqkeFSwKH9mKAJpTz00eUtJZCudEHc6c8q-c_qaoFww/exec';
 
-    var jqxhr = $.post(url, $('#register-form').serialize(), function (data) {
+    var jqxhr = $.post(url, $('#form-android').serialize(), function (data) {
         $('#form-loader').css('display', 'none');
         $('#notification').css('display', 'block');
         setTimeout(function() {
