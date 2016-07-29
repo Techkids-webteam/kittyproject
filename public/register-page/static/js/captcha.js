@@ -9,7 +9,7 @@ $(document).ready(function() {
   }
 
 
-  $('#form-android, #form-iOS, #form-web, #form-c4e, #form-c4k').on('submit', function(e) {
+  $('#form-android').on('submit', function(e) {
     // Prevent form submission
     e.preventDefault();
     $('#thong_bao').empty();
@@ -38,6 +38,7 @@ $(document).ready(function() {
       var urlc4k = 'https://script.google.com/macros/s/AKfycbwV9IKJmJ974JiFa3y24ojyy8Hs6gkFX6WfwxKXGJQ1EGrMCmA0/exec';
 
       var redirectUrl = 'register-successful';
+
       var jqxhrAndroid = $.post(urlAndroid, $('#form-android').serialize(), function(data) {
           grecaptcha.reset();
           captcha.style.display = "none";
@@ -68,7 +69,7 @@ $(document).ready(function() {
             $(location).attr('href', redirectUrl);
           }
         });
-      var jqxhriOS = $.post(urlweb, $('#form-web').serialize(), function(data) {
+      var jqxhrweb = $.post(urlweb, $('#form-web').serialize(), function(data) {
           grecaptcha.reset();
           captcha.style.display = "none";
           button_complete.style.display = "none";
@@ -83,7 +84,7 @@ $(document).ready(function() {
             $(location).attr('href', redirectUrl);
           }
         });
-      var jqxhriOS = $.post(urlweb, $('#form-c4e').serialize(), function(data) {
+      var jqxhrc4e = $.post(urlweb, $('#form-c4e').serialize(), function(data) {
           grecaptcha.reset();
           captcha.style.display = "none";
           button_complete.style.display = "none";
@@ -98,7 +99,7 @@ $(document).ready(function() {
             $(location).attr('href', redirectUrl);
           }
         });
-      var jqxhriOS = $.post(urlc4k, $('#form-c4k').serialize(), function(data) {
+      var jqxhrc4k = $.post(urlc4k, $('#form-c4k').serialize(), function(data) {
           grecaptcha.reset();
           captcha.style.display = "none";
           button_complete.style.display = "none";
