@@ -124,18 +124,19 @@
         <img src="/register-page/static/img/big_banner.png" class="responsive-img" alt="Mountain View" style="height: 70%; width:70%;">
       </div>
       <div class="card">
-        <form method="POST" action="#" id="register-form">
+        <form method="POST" action="#" id="form-web">
           <div class="card-content">
             <h5 class="center card-title grey-text text-darken-2">Đăng ký</h5>
             <h3 class="center card-title grey-text text-darken-2">Full-stack Web (FWD)</h3>
-            <!-- <p style="text-align:center"><span id="fieldRequire" style="color:#00a0c6">(*) Phần bắt buộc</span></p> -->
-            <p style="text-align:center"><span id="fieldRequire" style="color:#00a0c6">Chào mừng bạn đã đến với lớp học của Techkids. Bạn vui lòng đăng ký tại đây, Techkids sẽ gửi tài liệu và liên lạc với bạn để tư vấn!</span></p>
+            <!-- <p style="text-align:center"><span id="fieldRequire" style="color:#00a0c6">(*) Phầnndroid bắt buộc</span></p> -->
+            <p style="text-align:center">
+              <span id="fieldRequire" style="color:#00a0c6">Chào mừng bạn đã đến với lớp học của Techkids. Bạn vui lòng đăng ký tại đây nhé, Techkids sẽ gửi tài liệu và liên lạc với bạn để tư vấn!</span></p>
             <h6></h6>
             <div class="row">
               <div class="input-field col s12">
                 <!-- <i class="material-icons prefix">mode_edit</i> -->
                 <input class="validate" id="id_fist_name" maxlength="120" name="Họ và tên" required="&quot;&quot;" type="text" />
-                <label for="id_fist_name">Họ và tên<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
+                <label for="id_fist_name">Họ và tên</label>
               </div>
             </div>
             <div class="row">
@@ -143,7 +144,7 @@
                 <!--
 							<i class="material-icons prefix">account_circle</i> -->
                 <input class="validate" id="id_email" maxlength="120" name="Địa chỉ mail" required="&quot;&quot;" type="email" />
-                <label for="email" data-error="Email phải có '@'">Địa chỉ mail<span id="fieldRequire" style="color:#00a0c6"> (**)</span></label>
+                <label for="email" data-error="Email phải có '@'">Địa chỉ mail</label>
               </div>
               <!-- <label>Browser Select</label> -->
             </div>
@@ -158,14 +159,14 @@
               <div class="input-field col s12">
                 <!-- <i class="material-icons prefix">mode_edit</i> -->
                 <input class="validate" id="id_birthday" maxlength="120" name="Ngày tháng năm sinh" required="&quot;&quot;" type="text" />
-                <label for="id_birthday">Ngày tháng năm sinh<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
+                <label for="id_birthday">Ngày tháng năm sinh</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <!-- <i class="material-icons prefix">account_circle</i> -->
                 <input class="validate" id="id_facebook" maxlength="200" name="Địa chỉ Facebook" required="&quot;&quot;" type="text" />
-                <label for="Địa chỉ facebook">Địa chỉ Facebook<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
+                <label for="Địa chỉ facebook">Địa chỉ Facebook</label>
               </div>
 
             </div>
@@ -174,34 +175,36 @@
               <div class="input-field col s12">
                 <!-- <i class="material-icons prefix">mode_edit</i> -->
                 <input class="validate" id="id_company" maxlength="120" name="Nơi học tập hoặc công tác" required="&quot;&quot;" type="text" />
-                <label for="id_company">Nơi học tập hoặc công tác<span id="fieldRequire" style="color:#00a0c6"> (*)</span></label>
+                <label for="id_company">Nơi học tập hoặc công tác</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <!-- <i class="material-icons prefix">mode_edit</i> -->
+                <input class="validate" id="id_company" maxlength="120" name="Nơi học tập hoặc công tác" required="&quot;&quot;" type="text" />
+                <label for="id_company"></label>
               </div>
             </div>
           </div>
 
           <div class="card-action">
             <div class="center-align">
-
-              <button class="btn btn_button_orange" type="submit" id="submit-button"><span id="submit-text">Đăng ký ngay</span></button>
-              <h4 id="notification" class="notification"></h4>
-              <div id="form-loader" class="uil-rolling-css">
-                <div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
+              <button class="btn btn_button_orange" id="submit-button">
+                <h4 id="submit-text">Đăng ký ngay</h4></button>
             </div>
           </div>
         </form>
       </div>
     </div>
   </div>
-
-  <script type="text/javascript">
-  </script>
-
-
-
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <p class="modal-title opensans" id="thong_bao"></p>
+      <div class="g-recaptcha" data-sitekey="6LfWQyYTAAAAANnAOhP9dZoXUe8UMT2qxMCH1rn4" id="rcaptcha"></div>
+      <button id="compelete" class="btn" style="margin: 0 auto;">Hoàn thành</button>
+    </div>
+  </div>
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -216,7 +219,10 @@
             </a>
           </p>
           <div data-href="https://www.facebook.com/Techkids.Code.the.Change/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false" class="fb-page fb_iframe_widget" fb-xfbml-state="rendered"
-              fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=&amp;container_width=263&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FTechkids.Code.the.Change%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=true"><span style="vertical-align: bottom; width: 263px; height: 154px;"><iframe name="f2b3d462608d4a4" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:page Facebook Social Plugin" src="https://www.facebook.com/v2.6/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fbz-D0tzmBsw.js%3Fversion%3D42%23cb%3Df12830f7a4046e%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A8080%252Ff1a7fc5eb83188%26relation%3Dparent.parent&amp;container_width=263&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FTechkids.Code.the.Change%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=true" style="border: none; visibility: visible; width: 263px; height: 154px;" class=""></iframe></span></div>
+              fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=&amp;container_width=263&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FTechkids.Code.the.Change%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=true"><span style="vertical-align: bottom; width: 263px; height: 154px;"><iframe name="f2b3d462608d4a4" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:page Facebook Social Plugin" src="https://www.facebook.com/v2.6/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fbz-D0tzmBsw.js%3Fversion%3D42%23cb%3Df12830f7a4046e%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A8080%252Ff1a7fc5eb83188%26relation%3Dparent.parent&amp;container_width=263&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FTechkids.Code.the.Change%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=true" style="border: none; visibility: visible; width: 263px; height: 154px;">
+              </iframe>
+            </span>
+          </div>
           <p></p>
         </div>
         <div class="col-sm-3">
@@ -252,7 +258,9 @@
   <script src="/register-page/js/jquery-2.1.1.min.js"></script>
   <script src="/register-page/static/js/materialize.js"></script>
   <script src="/register-page/static/js/init.js"></script>
-  <script src="/register-page/static/js/form-web.js"></script>
+  <!-- <script src="/register-page/static/js/form-android.js"></script> -->
+  <script src='/register-page/static/js/captcha.js'></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <script type="text/javascript">
     $('.datepicker').pickadate({
       selectMonths: true, // Creates a dropdown to control month
@@ -266,14 +274,6 @@
     });
   </script>
 
-
-  <!-- Loading-->
-  <script type="text/javascript">
-    window.addEventListener("load", function() {
-      var load_screen = document.getElementById("load_screen");
-      document.body.removeChild(load_screen);
-    })
-  </script>
 
 </body>
 

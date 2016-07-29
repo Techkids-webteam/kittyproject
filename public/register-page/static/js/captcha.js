@@ -9,7 +9,7 @@ $(document).ready(function() {
   }
 
 
-  $('#form-android').on('submit', function(e) {
+  $('#form-android, #form-iOS, #form-web, #form-c4e, #form-c4k').on('submit', function(e) {
     // Prevent form submission
     e.preventDefault();
     $('#thong_bao').empty();
@@ -18,41 +18,6 @@ $(document).ready(function() {
     modal.style.display = "block";
     captcha.style.display = "block";
     button_complete.style.display = "block";
-
-
-
-    // // Get the form instance
-    //      var $form = $(e.target);
-
-    //      // // Get the BootstrapValidator instance
-    //      var bv = $form.data($('#test-form'));
-
-    //      // Use Ajax to submit form data
-    //      var url = 'https://script.google.com/macros/s/AKfycbyZM_IQkLdiN_h-VRNYJjOADFr77c4Ekw3GAc-xLIRguaQ2iw/exec';
-    //      var redirectUrl = 'success-page.html';
-    //      // show the loading
-    //      $('#postForm').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
-
-    //      var jqxhr = $.post(url, $form.serialize(), function(data) {
-    //          console.log("Success! Data: " + data.statusText);
-    // modal.style.display = "block";
-    //      });
-    //     }
-
-    //     var jqxhr = $.post(url, $form.serialize(), function(data) {
-    //             console.log("Success! Data: " + data.statusText);
-    //             $(location).attr('href',redirectUrl);
-    //         })
-    //             .fail(function(data) {
-    //                 console.warn("Error! Data: " + data.statusText);
-    //                 // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
-    //                 if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-    //                     //alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
-    //                     $(location).attr('href',redirectUrl);
-    //                 }
-    //             });
-    // });
-
   });
 
   $('#compelete').on('click', function(a) {
@@ -66,9 +31,74 @@ $(document).ready(function() {
       console.log("yes");
       //var $form = $(e.target);
       //var bv = $form.data($('#test-form'));
-      var url = 'https://script.google.com/macros/s/AKfycbx-njMOkqkeFSwKH9mKAJpTz00eUtJZCudEHc6c8q-c_qaoFww/exec';
+      var urlAndroid = 'https://script.google.com/macros/s/AKfycbx-njMOkqkeFSwKH9mKAJpTz00eUtJZCudEHc6c8q-c_qaoFww/exec';
+      var urliOS = 'https://script.google.com/macros/s/AKfycbzj38SJcgaAL6bMj3tPyiYkCWO-SLVvlEeTljwDv118wcUp7V0/exec';
+      var urlweb = 'https://script.google.com/macros/s/AKfycbxiRvjmrfKHzSTsNVESZ38EOYlW88-B2y35Y31PWONOglDAP0xA/exec';
+      var urlc4e = 'https://script.google.com/macros/s/AKfycbzE7dj5m-fcCL0vYzbecpxcoYbguvyyOvAx_MslIo8VuqdsA3I/exec';
+      var urlc4k = 'https://script.google.com/macros/s/AKfycbwV9IKJmJ974JiFa3y24ojyy8Hs6gkFX6WfwxKXGJQ1EGrMCmA0/exec';
+
       var redirectUrl = 'register-successful';
-      var jqxhr = $.post(url, $('#form-android').serialize(), function(data) {
+      var jqxhrAndroid = $.post(urlAndroid, $('#form-android').serialize(), function(data) {
+          grecaptcha.reset();
+          captcha.style.display = "none";
+          button_complete.style.display = "none";
+          console.log("Success! Data: " + data.statusText);
+          $(location).attr('href', redirectUrl);
+        })
+        .fail(function(data) {
+          console.warn("Error! Data: " + data.statusText);
+          // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
+          if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+            //alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
+            $(location).attr('href', redirectUrl);
+          }
+        });
+      var jqxhriOS = $.post(urliOS, $('#form-iOS').serialize(), function(data) {
+          grecaptcha.reset();
+          captcha.style.display = "none";
+          button_complete.style.display = "none";
+          console.log("Success! Data: " + data.statusText);
+          $(location).attr('href', redirectUrl);
+        })
+        .fail(function(data) {
+          console.warn("Error! Data: " + data.statusText);
+          // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
+          if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+            //alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
+            $(location).attr('href', redirectUrl);
+          }
+        });
+      var jqxhriOS = $.post(urlweb, $('#form-web').serialize(), function(data) {
+          grecaptcha.reset();
+          captcha.style.display = "none";
+          button_complete.style.display = "none";
+          console.log("Success! Data: " + data.statusText);
+          $(location).attr('href', redirectUrl);
+        })
+        .fail(function(data) {
+          console.warn("Error! Data: " + data.statusText);
+          // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
+          if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+            //alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
+            $(location).attr('href', redirectUrl);
+          }
+        });
+      var jqxhriOS = $.post(urlweb, $('#form-c4e').serialize(), function(data) {
+          grecaptcha.reset();
+          captcha.style.display = "none";
+          button_complete.style.display = "none";
+          console.log("Success! Data: " + data.statusText);
+          $(location).attr('href', redirectUrl);
+        })
+        .fail(function(data) {
+          console.warn("Error! Data: " + data.statusText);
+          // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
+          if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+            //alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
+            $(location).attr('href', redirectUrl);
+          }
+        });
+      var jqxhriOS = $.post(urlc4k, $('#form-c4k').serialize(), function(data) {
           grecaptcha.reset();
           captcha.style.display = "none";
           button_complete.style.display = "none";
