@@ -10,14 +10,6 @@ $(document).ready(function() {
 
 
   $('#form-android').on('submit', function(e) {
-    // 	var v = grecaptcha.getResponse();
-    // 	console.log(v);
-    // if(v.length == 0)
-    // {
-    // 		alert("You can't leave Captcha Code empty")
-    // }
-    // if(v.length != 0)
-    // {
     // Prevent form submission
     e.preventDefault();
     $('#thong_bao').empty();
@@ -47,6 +39,20 @@ $(document).ready(function() {
     //      });
     //     }
 
+    //     var jqxhr = $.post(url, $form.serialize(), function(data) {
+    //             console.log("Success! Data: " + data.statusText);
+    //             $(location).attr('href',redirectUrl);
+    //         })
+    //             .fail(function(data) {
+    //                 console.warn("Error! Data: " + data.statusText);
+    //                 // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
+    //                 if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+    //                     //alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
+    //                     $(location).attr('href',redirectUrl);
+    //                 }
+    //             });
+    // });
+
   });
 
   $('#compelete').on('click', function(a) {
@@ -61,17 +67,22 @@ $(document).ready(function() {
       //var $form = $(e.target);
       //var bv = $form.data($('#test-form'));
       var url = 'https://script.google.com/macros/s/AKfycbx-njMOkqkeFSwKH9mKAJpTz00eUtJZCudEHc6c8q-c_qaoFww/exec';
-
-
+      var redirectUrl = 'android-register-sucessful.html';
       var jqxhr = $.post(url, $('#form-android').serialize(), function(data) {
-        grecaptcha.reset();
-        captcha.style.display = "none";
-        button_complete.style.display = "none";
-        setTimeout(function() {
-          window.location.href = "register-successful";
-        }, 1000);
-        console.log("Success! Data: " + data.statusText);
-      });
+          grecaptcha.reset();
+          captcha.style.display = "none";
+          button_complete.style.display = "none";
+          console.log("Success! Data: " + data.statusText);
+          $(location).attr('href', redirectUrl);
+        })
+        .fail(function(data) {
+          console.warn("Error! Data: " + data.statusText);
+          // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
+          if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+            //alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
+            $(location).attr('href', redirectUrl);
+          }
+        });
     }
 
   });
