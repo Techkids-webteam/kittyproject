@@ -67,7 +67,7 @@ $(document).ready(function() {
       //var $form = $(e.target);
       //var bv = $form.data($('#test-form'));
       var url = 'https://script.google.com/macros/s/AKfycbx-njMOkqkeFSwKH9mKAJpTz00eUtJZCudEHc6c8q-c_qaoFww/exec';
-      var redirectUrl = 'android-register-sucessful.html';
+      var redirectUrl = 'register-successful';
       var jqxhr = $.post(url, $('#form-android').serialize(), function(data) {
           grecaptcha.reset();
           captcha.style.display = "none";
