@@ -9,7 +9,7 @@ $(document).ready(function() {
   }
 
 
-  $('#form-iOS').on('submit', function(e) {
+  $('#form-c4k').on('submit', function(e) {
     // Prevent form submission
     e.preventDefault();
     $('#thong_bao').empty();
@@ -31,15 +31,11 @@ $(document).ready(function() {
       console.log("yes");
       //var $form = $(e.target);
       //var bv = $form.data($('#test-form'));
-      var url = 'https://script.google.com/macros/s/AKfycbzj38SJcgaAL6bMj3tPyiYkCWO-SLVvlEeTljwDv118wcUp7V0/exec';
-      // var urliOS = 'https://script.google.com/macros/s/AKfycbzj38SJcgaAL6bMj3tPyiYkCWO-SLVvlEeTljwDv118wcUp7V0/exec';
-      // var urlweb = 'https://script.google.com/macros/s/AKfycbxiRvjmrfKHzSTsNVESZ38EOYlW88-B2y35Y31PWONOglDAP0xA/exec';
-      // var urlc4e = 'https://script.google.com/macros/s/AKfycbzE7dj5m-fcCL0vYzbecpxcoYbguvyyOvAx_MslIo8VuqdsA3I/exec';
-      // var urlc4k = 'https://script.google.com/macros/s/AKfycbwV9IKJmJ974JiFa3y24ojyy8Hs6gkFX6WfwxKXGJQ1EGrMCmA0/exec';
+      var url = 'https://script.google.com/macros/s/AKfycbwV9IKJmJ974JiFa3y24ojyy8Hs6gkFX6WfwxKXGJQ1EGrMCmA0/exec';
 
       var redirectUrl = 'register-successful';
 
-      var jqxhr = $.post(url, $('#form-iOS').serialize(), function(data) {
+      var jqxhr = $.post(url, $('#form-c4k').serialize(), function(data) {
           grecaptcha.reset();
           captcha.style.display = "none";
           button_complete.style.display = "none";
