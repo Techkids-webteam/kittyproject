@@ -31,7 +31,7 @@ $(document).ready(function() {
       console.log("yes");
       //var $form = $(e.target);
       //var bv = $form.data($('#test-form'));
-      var url = 'https://script.google.com/macros/s/AKfycbzj38SJcgaAL6bMj3tPyiYkCWO-SLVvlEeTljwDv118wcUp7V0/exec';
+      var url = 'https://script.google.com/macros/s/AKfycbwMT1s1fFWQXj-LyQAXKlYu2ezPUUINzp8K0-rbtr2I9bm948s/exec';
       // var urliOS = 'https://script.google.com/macros/s/AKfycbzj38SJcgaAL6bMj3tPyiYkCWO-SLVvlEeTljwDv118wcUp7V0/exec';
       // var urlweb = 'https://script.google.com/macros/s/AKfycbxiRvjmrfKHzSTsNVESZ38EOYlW88-B2y35Y31PWONOglDAP0xA/exec';
       // var urlc4e = 'https://script.google.com/macros/s/AKfycbzE7dj5m-fcCL0vYzbecpxcoYbguvyyOvAx_MslIo8VuqdsA3I/exec';

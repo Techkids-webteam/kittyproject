@@ -7,8 +7,6 @@ $(document).ready(function() {
       modal.style.display = "none";
     }
   }
-
-
   $('#form-android').on('submit', function(e) {
     // Prevent form submission
     e.preventDefault();
@@ -31,7 +29,7 @@ $(document).ready(function() {
       console.log("yes");
       //var $form = $(e.target);
       //var bv = $form.data($('#test-form'));
-      var url = 'https://script.google.com/macros/s/AKfycbx-njMOkqkeFSwKH9mKAJpTz00eUtJZCudEHc6c8q-c_qaoFww/exec';
+      var url = 'https://script.google.com/macros/s/AKfycbwohkk9JwVKmQQVAR0XIyP7nFS4GqWQS1j-pdkYIjTyjpOeV5KC/exec';
       var redirectUrl = 'register-successful';
 
       var jqxhr = $.post(url, $('#form-android').serialize(), function(data) {

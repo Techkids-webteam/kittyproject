@@ -31,7 +31,7 @@ $(document).ready(function() {
       console.log("yes");
       //var $form = $(e.target);
       //var bv = $form.data($('#test-form'));
-      var url = 'https://script.google.com/macros/s/AKfycbwV9IKJmJ974JiFa3y24ojyy8Hs6gkFX6WfwxKXGJQ1EGrMCmA0/exec';
+      var url = 'https://script.google.com/macros/s/AKfycbwgsi-oooArJV4ouR6Tt_JeEdWVu5gwjV---8xMFBpl9cezNgI/exec';
 
       var redirectUrl = 'register-successful';
 
