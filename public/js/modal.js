@@ -5,7 +5,7 @@ $(document).ready(function() {
             modal.style.display = "none";
         }
     }
-    $('#submit-button').on('click', function(e) {
+    $('#submit-button-modal').on('click', function(e) {
         modal.style.display = "block";
     });
 });
