@@ -1,7 +1,7 @@
 function formSubmit() {
     $('#submit-button').css('display', 'none');
-    $('#form-loader').css('display', 'block');
     $('#submit-text').css('display', 'none');
+    $('#form-loader').css('display', 'block');
     $('#submit-button').attr('disabled', 'true');
 
     var url = 'https://script.google.com/macros/s/AKfycbz_NBX2gVuFy0cxpWF2nzWvajxExNGn9AkKlhLkujBNQ3DpEQ/exec';
