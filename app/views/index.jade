@@ -288,29 +288,43 @@ block content
     section#join_us.join_us.stars.join_us_5
       .container.fade_up
         .row1.text-center
-          h3.section_title.col-sm-5.col-xs-9 KẾT NỐI CÙNG TECHKIDS
-        .row.text-center
-          h2.section_content_title BẠN MUỐN HỎI GÌ TECHKIDS
-        .row.text-center
-          h4 TechKids sẽ trò chuyện ngay với bạn!
+          h3.section_title.col-sm-5.col-xs-9 ĐĂNG KÍ NHẬN CHƯƠNG TRÌNH HỌC
         p(style='color:white')
         .container.container-form
                 .form-wrapper
                   form#register-form.form-group
-                    .form-info
-                      input(type='text', name='name', placeholder='Họ và tên', required='')
-                      input(type='text', name='tel', placeholder='Số điện thoại', required='')
-                      input(type='email', name='email', placeholder='Email', required='')
-                      input(type='text', name='facebook', placeholder='Link Facebook', required='')
-                    select(name='job', required='')
-                      option(value='-1', disabled='', selected='', hidden='') Bạn là...?
-                      option(value='Học sinh') Học sinh
-                      option(value='Sinh viên') Sinh viên
-                      option(value='Người đi làm') Người đi làm
-                      option(value='Lập trình viên') Lập trình viên
-                    textarea#position(name='question', placeholder='Câu hỏi của bạn là gì...?', required='')
+                    .row.form-info
+                     .col-xs-6.col-sm-4
+                      input(type='text', name='Name', placeholder='Họ và tên', required='')
+                     .col-xs-6.col-sm-4
+                      input(type='text', name='Tel', placeholder='Số điện thoại', required='')
+                     .clearfix.visible-xs-block
+                     .col-xs-6.col-sm-4
+                      input(type='email', name='Email', placeholder='Email', required='')
+                    .course-register
+                      .course-info
+                          p Bạn muốn đăng kí nhận chương trình học nào?
+                          .row
+                              .col-xs-6.col-sm-4
+                                input#iOS(type='checkbox', name='iOS', value='x')
+                                label(for='iOS') iOS
+                              .col-xs-6.col-sm-4
+                                input#Android(type='checkbox', name='Android', value='x')
+                                label(for='Android') Android
+                              // Optional: clear the XS cols if their content doesn't match in height
+                              .clearfix.visible-xs-block
+                              .col-xs-6.col-sm-4
+                                input#web(type='checkbox', name='Full-stack Web', value='x')
+                                label(for='web') Full-stack Web
+                          input#c4k(type='checkbox', name='Code for Kids', value='x')
+                          label(for='c4k') Code for Kids (C4K)  
+                          input#c4e(type='checkbox', name='Code for Everyone', value='x')
+                          label(for='c4e') Code for Everyone (C4E)
+                    .row
+                        input#sure(type='checkbox', name='Nhận tư vấn khóa học', value='Có')
+                        label(for='sure') Bạn có muốn nhận tư vấn về các khóa học không?
                     button#submit-button.btn.btn-form(type='submit')
-                      font(size='4').span#submit-text NHẬN TƯ VẤN
+                      font(size='2.5').span#submit-text NHẬN CHƯƠNG TRÌNH HỌC
                     h4#notification.notification
                     #form-loader.uil-rolling-css
                       div

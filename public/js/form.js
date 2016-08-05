@@ -4,7 +4,7 @@ function formSubmit() {
     $('#submit-text').css('display', 'none');
     $('#submit-button').attr('disabled', 'true');
 
-    var url = 'https: //script.google.com/macros/s/AKfycbz_NBX2gVuFy0cxpWF2nzWvajxExNGn9AkKlhLkujBNQ3DpEQ/exec';
+    var url = 'https://script.google.com/macros/s/AKfycbz_NBX2gVuFy0cxpWF2nzWvajxExNGn9AkKlhLkujBNQ3DpEQ/exec';
 
     var jqxhr = $.post(url, $('#register-form').serialize(), function (data) {
         $('#form-loader').css('display', 'none');
