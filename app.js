@@ -45,6 +45,12 @@ var app = express();
 // var viewPath ='/views'
 // app.set('views', viewPath);
 // the template engine to use.
+app.use(function(req, res, next) {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+	next();
+});
 app.set('view engine', 'jade');
 app.engine('jade', require('jade').__express);
 //upload folder
