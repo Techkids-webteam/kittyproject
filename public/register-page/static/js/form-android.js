@@ -66,7 +66,7 @@ $(document).ready(function() {
   }
 
 
-  $('#test-form').on('submit', function(e) {
+  $('#form-android').on('submit', function(e) {
     // 	var v = grecaptcha.getResponse();
     // 	console.log(v);
     // if(v.length == 0)
@@ -79,7 +79,6 @@ $(document).ready(function() {
     e.preventDefault();
     $('#thong_bao').empty();
     $('#thong_bao').append("Oops! ReCaptcha!");
-    $('#thank').empty();
     modal.style.display = "block";
     captcha.style.display = "block";
     button_complete.style.display = "block";
