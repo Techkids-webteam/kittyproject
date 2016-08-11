@@ -9,7 +9,7 @@ function formSubmit() {
     var jqxhr = $.post(url, $('#register-form').serialize(), function (data) {
         $('#form-loader').css('display', 'none');
         $('#notification').css('display', 'block');
-        $('#notification').html('Cảm ơn bạn đã quan tâm tới các chương trình của TechKids. Chúng tôi sẽ liên hệ với bạn sớm nhất có thể');
+        $('#notification').html('Cảm ơn bạn đã quan tâm tới các chương trình của TechKids. <br/> Chúng tôi sẽ liên hệ với bạn sớm nhất có thể');
         console.log("Success! Data: " + data.statusText);
     });
 
