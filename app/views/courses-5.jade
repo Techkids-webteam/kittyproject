@@ -182,51 +182,52 @@ block content
       button.button-close
         i#button-close.fa.fa-times
     #myModal.modal
-        .modal-content
-            section#join_us.join_us.stars.join_us_5
-                .row1.text-center
-                  h3.section_title.col-sm-5.col-xs-9 ĐĂNG KÍ NHẬN CHƯƠNG TRÌNH HỌC
-                p(style='color:white')
-                .container.container-form
-                        .form-wrapper
-                          form#register-form.form-group
-                            .row.form-info
-                             .col-xs-6.col-sm-4
-                              input(type='text', name='Name', placeholder='Họ và tên', required='')
-                             .col-xs-6.col-sm-4
-                              input(type='text', name='Tel', placeholder='Số điện thoại', required='')
-                             .clearfix.visible-xs-block
-                             .col-xs-6.col-sm-4
-                              input(type='email', name='Email', placeholder='Email', required='')
-                            .course-register
-                              .course-info
-                                  p Bạn muốn đăng kí nhận chương trình học nào?
-                                  .row
-                                      .col-xs-6.col-sm-4
-                                        input#iOS(type='checkbox', name='iOS', value='x')
-                                        label(for='iOS') iOS
-                                      .col-xs-6.col-sm-4
-                                        input#Android(type='checkbox', name='Android', value='x')
-                                        label(for='Android') Android
-                                      // Optional: clear the XS cols if their content doesn't match in height
-                                      .clearfix.visible-xs-block
-                                      .col-xs-6.col-sm-4
-                                        input#web(type='checkbox', name='Full-stack Web', value='x')
-                                        label(for='web') Full-stack Web
-                                  input#c4k(type='checkbox', name='Code for Kids', value='x')
-                                  label(for='c4k') Code for Kids (C4K)  
-                                  input#c4e(type='checkbox', name='Code for Everyone', value='x')
-                                  label(for='c4e') Code for Everyone (C4E)
-                            .row
-                                input#sure(type='checkbox', name='Nhận tư vấn khóa học', value='Có')
-                                label(for='sure') Bạn có muốn nhận tư vấn về các khóa học không?
-                            button#submit-button.btn.btn-form(type='submit')
-                              font(size='2.5').span#submit-text NHẬN CHƯƠNG TRÌNH HỌC
-                            h4#notification.notification
-                            #form-loader.uil-rolling-css
-                              div
-                                div
-                                div
+        .modal-content-course
+            button.button-close 
+              i#close-btn.fa.fa-times
+            .row1.text-center
+              h3.section_title.col-sm-5.col-xs-9 ĐĂNG KÍ NHẬN CHƯƠNG TRÌNH HỌC
+            form#register-form.container.container-form-advice
+              .centering-block
+                .row.form-info
+                 .col-xs-6.col-sm-4
+                  input(type='text', name='Name', placeholder='Họ và tên', required='')
+                 .col-xs-6.col-sm-4
+                  input(type='text', name='Tel', placeholder='Số điện thoại', required='')
+                 .clearfix.visible-xs-block
+                 .col-xs-6.col-sm-4
+                  input(type='email', name='Email', placeholder='Email', required='') 
+                .form-group
+                  p Bạn muốn đăng kí nhận chương trình học nào?
+                  .row
+                    .col-xs-6.col-sm-4
+                      input#iOS(type='checkbox', name='iOS', value='x')
+                      label(for='iOS') iOS
+                    .col-xs-6.col-sm-4
+                      input#Android(type='checkbox', name='Android', value='x')
+                      label(for='Android') Android
+                    // Optional: clear the XS cols if their content doesn't match in height
+                    .clearfix.visible-xs-block
+                    .col-xs-6.col-sm-4
+                      input#web(type='checkbox', name='Full-stack Web', value='x')
+                      label(for='web') Full-stack Web  
+                    .col-xs-6
+                      input#c4k(type='checkbox', name='Code for Kids', value='x')
+                      label(for='c4k') Code for Kids (C4K)  
+                    .col-xs-6
+                      input#c4e(type='checkbox', name='Code for Everyone', value='x')
+                      label(for='c4e') Code for Everyone (C4E)  
+                .text-center#advice
+                  input#sure(type='checkbox', name='Nhận tư vấn khóa học', value='Có')
+                  label(for='sure') Bạn có muốn nhận tư vấn về các khóa học không?    
+                button#submit-button.btn.btn-form(type='submit')
+                  font(size='2.5').span#submit-text NHẬN CHƯƠNG TRÌNH HỌC  
+                h4#notification.notification
+                #form-loader.uil-rolling-css
+                  div
+                    div
+                    div
+
     
             //- section
             //-   .item.syllabus  
