@@ -1020,6 +1020,7 @@ label:hover:before {
 	justify-content:center;
 	align-items:center;
 	width: 100%;
+  height: 85%;
 }
 .centering-block{
 	position: relative;
@@ -1048,7 +1049,8 @@ div.centering-block #advice{
   border-radius: 15px;
 }
 div.centering-block button {
-	margin-top: 0px;
+	margin-top: 15px;
+	height: 50px;
 	padding: 5px 15px;
   position: relative;
   top: 50%;
@@ -1057,8 +1059,11 @@ div.centering-block button {
   transform: translate(-50%, -50%);
 }
 .modal .button-close{
-	background-color:#f47930;
+	background-color: #696969;
+	font-size: 17px;
 	outline: 0 none;
+	height: 30px;
+	width: 30px;
 }
 .centering-block .form-info{
     margin: 0 25px;

@@ -8,13 +8,11 @@ $(document).ready(function() {
     }
   }
 
-
   $('#form-c4e').on('submit', function(e) {
     // Prevent form submission
     e.preventDefault();
     $('#thong_bao').empty();
     $('#thong_bao').append("Oops! ReCaptcha!");
-    $('#thank').empty();
     modal.style.display = "block";
     captcha.style.display = "block";
     button_complete.style.display = "block";
@@ -39,6 +37,7 @@ $(document).ready(function() {
           grecaptcha.reset();
           captcha.style.display = "none";
           button_complete.style.display = "none";
+          $('#compelete').attr('disabled', 'true');
           console.log("Success! Data: " + data.statusText);
           $('#myModal').empty();
           $(location).attr('href', redirectUrl);

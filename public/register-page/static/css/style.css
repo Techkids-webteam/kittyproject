@@ -183,8 +183,9 @@ li.dropdown .dropdown-menu li a:hover{
   margin: 0 auto;
   width: 304px;
 }
-@media only screen and (max-width: 992px) {}
-@media only screen and (max-width: 600px) {}
+input[type=email].invalid{
+  margin-bottom: 25px;
+}
 section.stars {
   color: #fff;
   background-size: cover;

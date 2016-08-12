@@ -3823,8 +3823,7 @@ footer.page-footer .footer-copyright {
 .card .card-action {
     position: relative;
     background-color: inherit;
-    border-top: 1px solid rgba(160, 160, 160, 0.2);
-    padding: 20px;
+    padding: 0px;
     z-index: 2;
 }
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
