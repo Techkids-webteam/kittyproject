@@ -104,7 +104,7 @@ function compare(a, b) {
 }
 
 app.get('/games/tanks', function (req, res) {
-    res.sendFile(__dirname + '/games/tanks/index.html');
+    res.sendFile(__dirname + '/public/games/tanks/index.html');
 });
 
 io.on('connection', function (socket) {
@@ -188,7 +188,6 @@ io.on('connection', function (socket) {
 
 //end server game tanks
 
-
 // Handle request
 app.get('/test', function (req, res) {
 
@@ -268,6 +267,11 @@ app.post('/create-post', multipartMiddleware, function (req, res) {
 
 
 //----------------------------route ------------------------------------------//
+
+app.get('/games/codenames', function (req, res) {
+    res.sendFile(__dirname + '/public/games/codenames/codenames.html');
+});
+
 app.get('/summer-code-camp', function (req, res) {
     res.sendFile(__dirname + '/public/Summer Camp/index.html');
 });
