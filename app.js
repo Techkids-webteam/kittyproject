@@ -529,6 +529,9 @@ router_courses.get('/code-for-kids/register', function (req, res) {
 router_courses.get('/code-for-kids/register-successful', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/c4k-register-sucessful.html');
 });
+router_courses.get('/Free-Code-Intensive', function (req, res) {
+    res.render('courses-code-intensive');
+});
 router_courses.get('/test', function (req, res) {
     res.render('test');
 });
