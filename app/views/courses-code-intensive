@@ -1,0 +1,293 @@
+extends layout
+append scripts
+  script.
+    (function(h,e,a,t,m,p) {
+    m=e.createElement(a);m.async=!0;m.src=t;
+    p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+    })(window,document,'script','https://u.heatmap.it/log.js');
+block content
+    section#page_title.page_title.stars
+      .container
+        .row.fade_up.text-center
+          h3.section_title.col-sm-5.col-xs-9 Thông tin
+          p.section_subtitle FREE CODE INTENSIVE
+    section
+      .container
+        hr.content_divider
+        article.row
+        
+          aside.course_summary.fly_right_md.col-md-4
+            .item
+              h3.column_title Khóa học tiếp theo
+              p
+                i.fa.fa-calendar
+                em  Lịch khai giảng:
+                span.pull-right 05/08/2016
+              hr.sub_divider
+              p
+                i.fa.fa-clock-o
+                em  Thời gian học:
+                div Thứ 2, 6
+              hr.sub_divider
+              p
+                i.fa.fa-level-up
+                em  Thời lượng học:
+                div 6 tuần, 115 giờ
+              hr.sub_divider
+              p.price_tag(style="text-align:center; font-size:30px")
+                | Miễn phí
+                sup đ
+              a.btn.btn-danger.btn-block(href='https://docs.google.com/forms/d/e/1FAIpQLSf036nYMvNBqHQ54jzKxlaUP0TtBQWT-UV3EtPEChGHuvoL_w/viewform') Đăng ký tại đây
+              hr
+          .col-md-8.fly_right_md
+            img.title_image(2015='', src='cms/img/c4e.jpg')
+            .vc_col-sm-8
+                  .item            
+                    h3.section_title.col-sm-5.col-xs-9 Thông tin khóa học
+                    p
+                      span
+                        em
+                          | Muốn làm dev mà không tự học được thì vứt! Có mentor giúp đỡ rồi mà cũng không học được nữa thì không nên làm dev.
+                    p
+                      span
+                        em
+                          | Tháng 9 này, TechKids gửi đến cộng đồng 1 khóa học miễn phí với mô hình Hybrid learning kết hợp học Online (video + live stream + excercises) và Offline (Hackathon + Demo day) để thúc đẩy việc tự giác học tập của các bạn IT. Đừng lười biếng, đừng chây ỳ.      
+                          hr
+                  .item
+                    h3
+                      span
+                        | 1. ĐIỀU KIỆN THAM GIA
+                    p
+                      span
+                        | - Biết những kiến thức cơ bản về Android Activity, kết nối giữa xml và Java
+                    p
+                      span
+                        | - Hoặc Kiến thức cơ bản về iOS(Swift) connect view và code
+                    p
+                      span
+                        | - Lập trình hướng đối tượng cơ bản
+                    p
+                      span
+                        | - Đã tiếp xúc với cách xử lí callback của Javascript
+                    p TechKids sẽ không kiểm tra, nhưng để thấy khóa học này hữu ích, các bạn cần có những điều kiện này bằng cách tự chuẩn bị trước khi bắt đầu khóa học (05/09) để theo được.
+                    p
+                      span
+                        | - Là 1 trong 100 người đầu tiên đăng ký và làm theo yêu cầu sau
+                    hr
+                  .item  
+                    h3
+                      span
+                        | 2. YÊU CẦU ĐĂNG KÝ
+                    p
+                      span
+                        | - Chia sẻ sự kiện này (chế độ public) trên timeline facebook của mình và tag thêm 2 người bạn mà bạn muốn rủ tham gia cùng.
+                    p
+                      span
+                        | - Đăng ký tại trang web này
+                    hr
+                  .item
+                    h3
+                      | 3. THỜI GIAN HỌC, LỘ TRÌNH HỌC, ĐIỀU KIỆN HOÀN THÀNH KHÓA HỌC
+                    p
+                      span Đọc kỹ 
+                        a(href='http://bit.ly/Free_Online_CI_Info')
+                          span TẠI ĐÂY.
+                    hr
+                  .item
+                    h3(dir='ltr')
+                      span 4. BẠN SẼ CÓ GÌ SAU KHI HỌC XONG
+                    p 
+                      | >> Xây dựng được 1 dự án hoàn chỉnh bằng việc: 
+                      hr
+                      | - Hiểu cách làm việc theo cơ chế client - server - client
+                      hr
+                      | - Hiểu cơ bản về làm việc “thời gian thực” real time
+                      hr
+                      | - 1 trong những cách code theo mô hình MVP trong Android
+                      hr
+                      | - Hiểu qua về NoSQL và MongoDB
+                      hr
+                      | - Xây dựng server chat sử dụng NodeJS và Socket.io
+                      hr 
+                      | - Các component cơ bản trong Android cũng như IOS
+                      hr
+                      | - Cách xử lí Recycler View cho Android và TableView cho iOSvới nhiều loại viewType
+                      hr
+                      | - Sử dụng 1 số thư viện hỗ trợ trong Android như Retrofit, GSON,...
+                      hr
+                      | - Sử dụng 1 số thư viện hỗ trợ trong iOS như Alamofire, JSONSwift
+                    p
+                      | >> Hơn thế nữa, bạn sẽ được
+                      hr
+                      | - Nhận chứng nhận từ Techkids
+                      hr
+                      | - Được chính thức trở thành thành viên của TechKids community
+                      hr
+                      | - Được giảm 15% học phí tất cả các khóa học tại TechKids và ILIAT School (iliat.org)
+                    hr
+                  .item
+                    h3
+                      | 5. KẾT NỐI VỚI TECHKIDS
+                    p
+                      | Số điện thoại: Ms Hà San 0165 300 5670
+                      hr
+                      | Email: Techkidsvn@gmail.com | Website: Techkids.vn
+                      hr
+                      | Fanpage: https://www.facebook.com/Techkids.Code.the.Change 
+                      hr
+                      | Địa chỉ: 
+                      hr
+                      | | TechHub 1: Số 28/10, ngõ 121 Chùa Láng
+                      hr
+                      | | TechHub 2: Số 101D, ngõ 95 Chùa Bộc.
+                    hr    
+              //- section
+              //-   .item.syllabus  
+              //-       h3.section_title.col-sm-5.col-xs-9 Các buổi học
+              //-       ul.list-group
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 1. Introduction 
+              //-           p.list-group-item-text
+              //-             //| Hour of Code (VI), First program: Hello World, Print & Input , Variables Introduction
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 2. Control flow Statements (1)
+              //-           p.list-group-item-text
+              //-             //| Data types and operators Control Flow Statements while while flowchart Functions & Modules Introduction Turtle introduction
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 3. Control flow Statements (2)
+              //-           p.list-group-item-text
+              //-             //| List introduction Control Flow Statements (1): for Control Flow statements (2): if - elif - else if-else flow chart
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 4. Lab 1
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 5. Function: introduction  
+              //-           p.list-group-item-text
+              //-             //| Function: introduction + syntax +List comprehension |
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 6. Dictionary introduction
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 7. Lab 2 
+              //-           p.list-group-item-text
+              //-             //| Movie Management
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 8. Object-oriented programming (1)
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 9. Object-oriented programming (2)
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 10. Lab 3
+              //-           p.list-group-item-text 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 11. Data scraping with Python (1)
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 12. Data scraping with Python (2)
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 13. Lab 4
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 14. Web development (1)
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 15. Web development (2)
+              //-           p.list-group-item-text 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 16. Lab 5
+              //-           p.list-group-item-text 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 17. Project execution & Issue handling (1)
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 18. Project execution & Issue handling (2)
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 19. Project execution & Issue handling (3)
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 20. Hackathon & demo
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 21. Personal consultancy about IT career path (1)
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 22. Personal consultancy about IT career path (2)
+              //-           p.list-group-item-text
+              //-             | 
+              //-         li.list-group-item
+              //-           h5.list-group-item-heading 23. Personal consultancy about IT career path (3)
+              //-           p.list-group-item-text
+              //-             | 
+              //-       div(style="text-align:center;margin: 20px auto; width: 30%;")
+              //-           a.btn.btn-danger.btn-block(href='/khoa-hoc/code-for-everyone/register') Đăng ký tại đây
+    section#register-bar.register-bar
+      .bar-content
+        i.fa.fa-envelope-o(aria-hidden='true')
+        span.reg-text Nhận chương trình học miễn phí
+        a#submit-button-modal.button-register
+          | ĐĂNG KÍ NGAY
+      button.button-close
+        i#button-close.fa.fa-times
+    #myModal.modal
+        .modal-content-course
+            button.button-close 
+              span#close-btn x
+            .row1.text-center
+              h3.section_title.col-sm-5.col-xs-9 ĐĂNG KÍ NHẬN CHƯƠNG TRÌNH HỌC
+            form#register-form.container.container-form-advice
+              .centering-block
+                .row.form-info
+                 .col-xs-6.col-sm-4
+                  input(type='text', name='Name', placeholder='Họ và tên', required='')
+                 .col-xs-6.col-sm-4
+                  input(type='text', name='Tel', placeholder='Số điện thoại', required='')
+                 .clearfix.visible-xs-block
+                 .col-xs-6.col-sm-4
+                  input(type='email', name='Email', placeholder='Email', required='') 
+                .form-group
+                  p Bạn muốn đăng kí nhận chương trình học nào?
+                  .row
+                    .col-xs-6.col-sm-4
+                      input#iOS(type='checkbox', name='iOS', value='x')
+                      label(for='iOS') iOS
+                    .col-xs-6.col-sm-4
+                      input#Android(type='checkbox', name='Android', value='x')
+                      label(for='Android') Android
+                    // Optional: clear the XS cols if their content doesn't match in height
+                    .clearfix.visible-xs-block
+                    .col-xs-6.col-sm-4
+                      input#web(type='checkbox', name='Full-stack Web', value='x')
+                      label(for='web') Full-stack Web  
+                    .col-xs-6
+                      input#c4k(type='checkbox', name='Code for Kids', value='x')
+                      label(for='c4k') Code for Kids (C4K)  
+                    .col-xs-6
+                      input#c4e(type='checkbox', name='Code for Everyone', value='x')
+                      label(for='c4e') Code for Everyone (C4E)  
+                .text-center#advice
+                  input#sure(type='checkbox', name='Nhận tư vấn khóa học', value='Có')
+                  label(for='sure') Bạn có muốn nhận tư vấn về các khóa học không?    
+                button#submit-button.btn.btn-form(type='submit')
+                  font(size='2.5').span#submit-text NHẬN CHƯƠNG TRÌNH HỌC  
+                h4#notification.notification
+                #form-loader.uil-rolling-css
+                  div
+                    div
+                    div
+
