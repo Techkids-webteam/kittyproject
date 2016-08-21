@@ -271,7 +271,19 @@ section.intro .container:before{
 .section_title{
 	font-size: 2.3rem;
 	margin: 40px auto;
-    padding-bottom: 25px;
+    /*padding-bottom: 25px;*/
+	float: none;
+	display: table;
+	position: relative;
+	white-space: nowrap;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.section_title_3 {
+	font-size: 2.3rem;
+	margin: 40px auto;
+  padding-bottom: 25px;
 	float: none;
 	display: table;
 	position: relative;
