@@ -107,6 +107,10 @@ app.get('/games/tanks', function (req, res) {
     res.sendFile(__dirname + '/public/games/tanks/index.html');
 });
 
+app.get('/pokemonquiz', function (req, res) {
+  res.sendFile(__dirname + '/public/quizEmAll/index.html');
+});
+
 io.on('connection', function (socket) {
     console.log('user connected');
 
