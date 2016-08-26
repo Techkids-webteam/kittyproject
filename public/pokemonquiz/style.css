@@ -1,0 +1,119 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+	font-size: 2.2rem;
+	letter-spacing: 0.5px;
+}
+
+a:hover,
+a:focus{
+  text-decoration: none;
+  outline: 0 none;
+}
+
+h1{
+  margin-bottom: 30px;
+}
+
+header{
+	padding-top: 30vh;
+  margin-bottom: 20px;
+	background: #A02441;
+	color: white;
+	overflow: hidden;
+}
+
+footer{
+  background-color: #212121;
+  padding: 20px 0 10vh;
+  color: #ffffff;
+  font-size: 1.7rem;
+}
+
+.contact{
+  color: #ffffff;
+}
+
+.contact a,
+footer a{
+	color: #ffffff;
+}
+
+.contact a:hover,
+.contact a:focus,
+footer a:hover,
+footer a:focus{
+	color: #212121;
+}
+
+.feature_img{
+  height: 30vh;
+  background: #A02441 url('./img/AppFeature.png') center right no-repeat;
+  background-size: contain;
+}
+
+.link_stores{
+  margin: 30px 0;
+  text-align: center;
+}
+
+.link_stores img{
+  max-width: 45%;
+}
+
+.contact{
+	padding: 20px 0;
+	background-color: #A02441;
+}
+
+.social{
+	font-size: 3rem;
+}
+
+img.avatar{
+	border-radius: 100%;
+	display: block;
+	margin: 0 auto 30px;
+	width: 100%;
+  max-width: 200px;
+}
+
+.previews {
+  overflow: hidden;
+}
+
+.scroll_container {
+  margin: 30px 0;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.scroll_container > iframe,
+.scroll_container > img{
+  display: block;
+  border: 0 none;
+  outline: 0 none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+@media screen and (min-width: 768px){
+	img.avatar{
+		margin: 0 auto;
+	}
+  .link_stores{
+    text-align: left;
+  }
+
+  .scroll_container > iframe,
+  .scroll_container > img{
+    width: 281px;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
