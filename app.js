@@ -340,6 +340,7 @@ app.get('/testimonial/57b3177cf36d282abec08d75', function (req, res) {
 app.get('/chia-se/tai-lieu/chia-se-sach-cho-dan-lap-trinh-vien', function (req, res) {
     res.render('articles-1');
 });
+
 app.get('/chuong-trinh/su-kien/english-and-it-why-how-what', function (req, res) {
     res.render('events-1');
 });
@@ -372,6 +373,9 @@ app.get('/chuong-trinh/su-kien/workshop-c4e', function (req, res) {
 });
 app.get('/chuong-trinh/su-kien/connect-techkids', function (req, res) {
     res.render('events-11');
+});
+app.get('/chuong-trinh/su-kien/duong-ra-the-gioi', function (req, res) {
+    res.render('events-12');
 });
 // create a route to render the index.jade file.
 app.get('/', function (req, res) {
