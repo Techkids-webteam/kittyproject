@@ -1,0 +1,34 @@
+extends layout
+append scripts
+  script.
+    (function(h,e,a,t,m,p) {
+    m=e.createElement(a);m.async=!0;m.src=t;
+    p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+    })(window,document,'script','https://u.heatmap.it/log.js');
+block content  
+  img.profie_background(src='/cms/img/Background.jpg')
+  .content-container
+    img.profie-pic(src='/cms/img/Hòa Khanh.jpg')
+    h3 Hòa Khanh
+    p Từng là nhân viên tại ABBank
+    p
+      |Lần đầu mình biết đến Techkids là do em gái mình gửi link, đúng lúc đang có đợt tặng học bổng 8/3. Mình vốn đã có hứng thú với công nghệ từ lâu và cũng có định hướng làm việc liên quan đến lĩnh vực này, nhưng lại không có background gì về IT cả, vậy nên thấy quảng cáo khóa C4E là phải đăng ký liền à. Đến lúc đi học thì thấy là mình đã quyết định hoàn toàn đúng. Mặc dù mình không có ý định học để trở thành dev nhưng khóa học này đã cung cấp cho mình những khái niệm cơ bản về coding và quy trình phát triển phần mềm, những thứ chắc chắn sẽ rất hữu ích với định hướng công việc sắp tới của mình.<br>
+    p Ngoài ra là học ở Techkids cũng khiến mình thấy yêu đời hơn :">, vì được tiếp xúc với những con người trẻ trung tài năng tràn đầy nhiệt huyết, và rất tốt bụng :)) Cụ thể là giảng viên và trợ giảng không chỉ nhiệt tình, quan tâm đến học viên trong mỗi giờ học mà còn cung cấp cả dịch vụ cấp cứu tại chỗ miễn phí. Tiện đây mình xin gửi lời cảm ơn một lần nữa đến thầy Huy béo và trợ giảng Hiepdamdang vì đã cưu mang mình vào cái đêm định mệnh ấy ...  <br>
+    p Túm lại là, vài tuần nữa là Hackathon, sắp không được đi học nữa rồi. Lúc đấy chắc là sẽ nhớ Techkids không ít đâu. Hi vọng sau khi khóa này kết thúc sẽ lại có cơ duyên được gặp lại những con người ở đây :)
+  .course
+    h2.text-center.title CÁC KHÓA HỌC
+    .content-container
+      .course-info
+        .row
+          .col-md-8.col-xs-12
+            h3 Code for Everyone (C4E)
+            p Đem một thứ ngôn ngữ toàn cầu mới trong tương lai của cả thế giới về Việt Nam: ngôn ngữ Lập trình. Đặc biệt dành cho non-Techs (không học Công nghệ thông tin), trẻ em, phụ nữ.
+            a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc/code-for-everyone') TÌM HIỂU NGAY
+          .col-md-4.col-xs-6
+            img.course_picture(src='/cms/img/c4e.jpg')
+  .col-xs-12.col-md-12.find_us
+    h3.title
+      | CÙNG TECHKIDS
+    p.sub_title
+      | viết những dòng code thay đổi cuộc đời bạn
+    a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc') TÌM HIỂU CÁC KHÓA HỌC

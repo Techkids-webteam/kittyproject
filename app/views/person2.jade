@@ -1,0 +1,40 @@
+extends layout
+append scripts
+  script.
+    (function(h,e,a,t,m,p) {
+    m=e.createElement(a);m.async=!0;m.src=t;
+    p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+    })(window,document,'script','https://u.heatmap.it/log.js');
+block content  
+  img.profie_background(src='/cms/img/Background.jpg')
+  .content-container
+    img.profie-pic(src='/cms/img/Đức Nhân.jpg')
+    h3 Đức Nhân
+    p K59 - ĐH BK HN<br>
+      |Chủ nhiệm của Câu lạc bộ Tranh biện Bách Khoa Thành viên tích cực của Hội sinh viên tài năng FPT (FYT)<br>
+      |Android student tại TechKids
+    p
+      |“Tao học về Công nghệ mà học ở trường chán quá mày ạ. Đến giờ tao vẫn chẳng biết làm cái gì”<br>
+      |“Có cái khóa này hay này, đi học đi nó sẽ thay đổi cuộc đời mày đấy.”<br>
+      |“Ừ để tao xem đã”<br>
+      |Được giới thiệu về Techkids một cách “siêu hấp dẫn” (bởi đứa bạn thân mới chỉ thấy giới thiệu tuyển sinh Gen 2 của Techkids trên mạng chứ chưa đi học bao giờ ), thế là tò mò, cũng đi phỏng vấn, rồi cũng được nhận. Lúc mới học, trong đâu lúc nào cũng nghĩ “ ** sao các anh chị ở đây giỏi thế, sao các bạn học cùng giỏi thế, sao policy khắt khe thế, kém thế này sao mà theo được mọi người…”. Học tiếp được 3 tuần thì bắt đầu cảm nhận được *cuộc đời thay đổi*: 1 tuần 3 buổi học, được giáo viên support đến tận răng, nhận ra rằng hóa ra mình cũng không *ngu* như mình tưởng, có niềm tin vào bản thân hơn. Về nhà thì lại cắm mặt vào code bài tập, rồi code game để làm hackathon. Tới giờ vẫn còn nhớ cái đêm “định mệnh” ấy, nhớ cả nhóm có 2 anh em code xuyên màn đêm, nhớ những lúc tìm được bug sau 3 tiếng dậm chân tại chỗ mà suýt khóc, nhớ lúc ăn mì mà ngon hơn cả sơn hào hải vị, nhớ cả lúc thuyết trình sản phẩm và bị “tra khảo” – vừa vui lại vừa run.<br>
+      |Techkids không làm mình lập tức trở thành siêu sao, nhưng đã cho mình thấy một con đường rộng mở, cho mình thêm niềm tin để tiếp tục bước trên con đường đã chọn ấy, và mang đến cho mình những người bạn vô cùng tuyệt vời.<br>
+      |“Techkids làm cuộc đời tao thay đổi thật mày ạ.” 
+  .course
+    h2.text-center.title CÁC KHÓA HỌC
+    .content-container
+      .course-info
+        .row
+          .col-md-8.col-xs-12
+            h3 Mobile apps development (MAD) - Android
+            p Học Lập trình nền tảng (Java, OOP) và tiếng Anh miễn phí; tạo ra ứng dụng trên nền tảng Android. Giảng viên trên 7 năm kinh nghiệm. Cam kết việc làm sau khóa học hoặc tự khởi nghiệp.
+            a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc/android') TÌM HIỂU NGAY
+          .col-md-4.col-xs-6
+            img.course_picture(src='/cms/img/android.png')
+  .col-xs-12.col-md-12.find_us
+    h3.title
+      | CÙNG TECHKIDS
+    p.sub_title
+      | viết những dòng code thay đổi cuộc đời bạn
+    a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc') TÌM HIỂU CÁC KHÓA HỌC
+          

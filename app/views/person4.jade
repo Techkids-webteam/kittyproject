@@ -1,0 +1,38 @@
+extends layout
+append scripts
+  script.
+    (function(h,e,a,t,m,p) {
+    m=e.createElement(a);m.async=!0;m.src=t;
+    p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+    })(window,document,'script','https://u.heatmap.it/log.js');
+block content  
+  img.profie_background(src='/cms/img/Background.jpg')
+  .content-container
+    img.profie-pic(src='/cms/img/Thắng Dương.jpg', style='height:350px')
+    h3 Dương Thắng
+    p K57 - Chương trình Tiên tiến - Cơ điện tử - ĐH BK HN <br>
+      |Từng được học bổng toàn phần trao đổi sinh viên tại Hàn Quốc, Đài Loan và Tây Ban Nha của ĐH BK<br>
+      |Top 3, cuộc thi 3D printing technology của công ty KYODAI; Top 16 tại cuộc thi Gameloft's AI 2015<br>
+    p
+      |Mình là Thắng, lúc mình học ở Techkids thì mình chưa biết gì về lập trình hướng đối tượng hay Android gì cả, nhưng do may mắn + tư duy logic tốt nên tự hào là một trong những đứa code tốt nhất đầu ra (nhưng nhìn lại thằng Hùng trợ giảng nó viết game online từ lớp 11 thì chỉ muốn đập đầu xuống gối tự vẫn ).<br>
+      |Lúc đầu mình không có ý định học lập trình cơ, nhưng do bản tính quái dị, lại tình cờ đọc được 1 post facebook kể về quá trình phỏng vấn đầu vào 4h => mình định đến chém gió, làm quả học bổng 100% rồi bỏ không học cho bọn trung tâm nó tiếc. Phỏng vấn xong thì mình rất ấn tượng bởi sự nhiệt tình, quan tâm chân thành đến học viên (những con chuột bạch đầu tiên) của Techkids, khác xa với các kiểu quan tâm nhạt nhòa hơi có phần mơ mộng trẻ con của mấy trung tâm tiếng anh. Lúc còn đang lưỡng lự thì bị ""mụ"" San nó đa cấp, ngọt nhạt hứa hẹn cho lên kim cương với Platium, thế là đành để Techkid lèo lái nửa năm cuộc đời tiếp theo.<br>
+      |Điểm đặc biệt ở TechKids là ở đây bạn phải tự cố gắng, đào tạo bản thân mình liên tục, nếu cứ chờ có người giảng, giúp đỡ từng chút một thì sẽ bị các bạn cùng lớp bỏ xa => tự drop. Đây là một môi trường lý tưởng để các bạn tự học, tự phát triển các kỹ năng cần thiết, vì vừa có các bạn đồng trang lứa, vừa được sự trợ giúp nhiệt tình của các thầy cô + trợ giảng rất pro, đảm bảo level của các bạn lên nhanh chưa từng thấy.<br>
+      |Học xong khóa Android thì mình hơi bị .... bối rối :3 . Mình ban đầu chỉ nghĩ đến việc học để nâng cao trình độ thôi, còn mục tiêu lâu dài là đi du học. Nhưng mà học xong thì thấy một con đường mới : mình hoàn toàn có khả năng theo đuổi android và có một sự nghiệp khá tốt ( vươn lên tầm manager ở fpt chắc không đến nỗi bất khả thi nếu cố gắng ).<br>
+      |Nói chung là ở Techkids nó cũng nhiều cái bựa lắm, khen nhiều quá rồi chê phát. Mụ mama tổng quản ở đấy vừa xấu vừa đanh đá nhé, mọi người đến ai nó cũng bắt gọi nó bằng chị. Nhưng thôi thương tình mấy lần nấu cơm, mát xa tẩm quất phục vụ anh em Hackathon nên chỉ dừng việc nói xấu ở đây :v
+  .course
+    h2.text-center.title CÁC KHÓA HỌC
+    .content-container
+      .course-info
+        .row
+          .col-md-8.col-xs-12
+            h3 Mobile apps development (MAD) - Android
+            p Học Lập trình nền tảng (Java, OOP) và tiếng Anh miễn phí; tạo ra ứng dụng trên nền tảng Android. Giảng viên trên 7 năm kinh nghiệm. Cam kết việc làm sau khóa học hoặc tự khởi nghiệp.
+            a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc/android') TÌM HIỂU NGAY
+          .col-md-4.col-xs-6
+            img.course_picture(src='/cms/img/android.png')
+  .col-xs-12.col-md-12.find_us
+    h3.title
+      | CÙNG TECHKIDS
+    p.sub_title
+      | viết những dòng code thay đổi cuộc đời bạn
+    a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc') TÌM HIỂU CÁC KHÓA HỌC

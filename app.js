@@ -297,6 +297,46 @@ app.get('/register', function (req, res) {
 //app.get('/register', function (req, res) {
 //    res.render('register-page');
 //});
+////////TESTIMONIAL//////////////////
+app.get('/testimonial', function (req, res) {
+    res.render('index_testimonial');
+});
+app.get('/testimonial/57c24c41dcba0f292b424e12', function (req, res) {
+    res.render('person1');
+});
+app.get('/testimonial/57c256c5a20cb3ec0a65ffcc', function (req, res) {
+    res.render('person2');
+});
+app.get('/testimonial/57c274d05ca20bbc152dd3e6', function (req, res) {
+    res.render('person3');
+});
+app.get('/testimonial/57c286c42057ca1413ab37b9', function (req, res) {
+    res.render('person4');
+});
+app.get('/testimonial/57c2889384acf8580526e2ca', function (req, res) {
+    res.render('person5');
+});
+app.get('/testimonial/57c2919db3f50bc01a643718', function (req, res) {
+    res.render('person6');
+});
+app.get('/testimonial/57c2929a9fc68a8803cd17f9', function (req, res) {
+    res.render('person7');
+});
+app.get('/testimonial/57c2a1e67a70b0f4094b6627', function (req, res) {
+    res.render('person8');
+});
+app.get('/testimonial/57c2bbeade03614e0c59c236', function (req, res) {
+    res.render('person9');
+});
+app.get('/testimonial/57b3174ef36d282abec08d60', function (req, res) {
+    res.render('person10');
+});
+app.get('/testimonial/57b31763f36d282abec08d72', function (req, res) {
+    res.render('person11');
+});
+app.get('/testimonial/57b3177cf36d282abec08d75', function (req, res) {
+    res.render('person12');
+});
 app.get('/chia-se/tai-lieu/chia-se-sach-cho-dan-lap-trinh-vien', function (req, res) {
     res.render('articles-1');
 });
