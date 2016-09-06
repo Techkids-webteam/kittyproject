@@ -53,6 +53,7 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.static(__dirname + "/pokemonquiz"));
+app.use(express.static(__dirname + "/dashboard"));
 app.set('view engine', 'jade');
 app.engine('jade', require('jade').__express);
 //upload folder
@@ -107,6 +108,9 @@ function compare(a, b) {
 
 app.get('/games/tanks', function (req, res) {
     res.sendFile(__dirname + '/public/games/tanks/index.html');
+});
+app.get('/blog', function (req, res) {
+    res.sendFile(__dirname + '/public/blog/src/index.html');
 });
 
 
