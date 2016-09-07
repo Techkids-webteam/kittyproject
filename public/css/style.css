@@ -1030,21 +1030,6 @@ div.centering-block button {
     color:#e7f2f6;
 }
 
- .about_us{
-    background-color: #00b3f6;
-    height: 35%;
-    color: #ffffff;
-    text-align: center;
-    padding-top: 4%;
-    padding-bottom: 5%;
-}
-
- .about_us p{
-    font-style: oblique;
-    font-size: inherit;
-
-}
-
  .find_us{
     background-image: url('/cms/img/background3.jpg');
     background-repeat: no-repeat;
