@@ -1034,7 +1034,7 @@ div.centering-block button {
     background-image: url('/cms/img/background3.jpg');
     background-repeat: no-repeat;
     color: #f8f8f8;
-    height: 65vh;
+    height: 350px;
     text-align: center;
     background-size: cover;
 }
@@ -1128,9 +1128,9 @@ div.centering-block button {
   margin-bottom: 25px;
 }
  .course_picture{
-  width: 400px;
-  height: 180px;
-  margin: 20px 25px;
+  width: 300px;
+  height: 215px;
+  margin: 20px 40px;
 }
 
  .title{
