@@ -1108,12 +1108,13 @@ div.centering-block button {
  .profie_background{
   background-repeat: no-repeat;
   background-size: cover;
-  height: 540px;
+  height: 600px;
 }
 
  .content-container{
-  padding:30px 100px 20px;
-}
+   padding: 30px 250px 20px;
+   text-align: justify;
+ }
 
  .profie-pic{
   float: right;
