@@ -1034,7 +1034,7 @@ div.centering-block button {
     background-image: url('/cms/img/background3.jpg');
     background-repeat: no-repeat;
     color: #f8f8f8;
-    height: 450px;
+    height: 350px;
     text-align: center;
     background-size: cover;
     margin-bottom: 70px;
@@ -1044,7 +1044,7 @@ div.centering-block button {
     text-align: center;
     font-size: 1.4em;
     float: none;
-    padding-top: 100px;
+    padding-top: 75px;
     white-space: nowrap;
     text-transform: uppercase;
     margin-bottom: 3px;
@@ -1113,7 +1113,7 @@ div.centering-block button {
 }
 
  .content-container{
-   padding: 30px 250px 20px;
+   padding: 30px 250px 75px;
    text-align: justify;
  }
 
