@@ -1150,3 +1150,10 @@ div.centering-block button {
   height: 40px;
   width: 160px;
 }
+
+.flex-verttically-center{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height:185px;
+}

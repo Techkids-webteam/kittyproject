@@ -6,11 +6,13 @@ append scripts
     p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
     })(window,document,'script','https://u.heatmap.it/log.js');
 block content  
-  img.profie_background(src='/cms/img/Testimonial.jpg')
+  section.background.img-responsive
   .content-container
-    img.profie-pic(src='/cms/img/Nga Nguyễn.jpg', style='height:350px')
-    h3 Nguyễn Nga
-    p D14 - PTIT Được học bổng Tech-Women Scholarships của TechKids
+    .row
+      .col-xs-6.col-md-3
+        img.profile_img(src='/cms/img/nga_nguyen.png', style='padding-bottom:25px;')
+      .col-xs-12.col-sm-6.col-md-9
+        p.justify-content.flex-verttically-center D14 - PTIT Được học bổng Tech-Women Scholarships của TechKids
     p
       |Vừa nhận mail của chị San!!! Thông báo kết thúc khóa học rồi, TechKids luôn ở đây,đỡ các em."Đừng dừng lại, tiếp tục cố gắng."<br>
       |Cũng là một đứa con gái mạnh mẽ lắm chứ bộ. Nhưng khi đọc mail này cảm xúc khó diễn tả quá.<br>

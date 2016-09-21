@@ -6,12 +6,15 @@ append scripts
     p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
     })(window,document,'script','https://u.heatmap.it/log.js');
 block content  
-  img.profie_background(src='/cms/img/Testimonial.jpg')
+  section.background.img-responsive
   .content-container
-    img.profie-pic(src='/cms/img/Trần Trung.jpg', style='height:350px')
-    h3 Trần Trung
-    p Android student tại TechKids <br>
-      |Android developer tại FPT software<br>
+    .row
+      .col-xs-6.col-md-4
+        img.profile_img(src='/cms/img/tran_trung.png', style='padding-bottom:25px;')
+      .col-xs-12.col-sm-6.col-md-8
+        p.justify-content.flex-verttically-center
+          |Android student tại TechKids <br>
+          |Android developer tại FPT software<br>
     p
       |Chào mọi người, tôi là Trần Trung - học viên khóa Gen 3 - Lập trình Android - của TechKids. 
     p
@@ -52,4 +55,3 @@ block content
     p.sub_title
       | viết những dòng code thay đổi cuộc đời bạn
     a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc') TÌM HIỂU CÁC KHÓA HỌC
-              

@@ -6,13 +6,16 @@ append scripts
     p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
     })(window,document,'script','https://u.heatmap.it/log.js');
 block content  
-  img.profie_background(src='/cms/img/Testimonial.jpg')
+  section.background.img-responsive
   .content-container
-    img.profie-pic(src='/cms/img/Đức Nhân.jpg')
-    h3 Đức Nhân
-    p K59 - ĐH BK HN<br>
-      |Chủ nhiệm của Câu lạc bộ Tranh biện Bách Khoa Thành viên tích cực của Hội sinh viên tài năng FPT (FYT)<br>
-      |Android student tại TechKids
+    .row
+      .col-xs-6.col-md-4
+        img.profile_img(src='/cms/img/duc_nhan.png', style='padding-bottom:25px;')
+      .col-xs-12.col-sm-6.col-md-8
+        p.justify-content.flex-verttically-center
+          |K59 - ĐH BK HN<br>
+          |Chủ nhiệm của Câu lạc bộ Tranh biện Bách Khoa Thành viên tích cực của Hội sinh viên tài năng FPT (FYT)<br>
+          |Android student tại TechKids
     p
       |“Tao học về Công nghệ mà học ở trường chán quá mày ạ. Đến giờ tao vẫn chẳng biết làm cái gì”<br>
       |“Có cái khóa này hay này, đi học đi nó sẽ thay đổi cuộc đời mày đấy.”<br>
@@ -37,4 +40,3 @@ block content
     p.sub_title
       | viết những dòng code thay đổi cuộc đời bạn
     a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc') TÌM HIỂU CÁC KHÓA HỌC
-          
