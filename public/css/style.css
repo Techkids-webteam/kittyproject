@@ -148,7 +148,8 @@ ol li {
   height: 100%;
 }
 footer.footer {
-  padding: 100px 0;
+  padding: 50px 0;
+  padding-bottom: 50px;
   font-size: 1.4rem;
   background-color: #f7f7f7;
 }
@@ -168,7 +169,7 @@ footer.footer {
 }
 body> section {
   overflow: hidden;
-  padding: 40px 0;
+  padding: 60px 0;
 }
 section.page_title {
   padding: 60px 0;
@@ -224,8 +225,8 @@ section.intro .container:before {
 }
 .section_title {
   font-size: 2.3rem;
-  margin: 40px auto;
-  padding-bottom: 25px;
+  margin: 25px auto;
+  /*padding-bottom: 25px;*/
   float: none;
   display: table;
   position: relative;
@@ -245,7 +246,7 @@ section.intro .container:before {
 }
 .section_title_2 {
   font-size: 2.5rem;
-  margin: 20px auto;
+  margin: 75px auto;
   float: none;
   display: table;
   position: relative;
@@ -315,7 +316,7 @@ section.stars .section_title:before, section.stars .section_title:after {
 }
 .about_values {
   font-size: 1.6rem;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .about_values>div {
   padding: 10px;
@@ -505,7 +506,7 @@ section.stars .section_title:before, section.stars .section_title:after {
   min-width: 60%;
 }
 .join_us_4 .btn {
-  margin: 40px 10px 0;
+  margin: 0px 10px 0;
   padding-left: 20px;
   padding-right: 20px;
   float: none;
@@ -1037,7 +1038,7 @@ div.centering-block button {
     height: 350px;
     text-align: center;
     background-size: cover;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
 }
 
  .find_us .title{
