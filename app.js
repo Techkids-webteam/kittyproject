@@ -11,11 +11,11 @@ var express = require('express'),
     multipartMiddleware = multipart();
 
 // mongoose.connect(config.db);
-mongoose.connect('mongodb://techkids:codethechange@ds021751.mlab.com:21751/techkids');
-var dbMongo = mongoose.connection;
-dbMongo.on('error', function () {
-    throw new Error('unable to connect to database at ' + config.db);
-});
+// mongoose.connect('mongodb://techkids:codethechange@ds021751.mlab.com:21751/techkids');
+// var dbMongo = mongoose.connection;
+// dbMongo.on('error', function () {
+//     throw new Error('unable to connect to database at ' + config.db);
+// });
 // ------------dữ liệu-----------------------
 // var models = glob.sync(config.root + '/app/models/*.js');
 // models.forEach(function (model) {
@@ -31,11 +31,11 @@ var PostSchema = mongoose.Schema({
     time: Number
 });
 // ---- kiểm tra tình trạng kết nối mongo -----
-var Post = mongoose.model('Post', PostSchema);
-dbMongo.on('error', console.error.bind(console, 'connection error:'));
-dbMongo.once('open', function () {
-    console.log('MongoDb connected');
-});
+// var Post = mongoose.model('Post', PostSchema);
+// dbMongo.on('error', console.error.bind(console, 'connection error:'));
+// dbMongo.once('open', function () {
+//     console.log('MongoDb connected');
+// });
 
 //=========================================================
 //app init
@@ -285,6 +285,10 @@ app.get('/portfolio/web', function (req, res) {
 
 app.get('/portfolio/mobile', function (req, res) {
     res.sendFile(__dirname + '/public/Mobile/index.html');
+});
+
+app.get('/portfolio', function (req, res) {
+    res.sendFile(__dirname + '/public/portfolio/index.html');
 });
 
 app.get('/connect', function (req, res) {
