@@ -24,4 +24,4 @@ $('.autoplay').slick({
       slidesToScroll: 1
     }
   }]
-})
+});

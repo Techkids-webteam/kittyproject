@@ -1,79 +1,246 @@
-.introduction-content{
-	text-align: center;
-	padding-top: 100px;
-	color: #fff;
+*, *:before, *:after{
+	box-sizing: border-box;
 }
 
-.introduction-content h1{
-	font-size: 5rem;
-	margin: 10px 0;
+html{
+	font: 10px/1.4 "Roboto", sans-serif;
+	font-weight: 300;
+
 }
 
-.introduction-content h2{
+body{
+	font-size: 1.4rem;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover,a:active,a:focus{
+	outline: 0 none;
+}
+h1{
+	font-size: 2.4rem;
+}
+
+h2{
+	font-size: 1.8rem;
+}
+
+h3{
+	font-size: 1.2rem;
+}
+
+h4{
+	font-size: 1.8rem;
+}
+
+h5,p{
+	font-size: 1.4rem;
+}
+
+ul{
 	margin: 0;
+	padding: 0;
 }
 
-.menu-btn{
-    display: none;
+li{
+	list-style: none;
+	padding: 0;
+}
+.blue-text{
+	color: #01a0c7;
 }
 
-.bold-text{
-    font-weight: 700;
-}
-.uppercase-text{
-    text-transform: uppercase;
-}
-.demo_pic{
-    width: 65px;
-    height: 50px;
-    margin: 20px 20px;
-}
-.wireframe{
-	width: 310px;
-	height: 650px;
+.open-san-bold{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
 }
 
-.mobile-frame{
-	/*margin-top: 150px;*/
+.source-san-black{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 900;
+}
+
+.source-san-light{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+}
+
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background: #01a0c7;
+}
+
+.main-nav{
+	float: right;
+	display: flex;
+	align-items: stretch;
+	transition: all 0.5s ease-in-out;
+}
+
+.main-nav a{
+	display: inline-block;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 15px;
+	background: #01a0c7;
+	margin-left: 5px;
+
+}
+#typo-button{
+	display: none;
+}
+.menu-button{
+	width: 55px;
+
+}
+
+.menu-button.active{
+	width: auto;
+}
+
+.menu-button div{
+	background-color: white;
+	height: 4px;
+}
+
+.menu-button div:nth-child(2){
+	margin: 5px 0;
+}
+
+.menu-button.active div{
+	opacity: 0;
+
+}
+
+.portfolios-item{
+	padding: 20px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.portfolios-item:nth-child(even){
+	background: #F1F1F1;
+}
+
+.portfolios-item:nth-child(odd){
+	background: #fff;
+}
+
+.portfolios-item>li{
+	display: inline-block;
+	vertical-align: top;
 	position: relative;
-	text-align: center;
-	margin: 40px auto;
 }
 
-.video-container{
-	position: relative; top: 0; left: 0;
-	/*display: block;
-	position: absolute;
-	width: 270px;
-	height: auto;
-	top: 75px;
-	margin: 0 auto;*/
-}
-/*.align-video-left{
-	left: -75px;
-	right: 50px;
-}
-.align-video-right{
-	left: 40px;
-	right: -40px;
-}*/
-video{
-	width: 100%;
+.portfolios-item .portfolios-img{
+	order: 1;
 }
 
-.frame{
-	margin-left: -40px;
+.portfolios-item .portfolios-detail{
+	order: 2;
 }
 
-.right_frame{
-	margin-left: 60px;
+.wireframe{
+	width: 160%;
+	margin-left: -35%;
 }
+
+.portfolios-detail h2,
+.portfolis-detail h3,
+.portfolios-detail p{
+	color: #333;
+}
+
+.portfolios-detail p{
+	font-size: 1.8rem;
+}
+
 .video-thumbnail{
-    position: absolute;
-	top: 60px; left: 80px;
-    /*width: 94%;
-    height: auto;
-    top: 11.9%;
-    left: 26.3%;
-    vertical-align: baseline;*/
+	position: absolute;
+	width: 55%;
+	height: auto;
+	top: 18.1%;
+	left: 16%;
+	vertical-align: baseline;
+}
+
+.footer{
+	background: url(../img/home_background.jpg);
+	color: #ffffff;
+	text-align: center;
+	padding: 20px 30px;
+}
+.video-thumbnail-android{
+	position: absolute;
+	width: 53%;
+	height: auto;
+	top: 18.1%;
+	left: 9%;
+	vertical-align: baseline;
+}
+.wireframe-android{
+	width: 100%;
+	margin-left: -15%;
+}
+
+@media(min-width: 720px){
+
+	.header{
+		background: none;
+		padding: 0 50px;
+	}
+
+	.page-block{
+		padding: 65px 60px;
+	}
+
+	.portfolios-item{
+		padding: 100px 60px;
+	}
+
+	.footer{
+		padding: 85px 240px;
+ 	}
+}
+
+@media(min-width: 900px){
+
+	.portfolios-item{
+    	padding: 60px 160px;
+		align-items: center;
+	}
+
+	.portfolios-img{
+		width: 33.33333333%;
+		height: auto;
+	}
+
+	.portfolios-detail{
+		width: 66.66666667%;
+	}
+
+	.portfolios-detail h1{
+		font-size: 3rem;
+	}
+
+	.portfolios-item:nth-child(even) .portfolios-img{
+		order: 2;
+	}
+
+	.portfolios-item:nth-child(even) .portfolios-detail{
+		order: 1;
+		padding-right: 40px;
+	}
+
+	.portfolios-item:nth-child(odd) .portfolios-detail{
+		padding-left: 40px;
+	}
+
 }
