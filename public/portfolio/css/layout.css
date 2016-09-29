@@ -21,10 +21,6 @@
 	text-align: justify;
 }
 
-.menu-btn{
-    display: none;
-}
-
 .uppercase-text{
     text-transform: uppercase;
 }
@@ -35,7 +31,7 @@
     margin: 20px 20px;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
+/*@import url("https://fonts.googleapis.com/css?family=Open+Sans:700");*/
 div nav {
   background: #ffffff;
   width: 100%;
@@ -54,7 +50,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  line-height: 1;
+  line-height: 2.6;
   display: block;
   zoom: 1;
   font-size: 0;
@@ -77,7 +73,7 @@ nav ul li a {
   text-decoration: none;
   display: block;
   width: 100%;
-  padding: 25px 65px;
+  padding: 27px 15px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -144,19 +140,10 @@ nav.align-right li:first-child a:after {
     margin: 60px 160px 60px 225px;
 }
 
+.autoplay{
+	margin: 0 10%;
+}
 @media screen and (max-width: 768px) {
-  /*.menu-btn{
-    display: inline-block;
-    float: right;
-    margin-right:-50px;
-    background-color: #00a0c6;
-    color: #ffffff;
-    font-size: 15px;
-    padding: 7px 6px;
-    border-radius: 15px;
-    width: 25px;
-    height: 25px;
-  }*/
   nav ul li {
     float: none;
     display: block;
@@ -166,7 +153,7 @@ nav.align-right li:first-child a:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    /*border-bottom: 1px solid #ffffff;*/
+	background-color: #ffffff;
   }
   nav ul li.last > a,
   nav ul li:last-child > a {
@@ -178,4 +165,13 @@ nav.align-right li:first-child a:after {
   nav ul li a:before {
     display: none;
   }
+  nav ul{
+	  line-height: 1;
+  }
+}
+#navbar-collapse{
+  display: block;
+}
+#desktop-nav{
+  display: none;
 }

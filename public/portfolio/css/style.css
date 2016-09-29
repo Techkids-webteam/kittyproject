@@ -3,9 +3,8 @@
 }
 
 html{
-	font: 10px/1.4 "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-
 }
 
 body{
@@ -48,6 +47,7 @@ li{
 	list-style: none;
 	padding: 0;
 }
+
 .blue-text{
 	color: #01a0c7;
 }
@@ -160,6 +160,7 @@ li{
 
 .portfolios-detail p{
 	font-size: 1.8rem;
+	font-family: 'Roboto';
 }
 
 .video-thumbnail{
@@ -227,10 +228,10 @@ li{
 	}
 
 	.portfolios-detail h1{
-		font-size: 3rem;
+		font-size: 3.3rem;
 	}
 
-	.portfolios-item:nth-child(even) .portfolios-img{
+	/*.portfolios-item:nth-child(even) .portfolios-img{
 		order: 2;
 	}
 
@@ -241,6 +242,6 @@ li{
 
 	.portfolios-item:nth-child(odd) .portfolios-detail{
 		padding-left: 40px;
-	}
+	}*/
 
 }

@@ -10,9 +10,13 @@
   <link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/css/bootstrap.css">
   <!-- Icon Library -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300|Open+Sans:700,800,300|Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
   <!-- Slick Library -->
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <!-- End Slick Library -->
+  <link rel="stylesheet" type="text/css" href="/Web/css/normalize.css">
 
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/style.css">
@@ -63,6 +67,7 @@
 </head>
 
 <body>
+
   <header class="header">
     <nav class="main-nav">
       <a class="open-san-bold" href="/">VISIT US</a>
@@ -74,19 +79,50 @@
       <img src="../img/TechkidBrandWhite.png" alt="Techkids Brand Black & White" style="margin-bottom: 25px;">
       <h2>Student's Portfolio</h2>
     </div>
-    <nav>
-      <ul class="nav-tabs list-unstyled">
+    <!-- <nav>
+      <ul class="nav-tabs list-unstyled" id='desktop-nav'>
         <li class="col-sm-3 active"><a data-toggle="tab" href="#ios"><span>iOS <i class="menu-btn fa fa-arrow-down dropdown-toggle" type="button" data-toggle="dropdown"></i></span></a></li>
         <li class="col-sm-3"><a data-toggle="tab" href="#android"><span>Android</span></a></li>
         <li class="col-sm-3"><a data-toggle="tab" href="#web"><span>Web</span></a></li>
         <li class="col-sm-3"><a data-toggle="tab" href="#c4k"><span>Code for Kids</span></a></li>
       </ul>
-      <!-- <select class="nav-tabs">
-        <option class="active" value="#ios" selected="selected">iOS</option>
-        <option value="#android"><a data-toggle="tab">Android</a></option>
-        <option value="#web"><a data-toggle="tab">Web</a></option>
-        <option value="#c4k"><a data-toggle="tab">Code For Kids</a></option>
-      </select> -->
+      <div class="container">
+        <div id="navbar-collapse" class="navbar-collapse collapse in" aria-expanded="true" style="">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">   Select    <span class="visible-xs-inline-block caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li class="col-sm-3 active"><a data-toggle="tab" href="#ios"><span>iOS   <i class="menu-btn fa fa-arrow-down dropdown-toggle" type="button" data-toggle="dropdown"></i></span></a></li>
+                  <li class="col-sm-3"><a data-toggle="tab" href="#android"><span>Android</span></a></li>
+                  <li class="col-sm-3"><a data-toggle="tab" href="#web"><span>Web</span></a></li>
+                  <li class="col-sm-3"><a data-toggle="tab" href="#c4k"><span>Code for Kids</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="menu-btn fa fa-arrow-down dropdown-toggle" type="button" data-toggle="dropdown"></i>
+          </button>
+          <div class="text-center navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">Select </div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav nav-tabs">
+            <li class="col-sm-3 active"><a data-toggle="tab" href="#ios"><span>iOS</span></a></li>
+            <li class="col-sm-3"><a data-toggle="tab" href="#android"><span>Android</span></a></li>
+            <li class="col-sm-3"><a data-toggle="tab" href="#web"><span>Web</span></a></li>
+            <li class="col-sm-3"><a data-toggle="tab" href="#c4k"><span>Code for Kids</span></a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
     </nav>
   </div>
 
@@ -96,7 +132,8 @@
         <li class="video portfolios-img">
           <img class="wireframe" src="img/apple-iphone6-gold-portrait.png">
           <div class="video-container">
-            <video class="video-thumbnail" src="https://thumbs.gfycat.com/ElatedLimitedGalapagosdove-mobile.mp4" loop autoplay></video>
+            <!-- <video class="video-thumbnail" src="https://thumbs.gfycat.com/ElatedLimitedGalapagosdove-mobile.mp4" loop autoplay></video> -->
+            <iframe style="transform: rotate(90deg); position: absolute; width: 500px; height: 350px; top: 18.1%; left: 16%; vertical-align: baseline;" src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" allowfullscreen></iframe>
           </div>
         </li>
         <li class="portfolios-detail">
@@ -105,9 +142,9 @@
           <h2 class="source-san-light">App designer:</h2>
           <h2 class="source-san-light">Thời gian thực hiện:</h2>
           <h2 class="source-san-light">Mô tả ngắn:</h2>
-          <p class="justify-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div class="autoplay">
+          <p class="justify-text open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
+            quantitiy, and compile a shopping cart for making a final purchase.</p>
+          <div class="responsive">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
@@ -135,7 +172,7 @@
           <h2 class="source-san-light">Mô tả ngắn:</h2>
           <p class="justify-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
             irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div class="autoplay">
+          <div class="responsive">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
@@ -168,8 +205,7 @@
           <h2 class="source-san-light">Mô tả ngắn:</h2>
           <p class="justify-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
             irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <img class="demo_pic" src="img/black_rect.png" alt="">
-          <div class="autoplay">
+          <div class="responsive">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
@@ -211,7 +247,7 @@
           <h2 class="source-san-light">Mô tả ngắn:</h2>
           <p class="justify-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
             irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div class="autoplay">
+          <div class="responsive">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
@@ -239,7 +275,7 @@
           <h2 class="source-san-light">Mô tả ngắn:</h2>
           <p class="justify-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
             irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div class="autoplay">
+          <div class="responsive">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
@@ -272,8 +308,7 @@
           <h2 class="source-san-light">Mô tả ngắn:</h2>
           <p class="justify-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
             irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <img class="demo_pic" src="img/black_rect.png" alt="">
-          <div class="autoplay">
+          <div class="responsive">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
             <img class="demo_pic" src="img/black_rect.png" alt="">
