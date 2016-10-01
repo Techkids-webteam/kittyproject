@@ -1090,7 +1090,7 @@ div.centering-block button {
  .profile_img{
   width: 200px;
   height: 200px;
-  margin: 0 25px;
+  /*margin: 0 25px;*/
 }
 
 .about_us2{
@@ -1156,5 +1156,5 @@ div.centering-block button {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height:185px;
+    height:100px;
 }
