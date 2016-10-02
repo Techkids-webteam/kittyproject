@@ -291,6 +291,10 @@ app.get('/portfolio', function (req, res) {
     res.sendFile(__dirname + '/public/portfolio/index.html');
 });
 
+app.get('/hackathon', function (req, res) {
+    res.sendFile(__dirname + '/public/hackathon_contest/index.html');
+});
+
 app.get('/connect', function (req, res) {
     res.sendFile(__dirname + '/public/Techkids Connect/index.html');
 });
