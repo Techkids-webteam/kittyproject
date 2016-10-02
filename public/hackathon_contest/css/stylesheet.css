@@ -148,9 +148,9 @@ li {
   background-color: #111;
 }
 
-.card {
+/*.card {
   margin: 0.5rem 100px 60px 0;
-}
+}*/
 
 .member-info{
     display: inline-block;
@@ -272,7 +272,7 @@ li {
 }
 
 @media(max-width: 938px ) {
-    .card {
+    /*.card {
       margin: 0.5rem 80px 1rem 0;
-    }
+    }*/
 }
