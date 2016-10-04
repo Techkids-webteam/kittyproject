@@ -10,8 +10,10 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300|Open+Sans:700,800,300|Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="/hackathon_contest/libs/materialize/css/materialize.css">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
   <link rel="stylesheet" href="/hackathon_contest/libs/FlipClock-master/src/flipclock/css/flipclock.css">
+  <link rel="stylesheet" href="/hackathon_contest/libs/lightbox2/dist/css/lightbox.min.css">
+  <link rel="stylesheet" href="/hackathon_contest/css/w3.css">
 
   <link rel="stylesheet" type="text/css" href="/hackathon_contest/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/hackathon_contest/css/stylesheet.css">
@@ -33,7 +35,7 @@
         <h2>Chỉ còn</h2>
       </div>
     </div>
-    <!-- <div class="clock"></div> -->
+    <div class="clock"></div>
   </div>
 
   <div class="row">
@@ -43,9 +45,17 @@
           <div class="col l4 m6 s12">
             <div class="card">
               <div class="single-item card-image waves-effect waves-block waves-light">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
+                <div class="single-item card-image waves-effect waves-block waves-light">
+                  <div class="w3-content" style="max-width:800px;position:relative">
+                    <!-- <img class="mySlides" src="https://www.nbc.com/sites/nbcunbc/files/files/styles/1080xauto/public/images/2016/10/02/BUMPER-MargotRobbie02_111_lyrd3.jpg" style="width:100%">
+                        <img class="mySlides" src="http://www.nbc.com/the-tonight-show/content/sites/nbcutsjf/files/styles/bit_stacked_resized/public/images/2016/01/20/katemckinnon_color.jpg?itok=L1tSKYTg" style="width:100%">
+                        <img class="mySlides" src="http://ia.media-imdb.com/images/M/MV5BMTY5ODc1MDM5Ml5BMl5BanBnXkFtZTgwODI5NjQwMzE@._V1_UY317_CR112,0,214,317_AL_.jpg" style="width:100%">
+                        <img class="mySlides" src="http://www.hdwallpapers.in/walls/amber_heard_8-wide.jpg" style="width:100%"> -->
+
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+                  </div>
+                </div>
               </div>
               <div class="card-content">
                 <div class="row">
@@ -59,47 +69,77 @@
             </div>
           </div>
           <div class="col l4 m6 s12">
-              <div class="card">
+            <div class="card">
+              <div class="single-item card-image waves-effect waves-block waves-light">
                 <div class="single-item card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                </div>
-                <div class="card-content">
-                  <div class="row">
-                    <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
-                    </img>
-                    <h3 class="col l7 blue-text member">Siêu Nhân</h3>
+                  <div class="w3-content" style="max-width:800px;position:relative">
+                    <!-- <img class="mySlides" src="https://www.nbc.com/sites/nbcunbc/files/files/styles/1080xauto/public/images/2016/10/02/BUMPER-MargotRobbie02_111_lyrd3.jpg" style="width:100%">
+                        <img class="mySlides" src="http://www.nbc.com/the-tonight-show/content/sites/nbcutsjf/files/styles/bit_stacked_resized/public/images/2016/01/20/katemckinnon_color.jpg?itok=L1tSKYTg" style="width:100%">
+                        <img class="mySlides" src="http://ia.media-imdb.com/images/M/MV5BMTY5ODc1MDM5Ml5BMl5BanBnXkFtZTgwODI5NjQwMzE@._V1_UY317_CR112,0,214,317_AL_.jpg" style="width:100%">
+                        <img class="mySlides" src="http://www.hdwallpapers.in/walls/amber_heard_8-wide.jpg" style="width:100%"> -->
+
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
                   </div>
-                  <h3>Thành viên</h3>
-                  <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
                 </div>
               </div>
-          </div>
-          <div class="col l4 m6 s12">
-              <div class="card">
-                <div class="single-item card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
+              <div class="card-content">
+                <div class="row">
+                  <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
+                  </img>
+                  <h3 class="col l7 blue-text member">Siêu Nhân</h3>
                 </div>
-                <div class="card-content">
-                  <div class="row">
-                    <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
-                    </img>
-                    <h3 class="col l7 blue-text member">Siêu Nhân</h3>
-                  </div>
-                  <h3>Thành viên</h3>
-                  <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
-                </div>
+                <h3>Thành viên</h3>
+                <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
               </div>
+            </div>
           </div>
           <div class="col l4 m6 s12">
             <div class="card">
               <div class="single-item card-image waves-effect waves-block waves-light">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
+                <div class="single-item card-image waves-effect waves-block waves-light">
+                  <div class="w3-content" style="max-width:800px;position:relative">
+                    <!-- <img class="mySlides" src="https://www.nbc.com/sites/nbcunbc/files/files/styles/1080xauto/public/images/2016/10/02/BUMPER-MargotRobbie02_111_lyrd3.jpg" style="width:100%">
+                        <img class="mySlides" src="http://www.nbc.com/the-tonight-show/content/sites/nbcutsjf/files/styles/bit_stacked_resized/public/images/2016/01/20/katemckinnon_color.jpg?itok=L1tSKYTg" style="width:100%">
+                        <img class="mySlides" src="http://ia.media-imdb.com/images/M/MV5BMTY5ODc1MDM5Ml5BMl5BanBnXkFtZTgwODI5NjQwMzE@._V1_UY317_CR112,0,214,317_AL_.jpg" style="width:100%">
+                        <img class="mySlides" src="http://www.hdwallpapers.in/walls/amber_heard_8-wide.jpg" style="width:100%"> -->
+
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
+                  </img>
+                  <h3 class="col l7 blue-text member">Siêu Nhân</h3>
+                </div>
+                <h3>Thành viên</h3>
+                <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m6 s12">
+            <div class="card">
+              <div class="single-item card-image waves-effect waves-block waves-light">
+                <div class="w3-content" style="max-width:800px;position:relative">
+                  <a href="https://www.nbc.com/sites/nbcunbc/files/files/styles/1080xauto/public/images/2016/10/02/BUMPER-MargotRobbie02_111_lyrd3.jpg" data-lightbox="roadtrip">
+                    <img class="mySlides" src="https://www.nbc.com/sites/nbcunbc/files/files/styles/1080xauto/public/images/2016/10/02/BUMPER-MargotRobbie02_111_lyrd3.jpg" style="width:100%">
+                  </a>
+                  <a href="http://www.nbc.com/the-tonight-show/content/sites/nbcutsjf/files/styles/bit_stacked_resized/public/images/2016/01/20/katemckinnon_color.jpg?itok=L1tSKYTg" data-lightbox="roadtrip">
+                    <img class="mySlides" src="http://www.nbc.com/the-tonight-show/content/sites/nbcutsjf/files/styles/bit_stacked_resized/public/images/2016/01/20/katemckinnon_color.jpg?itok=L1tSKYTg" style="width:100%">
+                  </a>
+                  <a href="http://ia.media-imdb.com/images/M/MV5BMTY5ODc1MDM5Ml5BMl5BanBnXkFtZTgwODI5NjQwMzE@._V1_UY317_CR112,0,214,317_AL_.jpg" data-lightbox="roadtrip">
+                    <img class="mySlides" src="http://ia.media-imdb.com/images/M/MV5BMTY5ODc1MDM5Ml5BMl5BanBnXkFtZTgwODI5NjQwMzE@._V1_UY317_CR112,0,214,317_AL_.jpg" style="width:100%">
+                  </a>
+                  <a href="http://www.hdwallpapers.in/walls/amber_heard_8-wide.jpg" data-lightbox="roadtrip">
+                    <img class="mySlides" src="http://www.hdwallpapers.in/walls/amber_heard_8-wide.jpg" style="width:100%">
+                  </a>
+
+                  <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+                  <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+                </div>
               </div>
               <div class="card-content">
                 <div class="row">
@@ -120,9 +160,10 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script src="/hackathon_contest/libs/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+  <script type="text/javascript" src="/hackathon_contest/libs/materialize/js/materialize.js"></script>
   <script type="text/javascript" src='/hackathon_contest/libs/FlipClock-master/compiled/flipclock.min.js'></script>
   <script type="text/javascript" src='/hackathon_contest/js/main.js'></script>
-
 </body>
 
 </html>
