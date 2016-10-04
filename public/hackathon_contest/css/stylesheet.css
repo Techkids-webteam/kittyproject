@@ -123,6 +123,23 @@ li {
 
 .clock {
   margin: 0 auto;
+  -moz-transform: scale(1.0);
+  -moz-transform-origin: 0 0;
+  width: -moz-max-content;
+}
+
+@media all and (max-width: 768px) {
+  .clock {
+    zoom: 0.9;
+    -moz-transform: scale(0.9);
+  }
+}
+
+@media all and (max-width: 479px) {
+  .clock {
+    zoom: 0.75;
+    -moz-transform: scale(0.75);
+  }
 }
 
 .flip-clock-wrapper {
@@ -148,11 +165,6 @@ li {
   background-color: #111;
 }
 
-
-/*.card {
-  margin: 0.5rem 100px 60px 0;
-}*/
-
 .member-info {
   display: inline-block;
 }
@@ -162,102 +174,11 @@ li {
 }
 
 
-/* Arrows */
-
-.slick-prev, .slick-next {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  cursor: pointer;
-  color: #000000;
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
-  color: #000000;
-  outline: none;
-  background: none;
-}
-
-.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
-  opacity: 1;
-}
-
-.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
-  opacity: .25;
-}
-
-.slick-prev:before, .slick-next:before {
-  font-family: 'slick';
-  font-size: 20px;
-  line-height: 12px;
-  opacity: .75;
-  color: #000000;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev {
-  left: -25px;
-}
-
-[dir='rtl'] .slick-prev {
-  right: -25px;
-  left: auto;
-}
-
-.slick-prev:before {
-  content: '<';
-  color: #212121;
-  font-size: 50px;
-  font-weight: 900;
-}
-
-[dir='rtl'] .slick-prev:before {
-  content: '>';
-}
-
-.slick-next {
-  right: -25px;
-}
-
-[dir='rtl'] .slick-next {
-  right: auto;
-  left: -25px;
-}
-
-.slick-next:before {
-  content: '>';
-  color: #212121;
-  font-size: 50px;
-  font-weight: 900;
-}
-
-[dir='rtl'] .slick-next:before {
-  content: '<';
-}
-
 @media(min-width: 720px) {
   .header {
     background: none;
     padding: 0 50px;
   }
-}
-
-@media(max-width: 938px) {
-  /*.card {
-      margin: 0.5rem 80px 1rem 0;
-    }*/
 }
 
 .blue-flat-button, .silver-flat-button {
@@ -281,31 +202,4 @@ li {
 
 .blue-flat-button {
   background: #00a0c6;
-}
-
-
-/*.wrapper{
-    margin: 0 auto;
-    width: 30%;
-}*/
-
-.clock {
-  margin: 0 auto;
-  -moz-transform: scale(1.0);
-  -moz-transform-origin: 0 0;
-  width: -moz-max-content;
-}
-
-@media all and (max-width: 768px) {
-  .clock {
-    zoom: 0.9;
-    -moz-transform: scale(0.9);
-  }
-}
-
-@media all and (max-width: 479px) {
-  .clock {
-    zoom: 0.75;
-    -moz-transform: scale(0.75);
-  }
 }
