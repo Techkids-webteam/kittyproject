@@ -49,8 +49,13 @@ li {
   padding: 0;
 }
 
-.blue-text {
+.bold-blue-text {
   color: #00a0c6;
+  font-weight: 700;
+}
+
+.bold-text{
+    font-weight: 600;
 }
 
 .open-san-bold {
@@ -172,6 +177,14 @@ li {
 
 .silver-flat-button {
   background: #b7b7b7;
+}
+
+.silver-flat-button:hover {
+  background: #F5AE3D;
+}
+
+.silver-flat-button:active {
+  background: #f39c12;
 }
 
 .blue-flat-button {
