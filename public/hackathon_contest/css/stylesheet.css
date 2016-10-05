@@ -121,40 +121,6 @@ li {
   font-weight: 400;
 }
 
-.clock {
-  width: 36%;
-  margin: 0 auto;
-  position: relative !important;
-  zoom: 1.0;
-  transform: scale(1.0);
-  -ms-transform: scale(1.0);
-  -webkit-transform: scale(1.0);
-  -o-transform: scale(1.0);
-  -moz-transform: scale(1.0);
-}
-
-@media all and (max-width: 768px) {
-  .clock {
-    zoom: 0.9;
-    transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    -webkit-transform: scale(0.9);
-    -o-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-  }
-}
-
-@media all and (max-width: 479px) {
-  .clock {
-    zoom: 0.75;
-    transform: scale(0.75);
-    -ms-transform: scale(0.75);
-    -webkit-transform: scale(0.75);
-    -o-transform: scale(0.75);
-    -moz-transform: scale(0.75);
-  }
-}
-
 .flip-clock-divider .flip-clock-label, .flip-clock-dot {
   display: none;
 }
