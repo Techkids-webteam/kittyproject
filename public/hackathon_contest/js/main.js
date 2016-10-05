@@ -50,7 +50,7 @@ showDivs_2(1);
 var slideIndex_3 = 1;
 showDivs_3(slideIndex_3);
 
-function plusDivs_2(n) {
+function plusDivs_3(n) {
   showDivs_3(slideIndex_3 += n);
 }
 
@@ -96,7 +96,7 @@ showDivs_4(1);
 var slideIndex_5 = 1;
 showDivs_5(slideIndex_5);
 
-function plusDivs_2(n) {
+function plusDivs_5(n) {
   showDivs_5(slideIndex_5 += n);
 }
 
