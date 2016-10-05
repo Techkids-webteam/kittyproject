@@ -127,7 +127,7 @@ li {
 }
 
 .flip-clock-divider .flip-clock-label, .flip-clock-dot {
-  display: none;
+  display: block;
 }
 
 .flip-clock-wrapper ul {

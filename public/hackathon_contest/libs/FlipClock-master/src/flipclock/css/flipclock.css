@@ -224,7 +224,7 @@
   width: 0;
 }
 
-.flip-clock-dot {
+/*.flip-clock-dot {
   display: block;
   background: #323434;
   width: 10px;
@@ -233,11 +233,11 @@
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   left: 5px;
-}
+}*/
 
 .flip-clock-divider .flip-clock-label {
   position: absolute;
-  top: -1.5em;
+  bottom: -1.5em;
   right: -86px;
   color: black;
   text-shadow: none;
@@ -251,13 +251,13 @@
   right: -91px;
 }
 
-.flip-clock-dot.top {
+/*.flip-clock-dot.top {
   top: 30px;
 }
 
 .flip-clock-dot.bottom {
   bottom: 30px;
-}
+}*/
 
 @-webkit-keyframes asd {
   0% {
