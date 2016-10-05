@@ -177,3 +177,24 @@ li {
 .blue-flat-button {
   background: #00a0c6;
 }
+
+.score_box {
+  margin-bottom: -15px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
+.image-wrapper p {
+    position: absolute;
+    left: 0;
+    top: -15%;
+    padding: 10px;
+    border: 1px solid #FFF;
+    width: 100%;
+    color: #FFF;
+    margin: 5px;
+}
