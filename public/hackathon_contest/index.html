@@ -15,15 +15,22 @@
 
   <link rel="stylesheet" type="text/css" href="/hackathon_contest/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/hackathon_contest/css/stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+
 
 </head>
 
-<body>
+<body ng-app="hackApp" ng-controller="hackCtrl">
+
   <header class="header">
     <nav class="main-nav">
       <a class="open-san-bold" href="/">VISIT US</a>
     </nav>
   </header>
+
 
   <div class="page-block img-block introduction-block">
     <div class="introduction-content">
@@ -40,76 +47,32 @@
     <div class="col l8 offset-l2">
       <div class="row">
         <div class="col l12 m12 s12">
-          <div class="col l4 m6 s12">
+          <div class="col l4 m6 s12" ng-repeat="team in data" id={{team._id}}>
             <div class="card">
+              <div class="rating">
+                {{"STT: " + $index}}
+                {{"So like: " + team.like}}
+              </div>
               <div class="single-item card-image waves-effect waves-block waves-light">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
                 <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
               </div>
               <div class="card-content">
                 <div class="row">
                   <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
                   </img>
-                  <h3 class="col l7 blue-text member">Siêu Nhân</h3>
+                  <h3 class="col l7 blue-text member">{{team.name}}</h3>
                 </div>
-                <h3>Thành viên</h3>
-                <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
+                <h3>Thành viên: </h3>
+                <ul>
+                  <li ng-repeat="member in team.member">
+                    {{member}}
+                  </li>
+                </ul>
+                <p>{{team.content}}</p>
               </div>
-            </div>
-          </div>
-          <div class="col l4 m6 s12">
-              <div class="card">
-                <div class="single-item card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                </div>
-                <div class="card-content">
-                  <div class="row">
-                    <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
-                    </img>
-                    <h3 class="col l7 blue-text member">Siêu Nhân</h3>
-                  </div>
-                  <h3>Thành viên</h3>
-                  <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
-                </div>
-              </div>
-          </div>
-          <div class="col l4 m6 s12">
-              <div class="card">
-                <div class="single-item card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                  <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                </div>
-                <div class="card-content">
-                  <div class="row">
-                    <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
-                    </img>
-                    <h3 class="col l7 blue-text member">Siêu Nhân</h3>
-                  </div>
-                  <h3>Thành viên</h3>
-                  <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
-                </div>
-              </div>
-          </div>
-          <div class="col l4 m6 s12">
-            <div class="card">
-              <div class="single-item card-image waves-effect waves-block waves-light">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
-              </div>
-              <div class="card-content">
-                <div class="row">
-                  <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
-                  </img>
-                  <h3 class="col l7 blue-text member">Siêu Nhân</h3>
-                </div>
-                <h3>Thành viên</h3>
-                <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
-              </div>
+              <button class="btn btn-default" ng-click="like(team._id)" ng-if="!team.is_like">VOTE</button>
+              <div class="btn btn-default" ng-click="like(team._id)" ng-if="team.is_like">ĐÃ VOTE ahihi</div>
+              <div id="shareBtn" class="btn btn-success clearfix" ng-click="share(team._id)">Share</div>
             </div>
           </div>
         </div>
@@ -117,11 +80,15 @@
     </div>
   </div>
 
+
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
   <script type="text/javascript" src='/hackathon_contest/libs/FlipClock-master/compiled/flipclock.min.js'></script>
   <script type="text/javascript" src='/hackathon_contest/js/main.js'></script>
+  <script type="text/javascript" src='/hackathon_contest/js/controller.js'></script>
+
+
 
 </body>
 
