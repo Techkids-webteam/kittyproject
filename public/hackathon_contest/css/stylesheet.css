@@ -121,7 +121,7 @@ li {
 }
 
 .card {
-  margin: 8.5rem 0px 1rem 5%;
+  margin: 3.5rem 0px 1rem 5%;
 }
 
 .introduction-content {
@@ -144,10 +144,12 @@ li {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+
 /*.flip-clock-wrapper ul:nth-child(1) li a div div.inn {
   text-shadow: 0 1px 1px #555;
   background-color: #2dcb73;
 }*/
+
 
 /*.flip-clock-wrapper ul:nth-child(1) li a div div.inn,
 .flip-clock-wrapper ul:nth-child(2) li a div div.inn {
@@ -210,18 +212,47 @@ li {
   margin-top: 30px;
 }
 
-.image-wrapper {
+.rank-wrapper {
   position: relative;
-  width: 100%;
+  z-index: 2;
+  top: 15px;
+  left: -5%;
+  margin-bottom: -22%;
 }
 
-.image-wrapper p {
+.image-wrapper {
+  position: relative;
+}
+
+.award_rank, .score {
   position: absolute;
-  left: 0;
-  top: -15%;
-  padding: 10px;
-  border: 1px solid #FFF;
-  width: 100%;
   color: #FFF;
+}
+
+.award_rank {
+  left: 1%;
+  top: 10%;
+  padding: 10px;
   margin: 5px;
+}
+
+.score {
+  left: 1%;
+  top: -35%;
+  padding: 9px;
+  margin: 5px;
+}
+
+.ribbon_title {
+  width: 60px;
+}
+
+.ribbon_award {
+  width: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  .rank-wrapper {
+    left: -2%;
+  }
 }
