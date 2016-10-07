@@ -22,7 +22,11 @@ var app = angular.module('hackApp', ['ngCookies']);
 
 app.controller('hackCtrl', function($scope, $http, $cookieStore) {
   var user =$cookieStore.get('user');
-  if(!user) var access_token = "";
+  console.log(user);
+  if(!user) {
+    console.log("hihi");
+    var access_token = "";
+  }
   else access_token = user.accessToken;
   $http.get('http://techkids.vn:9196/api/hackathon/data',
     {
@@ -53,8 +57,10 @@ app.controller('hackCtrl', function($scope, $http, $cookieStore) {
 
   $scope.like = function (team_id) {
     FB.getLoginStatus(function(response) {
-      if (response.status === 'connected') {
-        console.log(response.status);
+      if (user) {
+        $scope.data.forEach(function (item) {
+          if(item._id == team_id) item.is_like = true;
+        })
         var data = {
           "id" : team_id
         };
@@ -62,20 +68,21 @@ app.controller('hackCtrl', function($scope, $http, $cookieStore) {
             headers: {'Authorization': user.accessToken}
         }).success(function (res) {
           console.log(res);
-
-          $http.get('http://techkids.vn:9196/api/hackathon/data',
-            {
-              headers: {'Authorization': access_token}
-            }
-          ).success(function (data) {
-            $scope.data = data.items ;
-          });
         });
       } else if (response.status === 'not_authorized') {
         console.log("not authorized");
+        // loginFb();
+      }
+      else {
         loginFb();
-      } else {
-        loginFb();
+        $http.get('http://techkids.vn:9196/api/hackathon/data',
+          {
+            headers: {'Authorization': $cookieStore.get('user').accessToken}
+          }
+        ).success(function (data) {
+          $scope.data = data.items ;
+          console.log(data);
+        });
       }
     });
   };
