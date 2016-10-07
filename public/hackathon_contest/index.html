@@ -10,69 +10,332 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300|Open+Sans:700,800,300|Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="/hackathon_contest/libs/materialize/css/materialize.css">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
   <link rel="stylesheet" href="/hackathon_contest/libs/FlipClock-master/src/flipclock/css/flipclock.css">
+  <link rel="stylesheet" href="/hackathon_contest/libs/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/hackathon_contest/libs/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/hackathon_contest/libs/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/hackathon_contest/css/w3.css">
 
   <link rel="stylesheet" type="text/css" href="/hackathon_contest/css/normalize.css">
+  <link rel="stylesheet" href="/hackathon_contest/css/clock.css">
   <link rel="stylesheet" type="text/css" href="/hackathon_contest/css/stylesheet.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-
 
 </head>
 
-<body ng-app="hackApp" ng-controller="hackCtrl">
-
+<body>
   <header class="header">
     <nav class="main-nav">
       <a class="open-san-bold" href="/">VISIT US</a>
     </nav>
   </header>
 
-
   <div class="page-block img-block introduction-block">
     <div class="introduction-content">
       <img src="/hackathon_contest/img/techkids_logo.png" alt="Techkids Brand">
-      <h2>HACKATHON ĐẠI CHIẾN!</h2>
-      <div>
-        <h2>Chỉ còn</h2>
+      <h2 style="margin-top:25px;">HACKATHON ĐẠI CHIẾN!</h2>
+      <h2 style="margin-top:30px;">Chỉ còn</h2>
+      <div class="flip-counter clock">
       </div>
     </div>
-    <!-- <div class="clock"></div> -->
   </div>
 
   <div class="row">
     <div class="col l8 offset-l2">
       <div class="row">
         <div class="col l12 m12 s12">
-          <div class="col l4 m6 s12" ng-repeat="team in data" id={{team._id}}>
-            <div class="card">
-              <div class="rating">
-                {{"STT: " + $index}}
-                {{"So like: " + team.like}}
+          <div class="col l4 m6 s12">
+            <div class="rank-wrapper">
+              <div class="image-wrapper" style="z-index:2;">
+                <img class="ribbon_title" src="/hackathon_contest/img/Asset 1.svg" alt="" />
+                <p class="award_rank">1<sup>st</sup></p>
               </div>
+              <div class="image-wrapper" style="z-index: 1; top: -40px; left: 20%; margin-bottom: -22%;">
+                <img class="ribbon_award" src="/hackathon_contest/img/Asset 4.svg" alt="" />
+                <p class="score">999</p>
+              </div>
+            </div>
+            <div class="card" style="z-index: 1;">
+              <!-- <img class="ribbon_award" src="/hackathon_contest/img/Asset 1.svg" alt="" /> -->
               <div class="single-item card-image waves-effect waves-block waves-light">
-                <img class="activator" src="https://lh3.googleusercontent.com/-nAGEgasir4U/V3OBRD_SjEI/AAAAAAAAANA/io377G0oD-4plPffjc3aWUU49kpg6AeMQCCo/s512/thomasbouldin.jpeg">
+                <div class="single-item card-image waves-effect waves-block waves-light">
+                  <div class="w3-content" style="max-width:800px;position:relative">
+                    <a class="fancybox slide1" data-fancybox-type="image" data-fancybox-group="group1" title="headphone girl" href="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg">
+                      <img src="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg" alt="" />
+                    </a>
+                    <a class="fancybox slide1" data-fancybox-type="iframe" data-fancybox-group="group1" title="the video" href="https://www.youtube.com/embed/b4Wdnv7H__U">
+                      <iframe src="https://www.youtube.com/embed/b4Wdnv7H__U" frameborder="0" allowfullscreen></iframe>
+                    </a>
+
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+                  </div>
+                </div>
               </div>
               <div class="card-content">
                 <div class="row">
                   <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
                   </img>
-                  <h3 class="col l7 blue-text member">{{team.name}}</h3>
+                  <h3 class="col l7 bold-blue-text member">Siêu Nhân</h3>
                 </div>
-                <h3>Thành viên: </h3>
-                <ul>
-                  <li ng-repeat="member in team.member">
-                    {{member}}
-                  </li>
-                </ul>
-                <p>{{team.content}}</p>
+                <h3 class="bold-text">Thành viên</h3>
+                <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
+                <!-- <div class="row score_box">
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                </div> -->
               </div>
-              <button class="btn btn-default" ng-click="like(team._id)" ng-if="!team.is_like">VOTE</button>
-              <div class="btn btn-default" ng-click="like(team._id)" ng-if="team.is_like">ĐÃ VOTE ahihi</div>
-              <div id="shareBtn" class="btn btn-success clearfix" ng-click="share(team._id)">Share</div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Share" class="blue-flat-button" />
+              </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Voted" class="orange-flat-button" />
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m6 s12">
+              <div class="rank-wrapper">
+                <div class="image-wrapper" style="z-index:2;">
+                  <img class="ribbon_title" src="/hackathon_contest/img/Asset 2.svg" alt="" />
+                  <p class="award_rank">2<sup>nd</sup></p>
+              </div>
+                <div class="image-wrapper" style="z-index: 1; top: -40px; left: 20%; margin-bottom: -22%;">
+                  <img class="ribbon_award" src="/hackathon_contest/img/Asset 4.svg" alt="" />
+                  <p class="score">999</p>
+                </div>
+              </div>
+            <div class="card" style="z-index:1;">
+              <div class="single-item card-image waves-effect waves-block waves-light">
+                <div class="single-item card-image waves-effect waves-block waves-light">
+                  <div class="w3-content" style="max-width:800px;position:relative">
+                    <a class="fancybox slide2" data-fancybox-type="image" data-fancybox-group="group2" title="headphone girl" href="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg">
+                      <img src="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg" alt="" />
+                    </a>
+                    <a class="fancybox slide2" data-fancybox-type="iframe" data-fancybox-group="group2" title="the video" href="https://www.youtube.com/embed/b4Wdnv7H__U">
+                      <iframe src="https://www.youtube.com/embed/b4Wdnv7H__U" frameborder="0" allowfullscreen></iframe>
+                    </a>
+
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs_2(-1)">❮</a>
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs_2(1)">❯</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
+                  </img>
+                  <h3 class="col l7 bold-blue-text member">Siêu Nhân</h3>
+                </div>
+                <h3 class="bold-text">Thành viên</h3>
+                <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
+                <!-- <div class="row score_box">
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                </div> -->
+              </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Share" class="blue-flat-button" />
+              </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Voted" class="orange-flat-button" />
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m6 s12">
+              <div class="rank-wrapper">
+                <div class="image-wrapper" style="z-index:2;">
+                  <img class="ribbon_title" src="/hackathon_contest/img/Asset 3.svg" alt="" />
+                  <p class="award_rank">3<sup>rd</sup></p>
+                </div>
+                <div class="image-wrapper" style="z-index: 1; top: -40px; left: 20%; margin-bottom: -22%;">
+                  <img class="ribbon_award" src="/hackathon_contest/img/Asset 4.svg" alt="" />
+                  <p class="score">999</p>
+                </div>
+              </div>
+            <div class="card" style="z-index:1;">
+              <div class="single-item card-image waves-effect waves-block waves-light">
+                <div class="single-item card-image waves-effect waves-block waves-light">
+                  <div class="w3-content" style="max-width:800px;position:relative">
+                    <a class="fancybox slide3" data-fancybox-type="image" data-fancybox-group="group3" title="headphone girl" href="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg">
+                      <img src="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg" alt="" />
+                    </a>
+                    <a class="fancybox slide3" data-fancybox-type="iframe" data-fancybox-group="group3" title="the video" href="https://www.youtube.com/embed/b4Wdnv7H__U">
+                      <iframe src="https://www.youtube.com/embed/b4Wdnv7H__U" frameborder="0" allowfullscreen></iframe>
+                    </a>
+
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs_3(-1)">❮</a>
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs_3(1)">❯</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
+                  </img>
+                  <h3 class="col l7 bold-blue-text member">Siêu Nhân</h3>
+                </div>
+                <h3 class="bold-text">Thành viên</h3>
+                <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
+                <!-- <div class="row score_box">
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                </div> -->
+              </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Share" class="blue-flat-button" />
+              </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Voted" class="orange-flat-button" />
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m6 s12">
+            <div class="card">
+              <div class="single-item card-image waves-effect waves-block waves-light">
+                <div class="single-item card-image waves-effect waves-block waves-light">
+                  <div class="w3-content" style="max-width:800px;position:relative">
+                    <a class="fancybox slide4" data-fancybox-type="image" data-fancybox-group="group4" title="headphone girl" href="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg">
+                      <img src="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg" alt="" />
+                    </a>
+                    <a class="fancybox slide4" data-fancybox-type="iframe" data-fancybox-group="group4" title="the video" href="https://www.youtube.com/embed/b4Wdnv7H__U">
+                      <iframe src="https://www.youtube.com/embed/b4Wdnv7H__U" frameborder="0" allowfullscreen></iframe>
+                    </a>
+
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs_4(-1)">❮</a>
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs_4(1)">❯</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
+                  </img>
+                  <h3 class="col l7 bold-blue-text member">Siêu Nhân</h3>
+                </div>
+                <h3 class="bold-text">Thành viên</h3>
+                <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
+                <!-- <div class="row score_box">
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                </div> -->
+              </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Share" class="blue-flat-button" />
+              </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Voted" class="orange-flat-button" />
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m6 s12">
+            <div class="card">
+              <div class="single-item card-image waves-effect waves-block waves-light">
+                <div class="single-item card-image waves-effect waves-block waves-light">
+                  <div class="w3-content" style="max-width:800px;position:relative">
+                    <a class="fancybox slide5" data-fancybox-type="image" data-fancybox-group="group5" title="headphone girl" href="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg">
+                      <img src="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg" alt="" />
+                    </a>
+                    <a class="fancybox slide5" data-fancybox-type="iframe" data-fancybox-group="group5" title="the video" href="https://www.youtube.com/embed/b4Wdnv7H__U">
+                      <iframe src="https://www.youtube.com/embed/b4Wdnv7H__U" frameborder="0" allowfullscreen></iframe>
+                    </a>
+
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs_5(-1)">❮</a>
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs_5(1)">❯</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
+                  </img>
+                  <h3 class="col l7 bold-blue-text member">Siêu Nhân</h3>
+                </div>
+                <h3 class="bold-text">Thành viên</h3>
+                <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
+                <!-- <div class="row score_box">
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                </div> -->
+              </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Share" class="blue-flat-button" />
+              </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Voted" class="orange-flat-button" />
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m6 s12">
+            <div class="card">
+              <div class="single-item card-image waves-effect waves-block waves-light">
+                <div class="single-item card-image waves-effect waves-block waves-light">
+                  <div class="w3-content" style="max-width:800px;position:relative">
+                    <a class="fancybox slide6" data-fancybox-type="image" data-fancybox-group="group6" title="headphone girl" href="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg">
+                      <img src="https://pbs.twimg.com/media/CpMGGEaVIAArD0_.jpg" alt="" />
+                    </a>
+                    <a class="fancybox slide6" data-fancybox-type="iframe" data-fancybox-group="group6" title="the video" href="https://www.youtube.com/embed/b4Wdnv7H__U">
+                      <iframe src="https://www.youtube.com/embed/b4Wdnv7H__U" frameborder="0" allowfullscreen></iframe>
+                    </a>
+
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs_6(-1)">❮</a>
+                    <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs_6(1)">❯</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
+                  </img>
+                  <h3 class="col l7 bold-blue-text member">Siêu Nhân</h3>
+                </div>
+                <h3 class="bold-text">Thành viên</h3>
+                <p>App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a App dạy tiếng anh cho trẻ em bla bla... Lorem ipsum dolor sit a</p>
+                <!-- <div class="row score_box">
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                  <div class="col s6 m6 image-wrapper">
+                    <img src="/hackathon_contest/img/score_box.png" alt="" />
+                    <p class="text_over">999</p>
+                  </div>
+                </div> -->
+              </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Share" class="blue-flat-button" />
+              </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Voted" class="orange-flat-button" />
+              </div>
             </div>
           </div>
         </div>
@@ -83,13 +346,23 @@
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-  <script type="text/javascript" src='/hackathon_contest/libs/FlipClock-master/compiled/flipclock.min.js'></script>
+  <script type="text/javascript" src="/hackathon_contest/libs/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script type="text/javascript" src="/hackathon_contest/libs/materialize/js/materialize.js"></script>
+  <script type="text/javascript" src='/hackathon_contest/libs/FlipClock-master/compiled/flipclock.js'></script>
   <script type="text/javascript" src='/hackathon_contest/js/main.js'></script>
-  <script type="text/javascript" src='/hackathon_contest/js/controller.js'></script>
-
-
-
+  <script type="text/javascript">
+    $('.fancybox').fancybox({
+      padding: 0,
+      maxWidth: '100%',
+      maxHeight: '100%',
+      width: 560,
+      height: 315,
+      autoSize: true,
+      closeClick: true,
+      openEffect: 'elastic',
+      closeEffect: 'elastic'
+    });
+  </script>
 </body>
 
 </html>

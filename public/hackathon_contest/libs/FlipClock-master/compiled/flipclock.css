@@ -108,7 +108,7 @@
   width: 100%;
   height: 50%;
   font-size: 80px;
-  overflow: hidden; 
+  overflow: hidden;
   outline: 1px solid transparent; }
 
 .flip-clock-wrapper ul li a div .shadow {
@@ -200,9 +200,9 @@
 
 .flip-clock-divider .flip-clock-label {
   position: absolute;
-  top: -1.5em;
+  bottom: -1.5em;
   right: -86px;
-  color: black;
+  color: #ffffff;
   text-shadow: none; }
 
 .flip-clock-divider.minutes .flip-clock-label {
