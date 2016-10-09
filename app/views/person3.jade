@@ -1,0 +1,61 @@
+extends layout
+append scripts
+  script.
+    (function(h,e,a,t,m,p) {
+    m=e.createElement(a);m.async=!0;m.src=t;
+    p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+    })(window,document,'script','https://u.heatmap.it/log.js');
+block content  
+  section.background.img-responsive
+    .center_inline_list.center_inline_list_2
+      h3.section_title.col-sm-5.col-xs-9.font_color CÙNG TECHKIDS 
+      p.section_subtitle.font_color viết những dòng code thay đổi cuộc đời bạn
+  .content-container
+    .row(style='padding-bottom:25px;')
+      .col-xs-6.col-md-3
+        img.profile_img(src='/cms/img/tran_trung.png')
+      .col-xs-12.col-sm-6.col-md-9
+        h3 Trần Trung
+        p.justify-content.flex-verttically-center
+          |Android student tại TechKids <br>
+          |Android developer tại FPT software<br>
+    p
+      |Chào mọi người, tôi là Trần Trung - học viên khóa Gen 3 - Lập trình Android - của TechKids. 
+    p
+      |Bản thân tôi đã được rèn luyện ở TechKids được hơn 1 tháng đầu để củng cố lại kiến thức về Lập trình hướng đối tượng. 
+      |Học ở TechKids thật khác biệt. 
+      |Đó là những buổi Hackathon từ dạng mini Hackathon đến buổi Hackathon to nhất là để qua hết môn. 
+      |Và cả quá trình học ôn lại kiến thức Lập trình hướng đối tượng nữa. 
+      |Đây chính là hai điều đặc biệt nhất với cá nhân tôi. 
+    p
+      |Lúc đầu, tôi chỉ biết TechKids qua mấy lần gửi thư điện tử mời học. 
+      |Lúc đó, tôi cũng chẩng quan tâm lắm vì hầu như tôi thường nhận được lời mời học của các Trung tâm như FPT Aptech, VTC Academy … 
+      |Và dường như tôi cũng không mấy hứng thú và có ý muốn học. 
+    p
+      |Kể từ khi quan tâm mảng Lập trình di động Android, tôi mới quan tâm mình cần phải đầu tư thêm kiến thức về Lập trình Android và để xin đi làm mảng này. 
+      |Bản thân tôi đã ngoài 30 tuổi, đam mê Lập trình nhưng thời gian thì không cho phép tôi học ở trung tâm lập trình quá lâu nên tôi cũng rất đắn đo khi lựa chọn Trung tâm đào tạo Lập trình. 
+      |Trước đó, tôi cũng đã tham khảo nhiều Trung tâm như VTC Academy, FPT Aptech, TechMaster … 
+      |Nhưng thời gian học ở đó quá lâu và học phí cũng hơi cao so với điều kiện của cá nhân tôi. 
+    p
+      |Và rồi, tôi đã tìm hiểu Thông tin khóa học của TechKids (nhất là Lập trình Android). 
+      |Tôi thực ra, cũng ít biết nhiều về cái tên TechKids qua 1 em học viên của TechKids trước đó. 
+      |Và sau đó, tự bản thân tôi tìm hiểu thêm về Khóa học Android của TechKids. 
+      |Tôi rất ấn tượng với lộ trình học và đầu ra của TechKids về khóa học. 
+      |Ngoài ra, bản thân tôi cũng từng làm ở FPT Software, và cũng thích môi trường làm việc tại FSOFT.
+  //- .course
+  //-   h2.text-center.title CÁC KHÓA HỌC
+  //-   .content-container
+  //-     .course-info
+  //-       .row
+  //-         .col-md-8.col-xs-12
+  //-           h3 Mobile apps development (MAD) - Android
+  //-           p Học Lập trình nền tảng (Java, OOP) và tiếng Anh miễn phí; tạo ra ứng dụng trên nền tảng Android. Giảng viên trên 7 năm kinh nghiệm. Cam kết việc làm sau khóa học hoặc tự khởi nghiệp.
+  //-           a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc/android') TÌM HIỂU NGAY
+  //-         .col-md-3.col-xs-6
+  //-           img.course_picture(src='/cms/img/android.png')
+  .col-xs-12.col-md-12.find_us
+    h3.title
+      | CÙNG TECHKIDS
+    p.sub_title
+      | viết những dòng code thay đổi cuộc đời bạn
+    a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc') TÌM HIỂU CÁC KHÓA HỌC

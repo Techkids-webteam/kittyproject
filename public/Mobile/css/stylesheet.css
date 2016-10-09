@@ -122,12 +122,12 @@ li{
 }
 
 .menu-button div:nth-child(2){
-	margin: 5px 0; 
+	margin: 5px 0;
 }
 
 .menu-button.active div{
 	opacity: 0;
-	
+
 }
 
 .introduction-block{
@@ -170,9 +170,9 @@ li{
 	position: absolute;
 	width: 210px;
 	height: auto;
-	top: 77px; 
-	left: 3px; 
-	bottom: 0; 
+	top: 77px;
+	left: 3px;
+	bottom: 0;
 	right: 0;
 	margin: 0 auto;
 }
@@ -268,7 +268,7 @@ video{
 	.introduction-block{
 		flex-direction: row;
 	}
-	
+
 	.introduction-content{
 		text-align: left;
 	}
@@ -290,4 +290,3 @@ video{
  	}
 
  }
-

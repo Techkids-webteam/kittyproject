@@ -1,0 +1,41 @@
+extends layout
+append scripts
+  script.
+    (function(h,e,a,t,m,p) {
+    m=e.createElement(a);m.async=!0;m.src=t;
+    p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+    })(window,document,'script','https://u.heatmap.it/log.js');
+block content  
+  section.background.img-responsive
+    .center_inline_list.center_inline_list_2
+      h3.section_title.col-sm-5.col-xs-9.font_color CÙNG TECHKIDS 
+      p.section_subtitle.font_color viết những dòng code thay đổi cuộc đời bạn
+  .content-container
+    .row(style='padding-bottom:25px;')
+      .col-xs-6.col-md-3
+        img.profile_img(src='/cms/img/mai_nguyen.png')
+      .col-xs-12.col-sm-6.col-md-9
+        h3 Mai Nguyễn
+        p.justify-content.flex-verttically-center Marketing Manager tại Cốc Cốc
+    p Là một trong những học viên đầu tiên của khóa C4E, bọn mình được các thầy lôi ra làm “chuột bạch” bao nhiêu thứ: được dạy về Games, về Web, Github, mô hình Scrum,… cuối khóa còn tay to chơi cả một project website tin tức du lịch trong 2 tuần. Thế mà lớp mình đứa nào đứa nấy chăm vãi. Hôm nào học cũng 11h mới bắt đầu mò về mà chẳng đứa nào kêu ca gì, thậm chí còn bắt thầy ở lại giảng bài thêm.  
+    p Những ngày làm project,  có nhiều  hôm 12h đêm vẫn phải “áp sát” thầy giáo để được hướng dẫn làm project về 1 trang web du lịch, có đứa trong team còn phải “ăn ngủ” cùng thầy (theo nghĩa đen), để đến hôm Hackathon được thầy khen sướng phổng mũi.  Giờ đây mình có chút tự hào đã có thể chiến được html, css hay javascript, biết vooc về database, làm việc qua githup,…
+    p Ra trường đi làm được 2 năm, va chạm cũng không ít, nhưng chỉ có ở Teckids mình mới thấy 1 tinh thần ham học hỏi & ăn chơi hừng hực. Tất nhiên là độ bựa cũng không kém…Không tin hãy hỏi mọi người ở teckids, họ sẽ nói cho bạn biết làm sao với 2 BCS bạn có thể dùng dc 3 lần…
+    p Mình là Marketer, không phải Developer. Nhưng học cách làm việc như 1 developer cho mình nhiều bài học áp dụng trong công việc và cả cuộc sống.  Đó là Tư duy phân tích – chia nhỏ vấn đề và giải quyết từng phần một. Thêm nữa là khả năng làm việc nhóm: công việc của coder ai cũng nghĩ là độc lập, tẻ nhạt nhưng Teckids lại dạy cho mình điều ngược lại. Sau rốt là tư duy logic. 
+    p Nhưng C4E cho mình nhiều thứ hơn là 1 khóa học: những người bạn, người anh em (mà có thể gọi hội chơi Ba con sói bất cứ lúc nào), sự chia sẻ kiến thức, và trên hết là thường xuyên được truyền cảm hứng về việc mình được phép khác biệt trong thế giới này. Nếu bạn có 1 ước mơ, bạn còn cần gì hơn thế nữa?
+  //- .course
+  //-   h2.text-center.title CÁC KHÓA HỌC
+  //-   .content-container
+  //-     .course-info
+  //-       .row
+  //-         .col-md-8.col-xs-12
+  //-           h3 Code for Everyone (C4E)
+  //-           p Đem một thứ ngôn ngữ toàn cầu mới trong tương lai của cả thế giới về Việt Nam: ngôn ngữ Lập trình. Đặc biệt dành cho non-Techs (không học Công nghệ thông tin), trẻ em, phụ nữ.
+  //-           a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc/code-for-everyone') TÌM HIỂU NGAY
+  //-         .col-md-4.col-xs-6
+  //-           img.course_picture(src='/cms/img/c4e.jpg', style='width:400px; height:150px')
+  .col-xs-12.col-md-12.find_us
+    h3.title
+      | CÙNG TECHKIDS
+    p.sub_title
+      | viết những dòng code thay đổi cuộc đời bạn
+    a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc') TÌM HIỂU CÁC KHÓA HỌC

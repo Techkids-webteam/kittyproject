@@ -1,0 +1,51 @@
+extends layout
+append scripts
+  script.
+    (function(h,e,a,t,m,p) {
+    m=e.createElement(a);m.async=!0;m.src=t;
+    p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+    })(window,document,'script','https://u.heatmap.it/log.js');
+block content  
+  section.background.img-responsive
+    .center_inline_list.center_inline_list_2
+      h3.section_title.col-sm-5.col-xs-9.font_color CÙNG TECHKIDS 
+      p.section_subtitle.font_color viết những dòng code thay đổi cuộc đời bạn
+  .content-container
+    .row(style='padding-bottom:25px;')
+      .col-xs-6.col-md-3
+        img.profile_img(src='/cms/img/ufo.png')
+      .col-xs-12.col-sm-6.col-md-9
+        h3 Châu Dương Ufo
+        p.justify-content.flex-verttically-center Từng học tại Mỹ, Singapore Hiện tại đang làm Founder và CEO tại Wings.vn
+    p
+      |Hôm qua là kết thúc khóa C4E2, giờ nghĩ lại cứ thấy bồi hồi sao sao ý.. 
+    p
+      |Ufo muốn gửi lời cảm ơn tới tất cả mọi người:<br> 
+      |- Cảm ơn giảng viên Huy Nguyen Quang Trần Đức Hùng Cương Nguyễn đã cực kỳ tận tâm, nhiệt huyết, đáng yêu, kiến thức và kỹ năng rất khủng, cố gắng truyền tải cho học viên những cái hay ho nhất (k0 chỉ về code) dù trong khóa học ngắn như vậy. <br>
+      |- Cảm ơn các bạn học viên học cùng đã luôn chăm chỉ, máu lửa như vậy. các bạn máu quá cũng làm mình máu theo. Học viên toàn những người bựa và vui, nhưng sống lại đặc biệt tình cảm.<br>
+      |- Cá nhân Ufo có sự yêu mến đặc biệt với những con người ở Techkids. Ufo học hỏi được rất nhiều từ cả giảng viên, nhân viên, lẫn học viên. Ufo vẫn còn nhớ có lần ốm k0 đến lớp đc, mọi người réo rắt gọi đt hỏi thăm sao k0 đi học, và update về tình hình trên lớp trực tuyến luôn ^^ <br>
+    p
+      |Ufo cũng nhớ những buổi thâu đêm suốt sáng code cùng mọi người, hay léo nhéo nhắn tin hỏi giảng viên và coach để support. Mọi người vẫn luôn ở đấy vì nhau, đấy là điều đáng quý nhất <3
+      |Techkids là một trong những startups mình thực sự quan tâm và mong muốn hỗ trợ nhiều hơn, vì đơn giản Techkids đang mang lại giá trị thực cho xã hội và mình thấy được sự tận tâm của team đằng sau đó.
+      |- Khi nào có khóa data, mong Techkids ưu đãi học viên cũ để Ufo đi học :P<br>
+    p
+      |Thanks all for everything <3 Really appreciate with lots of love <3
+
+  //- .course
+  //-   h2.text-center.title CÁC KHÓA HỌC
+  //-   .content-container
+  //-     .course-info
+  //-       .row
+  //-         .col-md-8.col-xs-12
+  //-           h3 Code for Everyone (C4E)
+  //-           p Đem một thứ ngôn ngữ toàn cầu mới trong tương lai của cả thế giới về Việt Nam: ngôn ngữ Lập trình. Đặc biệt dành cho non-Techs (không học Công nghệ thông tin), trẻ em, phụ nữ.
+  //-           a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc/code-for-everyone') TÌM HIỂU NGAY
+  //-         .col-md-4.col-xs-6
+  //-           img.course_picture(src='/cms/img/c4e.jpg', style='width:400px; height:150px')
+  .col-xs-12.col-md-12.find_us
+    h3.title
+      | CÙNG TECHKIDS
+    p.sub_title
+      | viết những dòng code thay đổi cuộc đời bạn
+    a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc') TÌM HIỂU CÁC KHÓA HỌC
+md-3

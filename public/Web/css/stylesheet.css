@@ -118,12 +118,12 @@ li{
 }
 
 .menu-button div:nth-child(2){
-	margin: 5px 0; 
+	margin: 5px 0;
 }
 
 .menu-button.active div{
 	opacity: 0;
-	
+
 }
 
 .introduction-block{
@@ -229,7 +229,7 @@ li{
 		padding: 0 58px;
 	}
 
-	
+
 	.introduction-content{
 		text-align: left;
 	}
@@ -240,7 +240,7 @@ li{
 
 	.footer{
 		padding: 20px 58px;
- 	}	
+ 	}
 }
 
 @media(min-width: 900px){
@@ -253,7 +253,7 @@ li{
 	.portfolios-img{
 		width: 40%;
 	}
-	
+
 	.portfolios-detail{
 		width: 55%;
 	}
@@ -263,17 +263,16 @@ li{
 	}
 
 	.portfolios-item:nth-child(even) .portfolios-img{
-		order: 2; 
+		order: 2;
 	}
 
 	.portfolios-item:nth-child(even) .portfolios-detail{
 		order: 1;
-		padding-right: 40px; 
+		padding-right: 40px;
 	}
 
 	.portfolios-item:nth-child(odd) .portfolios-detail{
-		padding-left: 40px; 
+		padding-left: 40px;
 	}
 
 }
-

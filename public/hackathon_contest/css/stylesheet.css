@@ -1,0 +1,263 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font: 10px/1.4 "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  outline: 0 none;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5, p {
+  font-size: 1.3rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.bold-blue-text {
+  color: #00a0c6;
+  font-weight: 700;
+}
+
+.bold-text {
+  font-weight: 600;
+}
+
+.open-san-bold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.source-san-black {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+}
+
+.source-san-light {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+.page-block {
+  padding: 0 30px;
+}
+
+.img-block {
+  background-size: cover;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: #01a0c7;
+}
+
+.main-nav {
+  float: right;
+  display: flex;
+  align-items: stretch;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-nav a {
+  display: inline-block;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 2px 15px;
+  background: #01a0c7;
+  margin-left: 5px;
+}
+
+.introduction-block {
+  background-image: url('../img/banner.png');
+  height: 430px;
+}
+
+.thumbnail-block {
+  margin: 60px 30px 25px 140px;
+}
+
+.row .col.offset-l1 {
+  width: 91%;
+  margin: 0 3%;
+}
+
+.card {
+  margin: 3.5rem 0px 1rem 5%;
+}
+
+.introduction-content {
+  text-align: center;
+  padding-top: 100px;
+  color: #5f5f5f;
+}
+
+.introduction-content h2 {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.flip-clock-divider .flip-clock-label, .flip-clock-dot {
+  display: block;
+}
+
+.flip-clock-wrapper ul li a div.up:after {
+  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/*.flip-clock-wrapper ul:nth-child(1) li a div div.inn {
+  text-shadow: 0 1px 1px #555;
+  background-color: #2dcb73;
+}*/
+
+
+/*.flip-clock-wrapper ul:nth-child(1) li a div div.inn,
+.flip-clock-wrapper ul:nth-child(2) li a div div.inn {
+  text-shadow: 0 1px 1px #555;
+  background-color: #00a0c6;
+}*/
+
+.member-info {
+  display: inline-block;
+}
+
+.member {
+  vertical-align: middle;
+}
+
+@media(min-width: 720px) {
+  .header {
+    background: none;
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    margin: 8.5rem 0px 1rem 0px;
+  }
+}
+
+.blue-flat-button, .orange-flat-button {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  outline: 0 none;
+  border: 0;
+  cursor: pointer;
+  box-shadow: inset 0 -2px #d7d7d7;
+}
+
+.orange-flat-button {
+  background: #f39c12;
+}
+
+.disable {
+  background: #b7b7b7;
+}
+
+.blue-flat-button {
+  background: #00a0c6;
+}
+
+.score_box {
+  margin-bottom: -15px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.rank-wrapper {
+  position: relative;
+  z-index: 2;
+  top: 15px;
+  left: -5%;
+  margin-bottom: -22%;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.award_rank, .score {
+  position: absolute;
+  color: #FFF;
+}
+
+.award_rank {
+  left: 1%;
+  top: 10%;
+  padding: 10px;
+  margin: 5px;
+}
+
+.score {
+  left: 1%;
+  top: -35%;
+  padding: 9px;
+  margin: 5px;
+}
+
+.ribbon_title {
+  width: 60px;
+}
+
+.ribbon_award {
+  width: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  .rank-wrapper {
+    left: -2%;
+  }
+}
+
+.img-list{
+  max-height: 200px;
+  min-height: 200px;
+}

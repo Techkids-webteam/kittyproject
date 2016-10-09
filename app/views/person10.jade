@@ -1,0 +1,41 @@
+extends layout
+append scripts
+  script.
+    (function(h,e,a,t,m,p) {
+    m=e.createElement(a);m.async=!0;m.src=t;
+    p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+    })(window,document,'script','https://u.heatmap.it/log.js');
+block content  
+  section.background.img-responsive
+    .center_inline_list.center_inline_list_2
+      h3.section_title.col-sm-5.col-xs-9.font_color CÙNG TECHKIDS 
+      p.section_subtitle.font_color viết những dòng code thay đổi cuộc đời bạn
+  .content-container
+    .row(style='padding-bottom:25px;')
+      .col-xs-6.col-md-3
+        img.profile_img(src='/cms/img/thanh_son.png')
+      .col-xs-12.col-sm-6.col-md-9
+        h3 Thành Sơn 
+        p.justify-content.flex-verttically-center
+            |K59 - Khoa CNTT - ĐH BK HN
+            |Từng thực tập tại Telsoft và Trueplus
+    p Mình đến với Techkids cũng thật tình cờ và bất ngờ.Hôm đấy có ku em chia sẻ 1 status của mama Hà San.Thế nào mình lại đọc được,thấy bà ấy viết cũng hay hay, lôi cuốn nên nhảy vào xem có gì hay ho không. Vào xem thì thấy Techkids đang có khóa lập trình Android mà mình rất yêu thích, mỗi tội giá hơi chát.
+    p Nhưng thấy là có thêm vài khóa bonus nghe rất hấp dẫn,với lại có cơ hôi đạt học bổng trăm phần trăm nên ham hố đi xem sao. Hôm phỏng vấn thì cũng không tự tin lắm, lại được anh Huy và anh Tùng quay một lúc lâu, may mà vẫn được học bổng :v. Nhưng phải nói rằng học Techkids là một quyết đinh sáng suốt nhất trong cuộc đời sinh viên của mình cho tới giờ :3.
+    p Học ở đây mình được gặp gỡ các anh chị giảng viên tài giỏi,tận tình,anh em coder trâu bò,và cả mama San và mấy em chăm sóc học viên xinh đẹp nữa. Thời gian học ở Techkids mình đã có thêm rất nhiều kiến thức và kĩ năng bổ ích mà mình không có cơ hội tiếp cận khi học ở nhà hay học trên trường. Nói như vây không có nghĩa là bạn cứ vào Techkids là giỏi lên đâu nhá.Phải học hành tử tế,chăm chỉ cày cuốc chứ không là bị mama San dọa ... ngay đấy :3. Nhưng nếu các bạn đủ ý chí và nghị lực theo đuổi thì chắn chắn sẽ có rất nhiều cơ hội tại Techkids nhé.
+  //- .course
+  //-   h2.text-center.title CÁC KHÓA HỌC
+  //-   .content-container
+  //-     .course-info
+  //-       .row
+  //-         .col-md-8.col-xs-12
+  //-           h3 Mobile apps development (MAD) - iOS
+  //-           p Học Lập trình nền tảng (Java, OOP) và tiếng Anh miễn phí; tạo ra ứng dụng trên nền tảng iOS. Giảng viên trên 7 năm kinh nghiệm. Cam kết việc làm sau khóa học hoặc tự khởi nghiệp.
+  //-           a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc/ios') TÌM HIỂU NGAY
+  //-         .col-md-4.col-xs-6
+  //-           img.course_picture(src='/cms/img/banneriosandroid.jpg')
+  .col-xs-12.col-md-12.find_us
+    h3.title
+      | CÙNG TECHKIDS
+    p.sub_title
+      | viết những dòng code thay đổi cuộc đời bạn
+    a.btn.btn_button_orange.boder_radius_1(href='/khoa-hoc') TÌM HIỂU CÁC KHÓA HỌC

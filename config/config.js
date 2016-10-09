@@ -10,7 +10,7 @@ var config = {
       name: 'kitty-project'
     },
     port: process.env.PORT || 8080,
-    db: 'mongodb://localhost/kitty-project-development'
+    db: 'mongodb://admin:admin@ds019254.mlab.com:19254/hackathon'
   },
 
   test: {
@@ -19,7 +19,7 @@ var config = {
       name: 'kitty-project'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/kitty-project-test'
+    db: 'mongodb://admin:admin@ds019254.mlab.com:19254/hackathon'
   },
 
   production: {
@@ -28,7 +28,7 @@ var config = {
       name: 'kitty-project'
     },
     port: process.env.PORT || 80,
-    db: 'mongodb://localhost/kitty-project-production'
+    db: 'mongodb://admin:admin@ds019254.mlab.com:19254/hackathon'
   }
 };
 

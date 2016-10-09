@@ -11,11 +11,11 @@ var express = require('express'),
     multipartMiddleware = multipart();
 
 // mongoose.connect(config.db);
-mongoose.connect('mongodb://techkids:codethechange@ds021751.mlab.com:21751/techkids');
-var dbMongo = mongoose.connection;
-dbMongo.on('error', function () {
-    throw new Error('unable to connect to database at ' + config.db);
-});
+// mongoose.connect('mongodb://techkids:codethechange@ds021751.mlab.com:21751/techkids');
+// var dbMongo = mongoose.connection;
+// dbMongo.on('error', function () {
+//     throw new Error('unable to connect to database at ' + config.db);
+// });
 // ------------dữ liệu-----------------------
 // var models = glob.sync(config.root + '/app/models/*.js');
 // models.forEach(function (model) {
@@ -31,11 +31,11 @@ var PostSchema = mongoose.Schema({
     time: Number
 });
 // ---- kiểm tra tình trạng kết nối mongo -----
-var Post = mongoose.model('Post', PostSchema);
-dbMongo.on('error', console.error.bind(console, 'connection error:'));
-dbMongo.once('open', function () {
-    console.log('MongoDb connected');
-});
+// var Post = mongoose.model('Post', PostSchema);
+// dbMongo.on('error', console.error.bind(console, 'connection error:'));
+// dbMongo.once('open', function () {
+//     console.log('MongoDb connected');
+// });
 
 //=========================================================
 //app init
@@ -86,25 +86,6 @@ app.use(bodyParser.urlencoded({
 //HungTD 10/6/2016
 
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
-var allTanks = [];
-var tankById = function (id, killOnSight) {
-    for (var i = 0; i < allTanks.length; i++) {
-        if (allTanks[i].id == id) {
-            return killOnSight ? allTanks.splice(i, 1)[0] : allTanks[i];
-        }
-    }
-
-    return null;
-}
-
-function compare(a, b) {
-    if (a.score < b.score)
-        return 1;
-    if (a.score > b.score)
-        return -1;
-    return 0;
-}
 
 app.get('/games/tanks', function (req, res) {
     res.sendFile(__dirname + '/public/games/tanks/index.html');
@@ -114,84 +95,6 @@ app.get('/blog', function (req, res) {
 });
 
 
-io.on('connection', function (socket) {
-    console.log('user connected');
-
-    socket.emit('connected', {
-        enemies: allTanks.slice()
-    });
-
-    socket.on('login', function (msg) {
-        var response = {
-            score: 0,
-            username: msg,
-            position: {
-                x: Math.random() * 3200,
-                y: Math.random() * 600,
-            },
-            id: socket.id
-        }
-        response.top3 = allTanks.slice(0, 3);
-        socket.emit('loggedIn', response);
-        socket.broadcast.emit('newPlayerJoined', response);
-        response.top3 = undefined;
-
-        allTanks.push(response);
-    });
-
-    socket.on('tankMove', function (msg) {
-        var tank = tankById(socket.id);
-        if (tank) {
-            tank.position.x = msg.position.x;
-            tank.position.y = msg.position.y;
-        }
-
-        socket.broadcast.emit('tankMoved', msg);
-    });
-
-    socket.on('tankFire', function (msg) {
-        socket.broadcast.emit('tankFired', msg);
-    });
-
-    socket.on('tankDie', function (msg) {
-        var killer = tankById(msg.killerId);
-        if (killer) {
-            killer.score += 1;
-        }
-
-        allTanks.sort(compare);
-        msg.top3 = allTanks.slice(0, 3);
-        socket.broadcast.emit('tankDied', msg);
-    });
-
-    socket.on('playerAfk', function (msg) {
-        socket.broadcast.emit('playerAfk', msg);
-        var player = tankById(msg.id);
-        if (player) player.afk = true;
-    });
-
-    socket.on('playerReturn', function (msg) {
-        socket.broadcast.emit('playerReturn', msg);
-        var player = tankById(msg.id);
-        if (player) player.afk = false;
-    });
-
-    socket.on('disconnect', function () {
-        console.log('user disconnected: ' + socket.id);
-        if (tankById(socket.id, true)) {
-            socket.broadcast.emit('playerDisconnected', {
-                id: socket.id
-            });
-        }
-    });
-
-    socket.on('aPing', function (msg) {
-        socket.emit('aPong', {
-            ping: msg,
-            top3: allTanks.slice(0, 3)
-        });
-    });
-});
 
 //end server game tanks
 
@@ -291,6 +194,14 @@ app.get('/portfolio/mobile', function (req, res) {
     res.sendFile(__dirname + '/public/Mobile/index.html');
 });
 
+app.get('/portfolio', function (req, res) {
+    res.sendFile(__dirname + '/public/portfolio/index.html');
+});
+
+app.get('/hackathon', function (req, res) {
+    res.sendFile(__dirname + '/public/hackathon_contest/index.html');
+});
+
 app.get('/connect', function (req, res) {
     res.sendFile(__dirname + '/public/Techkids Connect/index.html');
 });
@@ -298,12 +209,62 @@ app.get('/connect', function (req, res) {
 app.get('/register', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/index.html');
 });
-//app.get('/register', function (req, res) {
-//    res.render('register-page');
-//});
+
+app.get('/hoc-vien', function (req, res) {
+    res.render('index_testimonial');
+});
+
+app.get('/hoc-vien/hoang-duong', function (req, res) {
+    res.render('person1');
+});
+
+app.get('/hoc-vien/duc-nhan', function (req, res) {
+    res.render('person2');
+});
+
+app.get('/hoc-vien/tran-trung', function (req, res) {
+    res.render('person3');
+});
+
+app.get('/hoc-vien/duong-thang', function (req, res) {
+    res.render('person4');
+});
+
+app.get('/hoc-vien/phuong-thao', function (req, res) {
+    res.render('person5');
+});
+
+app.get('/hoc-vien/hoa-khanh', function (req, res) {
+    res.render('person6');
+});
+
+app.get('/hoc-vien/ufo', function (req, res) {
+    res.render('person7');
+});
+
+app.get('/hoc-vien/mai-nguyen', function (req, res) {
+    res.render('person8');
+});
+
+app.get('/hoc-vien/nguyen-nga', function (req, res) {
+    res.render('person9');
+});
+
+app.get('/hoc-vien/thanh-son', function (req, res) {
+    res.render('person10');
+});
+
+app.get('/hoc-vien/son-vu', function (req, res) {
+    res.render('person11');
+});
+
+app.get('/hoc-vien/minh-tien', function (req, res) {
+    res.render('person12');
+});
 app.get('/chia-se/tai-lieu/chia-se-sach-cho-dan-lap-trinh-vien', function (req, res) {
     res.render('articles-1');
 });
+
 app.get('/chuong-trinh/su-kien/english-and-it-why-how-what', function (req, res) {
     res.render('events-1');
 });
@@ -336,6 +297,9 @@ app.get('/chuong-trinh/su-kien/workshop-c4e', function (req, res) {
 });
 app.get('/chuong-trinh/su-kien/connect-techkids', function (req, res) {
     res.render('events-11');
+});
+app.get('/chuong-trinh/su-kien/duong-ra-the-gioi', function (req, res) {
+    res.render('events-12');
 });
 // create a route to render the index.jade file.
 app.get('/', function (req, res) {
