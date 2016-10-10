@@ -65,7 +65,7 @@ app.controller('hackCtrl', function($scope, $http, $cookieStore) {
     if(item.slide_index < 1) {
       item.slide_index = item.group_img.length + 1;
     } else {
-      if (item.slide_index > item.group_img.length){
+      if (item.slide_index > item.group_img.length + 1){
         item.slide_index = 1;
       }
     }
