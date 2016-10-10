@@ -46,23 +46,23 @@
   </div>
 
 
-  <div class="row">
-    <div class="col l8 offset-l2">
-      <div class="row">
-        <div class="col l12 m12 s12">
-          <div class="col l4 m6 s12" ng-repeat="team in data" id={{team._id}}>
-
+  <div class="">
+    <div class="row">
+      <div class="col l12 m12 s12">
+        <div class="col l4 m6 s12" ng-repeat="team in data" id={{team._id}} style="padding-left: 25px">
+          <div class="col l10 offset-l1">
+            <!--rank-->
             <div class="rank-wrapper" ng-if="$index<3">
               <div class="image-wrapper" style="z-index:2;">
                 <img class="ribbon_title" src="{{'/hackathon_contest/img/Asset '+($index+1)+'.svg'}}" alt="" />
                 <p class="award_rank">{{$index+1}}<sup>st</sup></p>
               </div>
-              <div class="image-wrapper" style="z-index: 1; top: -40px; left: 20%; margin-bottom: -22%;">
+              <div class="image-wrapper" style="z-index: 1; top: -40px; left: 15%; margin-bottom: -22%;">
                 <img class="ribbon_award" src="/hackathon_contest/img/Asset 4.svg" alt="" />
                 <p class="score">{{team.like}}</p>
               </div>
             </div>
-            <!--silde ịmg-->
+
             <div class="card" style="z-index: 1;">
               <div class="single-item card-image waves-effect waves-block waves-light">
                 <div class="single-item card-image waves-effect waves-block waves-light">
@@ -79,10 +79,11 @@
                 </div>
               </div>
               <div class="card-content">
-                <div class="row">
-                  <img class="col l5" src="/hackathon_contest/img/ellipse.png" alt="thành viên">
-                  </img>
-                  <h3 class="col l7 bold-blue-text member">{{team.name}}</h3>
+                <div class="row team-info">
+                  <div class="col s12">
+                    <img class="img-team" src="{{team.group_img[0]}}" alt="thành viên">
+                    <h3 class="bold-blue-text member">{{team.name}}</h3>
+                  </div>
                 </div>
                 <h3 class="bold-text">Thành viên</h3>
                 <p>{{team.content}}</p>
@@ -95,6 +96,10 @@
                 <input type="submit" value="Voted" class="orange-flat-button disable" ng-if="team.is_like"/>
               </div>
             </div>
+          </div>
+          <!--silde ịmg-->
+  </div>
+      </div>
     </div>
   </div>
 
