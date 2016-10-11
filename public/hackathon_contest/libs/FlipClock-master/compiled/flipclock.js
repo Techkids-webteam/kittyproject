@@ -406,7 +406,6 @@ var FlipClock;
 			}
 
 			label = this.factory.localize(label);
-
 			var html = [
 				'<span class="'+this.factory.classes.divider+' '+(css ? css : '').toLowerCase()+'">',
 					'<span class="'+this.factory.classes.label+'">'+(label ? label : '')+'</span>',
@@ -2119,10 +2118,16 @@ var FlipClock;
 			}
 
 			$(this.createDivider('Minutes')).insertBefore(this.lists[this.lists.length - 4 + offset].$el);
-			$(this.createDivider('Hours')).insertBefore(this.lists[this.lists.length - 6 + offset].$el);
-			$(this.createDivider('Days', true)).insertBefore(this.lists[0].$el);
+      $(this.lists[this.lists.length - 3 + offset].$el).addClass('minutes');
+      $(this.lists[this.lists.length - 4+ offset].$el).addClass('minutes');
+      $(this.createDivider('Hours')).insertBefore(this.lists[this.lists.length - 6 + offset].$el);
+      $(this.lists[this.lists.length - 5 + offset].$el).addClass('hours');
+      $(this.lists[this.lists.length - 6 + offset].$el).addClass('hours');
+      $(this.createDivider('Days', true)).insertBefore(this.lists[0].$el);
+      $(this.lists[0].$el).addClass('days');
+      $(this.lists[1].$el).addClass('days');
 
-			this.base();
+      this.base();
 		},
 
 		/**

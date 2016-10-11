@@ -186,7 +186,6 @@ textarea {
 /* End extract from normalize.css */
 
 html, body {
-  font-family: Verdana, sans-serif;
   font-size: 15px;
   line-height: 1.5
 }
@@ -367,7 +366,8 @@ a {
 .w3-btn-floating {
   width: 40px;
   height: 40px;
-  line-height: 40px
+  line-height: 40px;
+  font-size: 30px;
 }
 
 .w3-btn-floating-large {
