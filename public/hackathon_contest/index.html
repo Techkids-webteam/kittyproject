@@ -31,7 +31,7 @@
 <body ng-app="hackApp" ng-controller="hackCtrl">
   <header class="header">
     <nav class="main-nav">
-      <a class="open-san-bold" href="/">VISIT US</a>
+      <a class="roboto-bold" href="/">VISIT US</a>
     </nav>
   </header>
 
@@ -51,19 +51,25 @@
       <div class="col l12 m12 s12">
         <div class="col l4 m6 s12" ng-repeat="team in data" id={{team._id}} style="padding-left: 25px">
           <div class="col l10 offset-l1">
-            <!--rank-->
-            <div class="rank-wrapper" ng-if="$index<3">
-              <div class="image-wrapper" style="z-index:2;">
-                <img class="ribbon_title" src="{{'/hackathon_contest/img/Asset '+($index+1)+'.svg'}}" alt="" />
-                <p class="award_rank">{{$index+1}}<sup>st</sup></p>
-              </div>
-              <div class="image-wrapper" style="z-index: 1; top: -40px; left: 15%; margin-bottom: -22%;">
-                <img class="ribbon_award" src="/hackathon_contest/img/Asset 4.svg" alt="" />
-                <p class="score">{{team.like}}</p>
-              </div>
-            </div>
-
             <div class="card" style="z-index: 1;">
+              <!--rank-->
+              <div class="rank-wrapper" ng-if="$index<3">
+                  <div class="image-wrapper" style="z-index:2;">
+                    <img class="ribbon_title" src="{{'/hackathon_contest/img/Asset '+($index+1)+'.svg'}}" alt="" />
+                    <p class="award_rank">{{$index+1}}
+                      <sup ng-if="$index ==0">st</sup>
+                      <sup ng-if="$index ==1">nd</sup>
+                      <sup ng-if="$index ==2">rd</sup>
+                    </p>
+                  </div>
+                  <div>
+                    <div class="image-wrapper">
+                      <img class="ribbon_award" src="/hackathon_contest/img/Asset 4.svg" alt="" />
+                      <p class="score">{{team.like}}</p>
+                    </div>
+                  </div>
+              </div>
+
               <div class="single-item card-image waves-effect waves-block waves-light">
                 <div class="single-item card-image waves-effect waves-block waves-light">
                   <div class="w3-content img-list" style="max-width:800px;position:relative">
@@ -78,7 +84,8 @@
                   </div>
                 </div>
               </div>
-              <div class="card-content">
+
+              <div class="content">
                 <div class="row team-info">
                   <div class="col s12">
                     <img class="img-team" src="{{team.group_img[0]}}" alt="thành viên">
@@ -88,6 +95,7 @@
                 <h3 class="bold-text">Thành viên</h3>
                 <p>{{team.content}}</p>
               </div>
+
               <div class="col s6 m6" style="padding:0;">
                 <input type="submit" value="Share" class="blue-flat-button" id="shareBtn" ng-click="share(team)"/>
               </div>

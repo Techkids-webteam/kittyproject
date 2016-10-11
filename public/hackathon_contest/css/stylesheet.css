@@ -9,6 +9,7 @@ html {
 
 body {
   font-size: 1.4rem;
+  background: #f7f7f7;
 }
 
 a {
@@ -28,7 +29,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 h4 {
@@ -36,7 +37,7 @@ h4 {
 }
 
 h5, p {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 }
 
 ul {
@@ -57,6 +58,7 @@ li {
 .bold-text {
   font-weight: 600;
   margin-top: 50px;
+  font-family: Roboto Bold;
 }
 
 .open-san-bold {
@@ -123,6 +125,7 @@ li {
 
 .card {
   margin: 3.5rem 0px 1rem 5%;
+  font-size: 18px;
 }
 
 .introduction-content {
@@ -213,18 +216,27 @@ li {
   margin-top: 30px;
 }
 
-.rank-wrapper {
-  position: relative;
-  z-index: 2;
-  top: 15px;
-  left: -5%;
-  margin-bottom: -22%;
+.rank-wrapper{
+  position: absolute;
+  z-index: 11;
+  top: -7%;
+  left: 4%;
 }
 
-.image-wrapper {
+.image-wrapper{
+  display: inline-block;
+}
+
+.rank-wrapper div{
   position: relative;
 }
 
+
+.rank-wrapper div div{
+  position: absolute;
+  top: -42px;
+  left: 75%;
+}
 .award_rank, .score {
   position: absolute;
   color: #FFF;
@@ -238,7 +250,8 @@ li {
 }
 
 .score {
-  left: 1%;
+  color: #000000;
+  left: 15%;
   top: -35%;
   padding: 9px;
   margin: 5px;
@@ -269,13 +282,13 @@ li {
 
 .team-info {
   position: absolute;
-  top: 48%;
+  top: 40%;
   z-index: 10;
 }
 
 .img-team{
-  height: 70px;
-  width: 70px;
+  height: 75px;
+  width: 75px;
   border-radius: 100%;
   border: 5px solid #ffffff;
   vertical-align: bottom;
@@ -285,7 +298,16 @@ li {
   display: inline-block;
 }
 
-/*.team-info{*/
-  /*position: absolute;*/
-  /*top:*/
-/*}*/
+.card-content p{
+  font-family: Roboto Regular;
+}
+
+.content{
+  padding: 20px 25px;
+  border-radius: 0 0 2px 2px;
+}
+
+.roboto-bold{
+  font-family: Roboto Bold;
+  font-size: 18px;
+}
