@@ -58,7 +58,7 @@ li {
 .bold-text {
   font-weight: 600;
   margin-top: 50px;
-  font-family: Roboto Bold;
+  font-family: Roboto;
 }
 
 .open-san-bold {
@@ -186,7 +186,7 @@ li {
   position: relative;
   vertical-align: top;
   width: 100%;
-  height: 40px;
+  height: 50px;
   padding: 0;
   font-size: 20px;
   color: white;
@@ -196,6 +196,8 @@ li {
   border: 0;
   cursor: pointer;
   box-shadow: inset 0 -2px #d7d7d7;
+  font-family: Source Sans Pro;
+  font-weight: 800;
 }
 
 .orange-flat-button {
@@ -219,8 +221,8 @@ li {
 .rank-wrapper{
   position: absolute;
   z-index: 11;
-  top: -7%;
-  left: 4%;
+  top: -14%;
+  left: 5%;
 }
 
 .image-wrapper{
@@ -282,7 +284,7 @@ li {
 
 .team-info {
   position: absolute;
-  top: 40%;
+  top: 86%;
   z-index: 10;
 }
 
@@ -299,7 +301,7 @@ li {
 }
 
 .card-content p{
-  font-family: Roboto Regular;
+  font-family: Roboto;
 }
 
 .content{
@@ -308,6 +310,12 @@ li {
 }
 
 .roboto-bold{
-  font-family: Roboto Bold;
+  font-family: Roboto;
   font-size: 18px;
+  font-weight: 600;
+}
+
+.body-content{
+  margin-top: 60px;
+  margin-bottom: 100px;
 }
