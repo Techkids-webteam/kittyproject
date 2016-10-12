@@ -46,14 +46,15 @@
   </div>
 
 
-  <div class="">
+  <div class="body-content">
     <div class="row">
       <div class="col l12 m12 s12">
         <div class="col l4 m6 s12" ng-repeat="team in data" id={{team._id}} style="padding-left: 25px">
           <div class="col l10 offset-l1">
             <div class="card" style="z-index: 1;">
               <!--rank-->
-              <div class="rank-wrapper" ng-if="$index<3">
+              <div style="position: relative">
+                <div class="rank-wrapper" ng-if="$index<3">
                   <div class="image-wrapper" style="z-index:2;">
                     <img class="ribbon_title" src="{{'/hackathon_contest/img/Asset '+($index+1)+'.svg'}}" alt="" />
                     <p class="award_rank">{{$index+1}}
@@ -68,30 +69,33 @@
                       <p class="score">{{team.like}}</p>
                     </div>
                   </div>
-              </div>
+                </div>
 
-              <div class="single-item card-image waves-effect waves-block waves-light">
                 <div class="single-item card-image waves-effect waves-block waves-light">
-                  <div class="w3-content img-list" style="max-width:800px;position:relative">
-                    <a ng-repeat="img in team.group_img" ng-show="team.slide_index == ($index+1)" class="fancybox slide" data-fancybox-type="image" data-fancybox-group="{{'group'+($parent.$index+1)}}" title="headphone girl" href="{{img}}">
-                      <img src="{{img}}" alt="" />
-                    </a>
-                    <a ng-show="team.slide_index == (team.group_img.length + 1)" class="fancybox slide" data-fancybox-type="iframe" data-fancybox-group="{{'group'+($index+1)}}" title="the video" href="https://www.youtube.com/embed/b4Wdnv7H__U">
-                      <iframe src="https://www.youtube.com/embed/b4Wdnv7H__U" frameborder="0" allowfullscreen></iframe>
-                    </a>
-                    <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" ng-click="showImg($index, -1)">❮</a>
-                    <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" ng-click="showImg($index, 1)">❯</a>
+                  <div class="single-item card-image waves-effect waves-block waves-light">
+                    <div class="w3-content img-list" style="max-width:800px;position:relative">
+                      <a ng-repeat="img in team.group_img" ng-show="team.slide_index == ($index+1)" class="fancybox slide" data-fancybox-type="image" data-fancybox-group="{{'group'+($parent.$index+1)}}" title="headphone girl" href="{{img}}">
+                        <img src="{{img}}" alt="" />
+                      </a>
+                      <a ng-show="team.slide_index == (team.group_img.length + 1)" class="fancybox slide" data-fancybox-type="iframe" data-fancybox-group="{{'group'+($index+1)}}" title="the video" href="https://www.youtube.com/embed/b4Wdnv7H__U">
+                        <iframe src="https://www.youtube.com/embed/b4Wdnv7H__U" frameborder="0" allowfullscreen></iframe>
+                      </a>
+                      <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" ng-click="showImg($index, -1)">❮</a>
+                      <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" ng-click="showImg($index, 1)">❯</a>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="content">
                 <div class="row team-info">
                   <div class="col s12">
                     <img class="img-team" src="{{team.group_img[0]}}" alt="thành viên">
                     <h3 class="bold-blue-text member">{{team.name}}</h3>
                   </div>
                 </div>
+
+              </div>
+
+              <div class="content">
                 <h3 class="bold-text">Thành viên</h3>
                 <p>{{team.content}}</p>
               </div>
