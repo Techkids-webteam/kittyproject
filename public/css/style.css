@@ -624,11 +624,10 @@ section.stars .section_title:before, section.stars .section_title:after {
   color: #333;
 }
 .btn-form {
-  background-color: #f47930;
+  background-color: #FF5733;
   outline: 0 none;
   border: 0 none;
   color: #fff;
-  border-radius: 8px;
   padding: 20px 15px;
 }
 .btn-form:hover {
@@ -952,6 +951,7 @@ div.centering-block button {
     height: 515px;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 25px;
 }
 
  .white-bg{
@@ -1157,4 +1157,8 @@ div.centering-block button {
     justify-content: center;
     flex-direction: column;
     height:100px;
+}
+
+.uppercase{
+    text-transform: uppercase;
 }

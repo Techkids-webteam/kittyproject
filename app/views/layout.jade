@@ -16,6 +16,8 @@ html
       link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css', integrity='sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r', crossorigin='anonymous')
       link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
       link(href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,vietnamese', rel='stylesheet', type='text/css')
+      
+      linl(rel="stylesheet", href="/cms/css/w3.css")
       // CSS #self
       link(rel='stylesheet', type='text/css', href='/cms/css/style.css')
       link(rel='stylesheet', type='text/css', href='/cms/css/fadeIn.css')
@@ -80,7 +82,7 @@ html
             span.icon-bar
             span.icon-bar
           a.navbar-brand(href="/")
-            span.brand_logo
+            span.brand_logo(style="margin-left: -60px;")
               img(src='/cms/img/TechkidBrandColor.png', alt='TechKids')
         // Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
@@ -109,10 +111,6 @@ html
                   a(href="/khoa-hoc/code-for-everyone") Code For Everyone
                 li
                   a(href="/khoa-hoc/code-for-kids") Code For Kids 
-            li.dropdown
-              a.dropdown-toggle(href='/chuong-trinh/', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                | Các Sự Kiện
-                span.visible-xs-inline-block.caret
               //- ul.dropdown-menu
               //-   li
               //-     a(href='#') Techhub - Free 4th place for IT students
@@ -128,6 +126,10 @@ html
             li.dropdown
               a.dropdown-toggle(href='/hoc-vien', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
                 | Học viên TechKids
+                span.visible-xs-inline-block.caret
+            li.dropdown
+              a.dropdown-toggle(href='/chuong-trinh/', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Các Sự Kiện
                 span.visible-xs-inline-block.caret
               //- ul.dropdown-menu
               //-   li
