@@ -296,6 +296,9 @@ app.get('/chuong-trinh/su-kien/connect-techkids', function (req, res) {
 app.get('/chuong-trinh/su-kien/duong-ra-the-gioi', function (req, res) {
     res.render('events-12');
 });
+app.get('/chuong-trinh/su-kien/techkids-hackathon', function (req, res) {
+    res.render('events-13');
+});
 // create a route to render the index.jade file.
 app.get('/', function (req, res) {
     res.render('index', {
