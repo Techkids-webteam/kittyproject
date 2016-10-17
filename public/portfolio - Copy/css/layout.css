@@ -1,0 +1,83 @@
+nav {
+  background-color: transparent;
+}
+
+.page-block {
+  padding: 30px 30px;
+}
+
+.img-block {
+  background-size: cover;
+}
+
+.introduction-block {
+  background-image: url('../img/home_background.jpg');
+  height: 330px;
+}
+
+.introduction-content {
+  text-align: center;
+  padding: 4px;
+  color: #ffffff;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.demo_pic {
+  width: 65px;
+  height: 50px;
+  margin: 20px 20px;
+}
+
+.landscape-wireframe {
+  transform: rotate(90deg);
+  width: 125%;
+  margin-left: -35%;
+}
+
+.gray-block {
+  background-color: #f4f4f4;
+}
+
+.relative-container {
+  position: relative;
+}
+
+.gray-block .relative-container {
+  margin-left: 10%;
+}
+
+.relative-container .video-container {
+  position: absolute;
+  top: 18%;
+  left: 15%;
+  width: 55%;
+  height: 60%;
+}
+
+#web .relative-container .video-container {
+  position: absolute;
+  top: 5%;
+  left: -11%;
+  width: 92%;
+  height: 60%;
+}
+
+#web .gray-block .relative-container {
+  margin-left: 0%;
+}
+
+#web .gray-block .relative-container .video-container {
+  left: -3.5%;
+}
+
+.laptop {
+  width: 100%;
+  margin-left: -15%;
+}

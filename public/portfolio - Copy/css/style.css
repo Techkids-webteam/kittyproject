@@ -1,0 +1,190 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 10px/1.4 "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  outline: 0 none;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 2.0rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5, p {
+  font-size: 1.4rem;
+}
+
+p{
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.blue-text {
+  color: #01a0c7;
+}
+
+.open-san-bold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.source-san-black {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+}
+
+.source-san-light {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.main-nav {
+  float: right;
+  display: flex;
+  align-items: stretch;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-nav a {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 8px;
+  background: #01a0c7;
+}
+
+#typo-button {
+  display: none;
+}
+
+.menu-button {
+  width: 55px;
+}
+
+.menu-button.active {
+  width: auto;
+}
+
+.menu-button div {
+  background-color: white;
+  height: 4px;
+}
+
+.menu-button div:nth-child(2) {
+  margin: 5px 0;
+}
+
+.menu-button.active div {
+  opacity: 0;
+}
+
+.wireframe {
+  width: 160%;
+  margin-left: -35%;
+}
+
+.portfolios-detail p {
+  font-size: 2.0rem;
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+.video-thumbnail {
+  position: absolute;
+  width: 55%;
+  height: auto;
+  top: 18.1%;
+  left: 16%;
+  vertical-align: baseline;
+}
+
+.footer {
+  background: url(../img/home_background.jpg);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 30px;
+}
+
+.video-thumbnail-android {
+  position: absolute;
+  width: 53%;
+  height: auto;
+  top: 18.1%;
+  left: 9%;
+  vertical-align: baseline;
+}
+
+.wireframe-android {
+  width: 100%;
+  margin-left: -15%;
+}
+
+@media(min-width: 720px) {
+  .header {
+    background: none;
+    padding: 0 50px;
+  }
+  .page-block {
+    padding: 50px 110px 60px;
+  }
+  .footer {
+    padding: 85px 240px;
+  }
+}
+
+.tabs .tab a {
+  color: #53504e;
+  text-transform: none;
+}
+
+.tabs .tab a:hover {
+  color: #7fcfe2;
+}
+
+.tabs .indicator {
+  background-color: #00a0c6;
+  height: 3px;
+}
