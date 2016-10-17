@@ -3,7 +3,7 @@
 }
 
 html{
-    font-family: 'Roboto', sans-serif;
+    font-family: 10px/1.4 "Roboto", sans-serif;
 	font-weight: 300;
 }
 
@@ -159,8 +159,9 @@ li{
 }
 
 .portfolios-detail p{
-	font-size: 1.8rem;
+	font-size: 2.0rem;
 	font-family: 'Roboto';
+	font-weight: 300;
 }
 
 .video-thumbnail{
@@ -244,4 +245,9 @@ li{
 		padding-left: 40px;
 	}*/
 
+}
+
+.landscape-wireframe{
+	width: 125%;
+	margin-left: -35%;
 }
