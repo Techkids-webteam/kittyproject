@@ -62,6 +62,10 @@ nav {
   height: 60%;
 }
 
+#web .relative-container{
+    margin-left: 18%;
+}
+
 #web .relative-container .video-container {
   position: absolute;
   top: 5%;
@@ -70,14 +74,13 @@ nav {
   height: 60%;
 }
 
-#web .gray-block .relative-container {
+/*#web .gray-block .relative-container {
   margin-left: 0%;
-}
+}*/
 
 #web .gray-block .relative-container .video-container {
-  left: -3.5%;
+  left: -11%;
 }
-
 .laptop {
   width: 100%;
   margin-left: -15%;
