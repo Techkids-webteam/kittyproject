@@ -175,6 +175,9 @@ li {
   .desktop-version{
       display: inline-block;
   }
+  .container .desktop-version{
+      display: block;
+  }
   .mobile-version{
       display: none;
   }
@@ -198,6 +201,57 @@ li {
   height: 3px;
 }
 
+.tabs-vertical .tabs .indicator {
+  background-color: #ffffff;
+}
+
+
 .gray-block {
   background-color: #f4f4f4;
+}
+
+
+
+.tabs-vertical .tabs {
+  height: auto;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.tabs-vertical .tab {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: block;
+  float: left;
+  text-align: left;
+  line-height: 48px;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+}
+
+.tabs-vertical .tab .active {
+  -moz-transition: border-color .5s ease;
+  -o-transition: border-color .5s ease;
+  -webkit-transition: border-color .5s ease;
+  transition: border-color .5s ease;
+}
+
+.tabs-vertical .tab a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transition: color 0.28s ease;
+  -moz-transition: color 0.28s ease;
+  -o-transition: color 0.28s ease;
+  -ms-transition: color 0.28s ease;
+  transition: color 0.28s ease;
 }
