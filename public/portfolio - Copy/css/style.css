@@ -39,9 +39,9 @@ h5, p {
   font-size: 1.4rem;
 }
 
-p{
-    font-family: 'Roboto';
-    font-weight: 300;
+p {
+  font-family: 'Roboto';
+  font-weight: 300;
 }
 
 ul {
@@ -141,11 +141,63 @@ li {
   vertical-align: baseline;
 }
 
-.footer {
+.footer0 {
   background: url(../img/home_background.jpg);
   color: #ffffff;
   text-align: center;
-  padding: 20px 30px;
+  height: 300px;
+  padding: 85px 30px;
+}
+
+footer.footer {
+  padding: 50px;
+  font-size: 1.4rem;
+  background-color: #f7f7f7;
+}
+
+.footer_logo {
+  margin: 15px 0;
+}
+
+.footer h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #cccccc;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+.footer p {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.footer ul {
+  padding-left: 20px;
+}
+
+.footer ul li {
+  list-style-type: disc;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.footer .socials_list {
+  margin-top: -5px;
+}
+
+.socials_list a {
+  color: #333;
+}
+
+.socials_list a:hover, .socials_list a:focus {
+  color: #000;
 }
 
 .video-thumbnail-android {
@@ -161,10 +213,15 @@ li {
   width: 100%;
   margin-left: -15%;
 }
-.desktop-version{
-    display: none;
+
+.desktop-version {
+  display: none;
 }
+
 @media(min-width: 720px) {
+  .demo_pic {
+    margin: 20px 20px;
+  }
   .header {
     background: none;
     padding: 0 50px;
@@ -172,20 +229,19 @@ li {
   .page-block {
     padding: 50px 110px 60px;
   }
-  .desktop-version{
-      display: inline-block;
+  .desktop-version {
+    display: inline-block;
   }
-  .container .desktop-version{
-      display: block;
+  .container .desktop-version {
+    display: block;
   }
-  .mobile-version{
-      display: none;
+  .mobile-version {
+    display: none;
   }
   .footer {
     padding: 85px 240px;
   }
 }
-
 
 .tabs .tab a {
   color: #53504e;
@@ -205,12 +261,9 @@ li {
   background-color: #ffffff;
 }
 
-
 .gray-block {
   background-color: #f4f4f4;
 }
-
-
 
 .tabs-vertical .tabs {
   height: auto;
@@ -237,6 +290,8 @@ li {
 }
 
 .tabs-vertical .tab .active {
+  background-color: #00a0c6;
+  color: #ffffff;
   -moz-transition: border-color .5s ease;
   -o-transition: border-color .5s ease;
   -webkit-transition: border-color .5s ease;
