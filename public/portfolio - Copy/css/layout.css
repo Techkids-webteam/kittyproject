@@ -12,7 +12,7 @@ nav {
 
 .introduction-block {
   background-image: url('../img/home_background.jpg');
-  height: 330px;
+  height: 65vh;
 }
 
 .introduction-content {
@@ -32,7 +32,7 @@ nav {
 .demo_pic {
   width: 65px;
   height: 50px;
-  margin: 20px 20px;
+  margin: 5% 30%;
   outline: 0 none;
 }
 
@@ -62,8 +62,8 @@ nav {
   height: 60%;
 }
 
-#web .relative-container{
-    margin-left: 18%;
+#web .relative-container {
+  margin-left: 18%;
 }
 
 #web .relative-container .video-container {
@@ -74,6 +74,7 @@ nav {
   height: 60%;
 }
 
+
 /*#web .gray-block .relative-container {
   margin-left: 0%;
 }*/
@@ -81,7 +82,87 @@ nav {
 #web .gray-block .relative-container .video-container {
   left: -11%;
 }
+
+#android .wireframe{
+    width: 100%;
+    margin-left: -8%;
+}
+#android .relative-container .video-container {
+    position: absolute;
+    top: 18%;
+    left: 15.5%;
+    width: 54%;
+    height: 64%;
+}
 .laptop {
   width: 100%;
   margin-left: -15%;
+}
+
+.footer .row:before, .footer .row:after, .footer .container:before, .footer .container:after {
+  display: table;
+  content: " ";
+}
+
+.footer .container:after, .footer .row:after {
+  clear: both;
+}
+
+@media (min-width: 768px) {
+    .footer .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+  .footer .container {
+    width: 1200px;
+  }
+}
+
+.footer .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer .row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-sm-3, .col-sm-2 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .col-sm-3, .col-sm-2 {
+    float: left;
+  }
+  .col-sm-2 {
+    width: 16.66666667%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+}
+
+footer a {
+  color: #337ab7;
+}
+footer a:hover, footer a:focus {
+  text-decoration: none;
+  outline: 0 none;
+  color: #02BBE9;
+  cursor: pointer;
 }
