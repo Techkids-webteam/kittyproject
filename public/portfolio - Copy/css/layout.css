@@ -3,7 +3,11 @@ nav {
 }
 
 .page-block {
-  padding: 30px 30px;
+  padding: 10% 7.5%;
+}
+
+.portfolio-block {
+  padding: 50px 110px 60px;
 }
 
 .img-block {
@@ -12,7 +16,7 @@ nav {
 
 .introduction-block {
   background-image: url('../img/home_background.jpg');
-  height: 70vh;
+  height: 110vh;
 }
 
 .introduction-content {
