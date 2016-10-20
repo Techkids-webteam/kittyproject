@@ -186,12 +186,12 @@ app.get('/portfolio/mobile', function (req, res) {
 });
 
 app.get('/portfolio', function (req, res) {
-    res.sendFile(__dirname + '/public/portfolio/index.html');
-});
-
-app.get('/portfoliorm', function (req, res) {
     res.sendFile(__dirname + '/public/portfolio - Copy/index.html');
 });
+
+// app.get('/portfoliorm', function (req, res) {
+//     res.sendFile(__dirname + '/public/portfolio - Copy/index.html');
+// });
 
 app.get('/hackathon', function (req, res) {
     res.sendFile(__dirname + '/public/hackathon_contest/index.html');
