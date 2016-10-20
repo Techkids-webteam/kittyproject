@@ -16,7 +16,7 @@ nav {
 
 .introduction-block {
   background-image: url('../img/home_background.jpg');
-  height: 500px;
+  height: 390px;
 }
 
 .introduction-content {
@@ -36,7 +36,6 @@ nav {
 .demo_pic {
   width: 65px;
   height: 50px;
-  margin: 5% 30%;
   outline: 0 none;
 }
 

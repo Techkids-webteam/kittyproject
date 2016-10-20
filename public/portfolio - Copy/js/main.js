@@ -25,6 +25,8 @@ $('.responsive-slick').slick({
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2
+        // vertical: true,
+        // verticalSwiping: true
       }
     }
     // You can unslick at a given breakpoint now by adding:

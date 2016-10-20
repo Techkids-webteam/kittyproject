@@ -25,7 +25,7 @@
     display: block;
     overflow: hidden;
 
-    margin: 0;
+    margin: 35px;
     padding: 0;
 }
 .slick-list:focus
@@ -53,8 +53,12 @@
     position: relative;
     top: 0;
     left: 0;
-
     display: block;
+}
+@media (min-width: 720px) {
+    .slick-track{
+        left: 10px;
+    }
 }
 .slick-track:before,
 .slick-track:after
