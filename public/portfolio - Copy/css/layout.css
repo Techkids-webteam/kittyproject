@@ -86,17 +86,19 @@ nav {
   left: -11%;
 }
 
-#android .wireframe{
-    width: 100%;
-    margin-left: -8%;
+#android .wireframe {
+  width: 100%;
+  margin-left: -8%;
 }
+
 #android .relative-container .video-container {
-    position: absolute;
-    top: 18%;
-    left: 15.5%;
-    width: 54%;
-    height: 64%;
+  position: absolute;
+  top: 18%;
+  left: 15.5%;
+  width: 54%;
+  height: 64%;
 }
+
 .laptop {
   width: 100%;
   margin-left: -15%;
@@ -112,15 +114,15 @@ nav {
 }
 
 @media (min-width: 768px) {
-    .footer .container {
-        width: 750px;
-    }
+  .footer .container {
+    width: 750px;
+  }
 }
 
 @media (min-width: 992px) {
-    .footer .container {
-        width: 970px;
-    }
+  .footer .container {
+    width: 970px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -163,9 +165,51 @@ nav {
 footer a {
   color: #337ab7;
 }
+
 footer a:hover, footer a:focus {
   text-decoration: none;
   outline: 0 none;
   color: #02BBE9;
   cursor: pointer;
+}
+
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked~.read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state~.read-more-trigger:before {
+  content: 'Show more';
+}
+
+.read-more-state:checked~.read-more-trigger:before {
+  content: 'Show less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  line-height: 1;
+  font-size: .9em;
+}
+
+#web .read-more-trigger {
+  margin-bottom: 25px;
+}
+
+.fb-page {
+  width: 100% !important;
 }

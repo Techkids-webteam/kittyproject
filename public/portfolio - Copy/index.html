@@ -87,7 +87,7 @@
     <div class="container">
       <div class="row desktop-version">
         <div class="col s12">
-          <ul class="tabs">
+          <ul class="tabs" id="tabs">
             <li class="tab col s12 m3"><a class="active" href="#ios">iOS</a></li>
             <li class="tab col s12 m3"><a href="#android">Android</a></li>
             <li class="tab col s12 m3"><a href="#web">Web</a></li>
@@ -110,12 +110,12 @@
   <div id="ios">
     <div class="portfolio-block">
       <div class="row">
-        <div class="col s12 m4 l4">
+        <div class="col s12 m4 l4 desktop-version">
           <div class="relative-container">
-              <img class="wireframe" src="/portfolio - Copy/img/apple-iphone6-gold-portrait.png">
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" allowfullscreen></iframe>
-              </div>
+            <img class="wireframe" src="/portfolio - Copy/img/apple-iphone6-gold-portrait.png">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
         <div class="col s12 m8 l8">
@@ -124,8 +124,22 @@
           <h5 class="source-san-light">App designer:</h5>
           <h5 class="source-san-light">Thời gian thực hiện:</h5>
           <h5 class="source-san-light">Mô tả ngắn:</h5>
-          <p class="justify-text open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
+          <p class="justify-text desktop-version open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
             quantitiy, and compile a shopping cart for making a final purchase.</p>
+          <div class="justify-text mobile-version open-san-light">
+            <input type="checkbox" class="read-more-state" id="post-1" />
+
+            <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
+
+            <label for="post-1" class="read-more-trigger"></label>
+          </div>
+          <div class="relative-container mobile-version">
+            <img class="wireframe" src="/portfolio - Copy/img/apple-iphone6-gold-portrait.png">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
           <div class="responsive-slick">
             <a href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="set-1" data-title="Click the right half of the image to move forward.">
               <img class="demo_pic" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt="" />
@@ -157,22 +171,28 @@
     </div>
     <div class="portfolio-block gray-block">
       <div class="row">
-        <div class="col s12 m4 l4 mobile-version">
-          <div class="relative-container">
-            <img class="wireframe" src="/portfolio - Copy/img/apple-iphone6-gold-portrait.png">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" auto allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
         <div class="col s12 m8 l8">
           <h1 class="source-san-black uppercase-text">Lorem ipsum</h1>
           <h1 class="source-san-black uppercase-text">dolor sit amet</h1>
           <h5 class="source-san-light">App designer:</h5>
           <h5 class="source-san-light">Thời gian thực hiện:</h5>
           <h5 class="source-san-light">Mô tả ngắn:</h5>
-          <p class="justify-text open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
+          <p class="justify-text desktop-version open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
             quantitiy, and compile a shopping cart for making a final purchase.</p>
+          <div class="justify-text mobile-version open-san-light">
+            <input type="checkbox" class="read-more-state" id="post-2" />
+
+            <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
+
+            <label for="post-2" class="read-more-trigger"></label>
+          </div>
+          <div class="relative-container mobile-version">
+            <img class="wireframe" src="/portfolio - Copy/img/apple-iphone6-gold-portrait.png">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" auto allowfullscreen></iframe>
+            </div>
+          </div>
           <div class="responsive-slick">
             <a href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="set-2" data-title="Click the right half of the image to move forward.">
               <img class="demo_pic" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt="" />
@@ -212,7 +232,7 @@
     </div>
     <div class="portfolio-block">
       <div class="row">
-        <div class="col s12 m4 l4">
+        <div class="col s12 m4 l4 desktop-version">
           <div class="relative-container">
             <img class="wireframe" src="/portfolio - Copy/img/apple-iphone6-gold-portrait.png">
             <div class="video-container">
@@ -226,8 +246,22 @@
           <h5 class="source-san-light">App designer:</h5>
           <h5 class="source-san-light">Thời gian thực hiện:</h5>
           <h5 class="source-san-light">Mô tả ngắn:</h5>
-          <p class="justify-text open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
+          <p class="justify-text desktop-version open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
             quantitiy, and compile a shopping cart for making a final purchase.</p>
+          <div class="justify-text mobile-version open-san-light">
+            <input type="checkbox" class="read-more-state" id="post-3" />
+
+            <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
+
+            <label for="post-3" class="read-more-trigger"></label>
+          </div>
+          <div class="relative-container mobile-version">
+            <img class="wireframe" src="/portfolio - Copy/img/apple-iphone6-gold-portrait.png">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
           <div class="responsive-slick">
             <a href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="set-3" data-title="Click the right half of the image to move forward.">
               <img class="demo_pic" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt="" />
@@ -261,7 +295,7 @@
   <div id="android">
     <div class="portfolio-block">
       <div class="row">
-        <div class="col s12 m4 l4">
+        <div class="col s12 m4 l4 desktop-version">
           <div class="relative-container">
             <img class="wireframe" src="/portfolio - Copy/img/S7.png">
             <div class="video-container">
@@ -275,8 +309,23 @@
           <h5 class="source-san-light">App designer:</h5>
           <h5 class="source-san-light">Thời gian thực hiện:</h5>
           <h5 class="source-san-light">Mô tả ngắn:</h5>
-          <p class="justify-text open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
-            quantitiy, and compile a shopping cart for making a final purchase.</p>
+          <p class="justify-text desktop-version open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
+            quantitiy, and compile a shopping cart for making a final purchase.
+          </p>
+          <div class="justify-text mobile-version open-san-light">
+            <input type="checkbox" class="read-more-state" id="post-4" />
+
+            <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
+
+            <label for="post-4" class="read-more-trigger"></label>
+          </div>
+          <div class="relative-container mobile-version">
+            <img class="wireframe" src="/portfolio - Copy/img/S7.png">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
           <div class="responsive-slick">
             <a href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="set-4" data-title="Click the right half of the image to move forward.">
               <img class="demo_pic" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt="" />
@@ -308,22 +357,29 @@
     </div>
     <div class="portfolio-block gray-block">
       <div class="row">
-        <div class="col s12 m4 l4 mobile-version">
-          <div class="relative-container">
-            <img class="wireframe" src="/portfolio - Copy/img/S7.png">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" auto allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
         <div class="col s12 m8 l8">
           <h1 class="source-san-black uppercase-text">Lorem ipsum</h1>
           <h1 class="source-san-black uppercase-text">dolor sit amet</h1>
           <h5 class="source-san-light">App designer:</h5>
           <h5 class="source-san-light">Thời gian thực hiện:</h5>
           <h5 class="source-san-light">Mô tả ngắn:</h5>
-          <p class="justify-text open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
-            quantitiy, and compile a shopping cart for making a final purchase.</p>
+          <p class="justify-text desktop-version open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
+            quantitiy, and compile a shopping cart for making a final purchase.
+          </p>
+          <div class="justify-text mobile-version open-san-light">
+            <input type="checkbox" class="read-more-state" id="post-5" />
+
+            <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
+
+            <label for="post-5" class="read-more-trigger"></label>
+          </div>
+          <div class="relative-container mobile-version">
+            <img class="wireframe" src="/portfolio - Copy/img/S7.png">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" auto allowfullscreen></iframe>
+            </div>
+          </div>
           <div class="responsive-slick">
             <a href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="set-5" data-title="Click the right half of the image to move forward.">
               <img class="demo_pic" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt="" />
@@ -363,7 +419,7 @@
     </div>
     <div class="portfolio-block">
       <div class="row">
-        <div class="col s12 m4 l4">
+        <div class="col s12 m4 l4 desktop-version">
           <div class="relative-container">
             <img class="wireframe" src="/portfolio - Copy/img/S7.png">
             <div class="video-container">
@@ -377,8 +433,23 @@
           <h5 class="source-san-light">App designer:</h5>
           <h5 class="source-san-light">Thời gian thực hiện:</h5>
           <h5 class="source-san-light">Mô tả ngắn:</h5>
-          <p class="justify-text open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
-            quantitiy, and compile a shopping cart for making a final purchase.</p>
+          <p class="justify-text desktop-version open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
+            quantitiy, and compile a shopping cart for making a final purchase.
+          </p>
+          <div class="justify-text mobile-version open-san-light">
+            <input type="checkbox" class="read-more-state" id="post-6" />
+
+            <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
+
+            <label for="post-6" class="read-more-trigger"></label>
+          </div>
+          <div class="relative-container mobile-version">
+            <img class="wireframe" src="/portfolio - Copy/img/S7.png">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" auto allowfullscreen></iframe>
+            </div>
+          </div>
           <div class="responsive-slick">
             <a href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="set-6" data-title="Click the right half of the image to move forward.">
               <img class="demo_pic" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt="" />
@@ -412,7 +483,7 @@
   <div id="web">
     <div class="portfolio-block">
       <div class="row">
-        <div class="col s12 m4 l4">
+        <div class="col s12 m4 l4 desktop-version">
           <div class="relative-container">
             <img class="laptop" src="/Web/img/frame.png">
             <div class="video-container">
@@ -426,8 +497,23 @@
           <h5 class="source-san-light">App designer:</h5>
           <h5 class="source-san-light">Thời gian thực hiện:</h5>
           <h5 class="source-san-light">Mô tả ngắn:</h5>
-          <p class="justify-text open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
-            quantitiy, and compile a shopping cart for making a final purchase.</p>
+          <p class="justify-text desktop-version open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
+            quantitiy, and compile a shopping cart for making a final purchase.
+          </p>
+          <div class="justify-text mobile-version open-san-light">
+            <input type="checkbox" class="read-more-state" id="post-7" />
+
+            <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
+
+            <label for="post-7" class="read-more-trigger"></label>
+          </div>
+          <div class="relative-container mobile-version">
+            <img class="laptop" src="/Web/img/frame.png">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
           <div class="responsive-slick">
             <a href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="set-7" data-title="Click the right half of the image to move forward.">
               <img class="demo_pic" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt="" />
@@ -459,22 +545,29 @@
     </div>
     <div class="portfolio-block gray-block">
       <div class="row">
-        <div class="col s12 m4 l4 mobile-version">
-          <div class="relative-container">
-            <img class="laptop" src="/Web/img/frame.png">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" auto allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
         <div class="col s12 m8 l8">
           <h1 class="source-san-black uppercase-text">Lorem ipsum</h1>
           <h1 class="source-san-black uppercase-text">dolor sit amet</h1>
           <h5 class="source-san-light">App designer:</h5>
           <h5 class="source-san-light">Thời gian thực hiện:</h5>
           <h5 class="source-san-light">Mô tả ngắn:</h5>
-          <p class="justify-text open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
-            quantitiy, and compile a shopping cart for making a final purchase.</p>
+          <p class="justify-text desktop-version open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
+            quantitiy, and compile a shopping cart for making a final purchase.
+          </p>
+          <div class="justify-text mobile-version open-san-light">
+            <input type="checkbox" class="read-more-state" id="post-8" />
+
+            <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
+
+            <label for="post-8" class="read-more-trigger"></label>
+          </div>
+          <div class="relative-container mobile-version">
+            <img class="laptop" src="/Web/img/frame.png">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
           <div class="responsive-slick">
             <a href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="set-8" data-title="Click the right half of the image to move forward.">
               <img class="demo_pic" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt="" />
@@ -514,7 +607,7 @@
     </div>
     <div class="portfolio-block">
       <div class="row">
-        <div class="col s12 m4 l4">
+        <div class="col s12 m4 l4 desktop-version">
           <div class="relative-container">
             <img class="laptop" src="/Web/img/frame.png">
             <div class="video-container">
@@ -528,8 +621,23 @@
           <h5 class="source-san-light">App designer:</h5>
           <h5 class="source-san-light">Thời gian thực hiện:</h5>
           <h5 class="source-san-light">Mô tả ngắn:</h5>
-          <p class="justify-text open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
-            quantitiy, and compile a shopping cart for making a final purchase.</p>
+          <p class="justify-text desktop-version open-san-light">La Mode was built with the LAMP stack during the early segments of the Onsite Flex Bootcamp. La Mode is an Ecommerce website for designed to market various clothing products. Users are able to view the available garments, select their desired
+            quantitiy, and compile a shopping cart for making a final purchase.
+          </p>
+          <div class="justify-text mobile-version open-san-light">
+            <input type="checkbox" class="read-more-state" id="post-9" />
+
+            <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
+
+            <label for="post-9" class="read-more-trigger"></label>
+          </div>
+          <div class="relative-container mobile-version">
+            <img class="laptop" src="/Web/img/frame.png">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/40mHfIAKR28" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
           <div class="responsive-slick">
             <a href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="set-9" data-title="Click the right half of the image to move forward.">
               <img class="demo_pic" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt="" />
@@ -577,12 +685,9 @@
             <br>
             <br>
           </p>
-          <div data-href="https://www.facebook.com/Techkids.Code.the.Change/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false" class="fb-page fb_iframe_widget" fb-xfbml-state="rendered"
-              fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=&amp;container_width=263&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FTechkids.Code.the.Change%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=true"><span style="vertical-align: bottom; width: 263px; height: 154px;"><iframe name="f2b3d462608d4a4" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:page Facebook Social Plugin" src="https://www.facebook.com/v2.6/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fbz-D0tzmBsw.js%3Fversion%3D42%23cb%3Df12830f7a4046e%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A8080%252Ff1a7fc5eb83188%26relation%3Dparent.parent&amp;container_width=263&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FTechkids.Code.the.Change%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=true" style="border: none; visibility: visible; width: 263px; height: 154px;">
-              </iframe>
-            </span>
+          <div class="fb-page" data-href="https://www.facebook.com/Techkids.Code.the.Change/?fref=ts" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/Techkids.Code.the.Change/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Techkids.Code.the.Change/?fref=ts">Techkids - Coding school</a></blockquote>
           </div>
-          <p></p>
         </div>
         <div class="col-sm-3">
           <h5>Về chúng tôi</h5>
