@@ -638,6 +638,9 @@ section.stars .section_title:before, section.stars .section_title:after {
   display: none;
 }
 @media screen and (min-width: 768px) {
+  .brand_logo{
+    margin-left: -60px;
+  }
   .form-info {
     display: flex;
     flex-wrap: wrap;
