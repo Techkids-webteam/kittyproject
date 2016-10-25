@@ -145,12 +145,17 @@ nav {
 }
 
 .footer0 {
-  background: url(../img/home_background.jpg);
+  background: url(../img/CTA.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #ffffff;
   text-align: center;
   padding: 85px 30px;
 }
 
+.footer0:hover{
+    background-image: url(../img/CTA_hover.png);
+}
 footer.footer {
   padding: 50px;
   font-size: 1.4rem;
