@@ -7,7 +7,7 @@ nav {
 }
 
 .portfolio-block {
-  padding: 5% 10%;
+  padding: 3% 7%;
 }
 
 .img-block {
@@ -23,6 +23,10 @@ nav {
   text-align: center;
   padding: 4px;
   color: #ffffff;
+}
+
+.tabs{
+    margin-top: 25px;
 }
 
 .justify-text {
@@ -71,9 +75,9 @@ nav {
 
 #web .relative-container .video-container {
   position: absolute;
-  top: 5%;
-  left: -11%;
-  width: 92%;
+  top: 17%;
+  left: -25%;
+  width: 115%;
   height: 60%;
 }
 
@@ -100,8 +104,13 @@ nav {
 }
 
 .laptop {
-  width: 100%;
-  margin-left: -15%;
+  width: 125%;
+  margin-left: -30%;
+  margin-top: 15%;
+}
+
+.gray-block .laptop {
+  margin-left: -16%;
 }
 
 .footer .row:before, .footer .row:after, .footer .container:before, .footer .container:after {
