@@ -24,11 +24,11 @@ h1 {
 }
 
 h2 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 h3 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 h4 {
@@ -151,11 +151,22 @@ nav {
   color: #ffffff;
   text-align: center;
   padding: 85px 30px;
+  position: relative;
+  transition: color 0.25s ease;
 }
 
-.footer0:hover{
-    background-image: url(../img/CTA_hover.png);
+.footer0:hover {
+  text-shadow: none;
+  background: url(../img/CTA_hover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
+
 footer.footer {
   padding: 50px;
   font-size: 1.4rem;
@@ -229,7 +240,6 @@ footer.footer {
   .introduction-block {
     height: 300px;
   }
-
   .page-block {
     padding: 3% 7.5%;
   }
