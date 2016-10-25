@@ -25,8 +25,8 @@ nav {
   color: #ffffff;
 }
 
-.tabs{
-    margin-top: 4%;
+.tabs {
+  margin-top: 4%;
 }
 
 .justify-text {
@@ -41,6 +41,26 @@ nav {
   width: 65px;
   height: 50px;
   outline: 0 none;
+}
+
+.register-btn {
+  cursor: pointer;
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 30px;
+  outline: 0 none;
+  background-color: #008CBA;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 0 none;
+  letter-spacing: 1px;
+  line-height: 1.42857143;
+  box-shadow: none;
+}
+
+.register-btn:hover {
+  color: #1d2e42;
 }
 
 .landscape-wireframe {
