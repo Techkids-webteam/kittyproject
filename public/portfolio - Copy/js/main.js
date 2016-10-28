@@ -1,3 +1,6 @@
+$('#mySelect').on('change', function(e) {
+  $('#myTab li a').eq($(this).val()).tab('show');
+});
 $('.responsive-slick').slick({
   dots: false,
   autoplay: true,

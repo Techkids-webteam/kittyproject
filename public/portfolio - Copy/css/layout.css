@@ -26,7 +26,7 @@ nav {
 }
 
 .tabs {
-  margin-top: 4%;
+  margin-top: 6%;
 }
 
 .justify-text {
@@ -241,4 +241,9 @@ footer a:hover, footer a:focus {
 
 .fb-page {
   width: 100% !important;
+}
+
+.footer0 p{
+    font-family: "Roboto";
+    font-size: 1.4rem;
 }
