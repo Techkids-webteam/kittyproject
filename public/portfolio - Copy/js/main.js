@@ -6,7 +6,7 @@ $('.responsive-slick').slick({
   autoplay: true,
   infinite: false,
   speed: 300,
-  slidesToShow: 4,
+  slidesToShow: 6,
   responsive: [
     {
       breakpoint: 1024,
