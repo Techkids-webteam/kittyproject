@@ -111,7 +111,7 @@
 	position: absolute;
 	top: 0;
 	width: 40%;
-	height: 100%;
+	height: 80%;
 	cursor: pointer;
 	text-decoration: none;
 	background: transparent url('blank.gif'); /* helps IE */
@@ -135,7 +135,7 @@
 	margin-top: -18px;
 	cursor: pointer;
 	z-index: 8040;
-	visibility: hidden;
+
 }
 
 .fancybox-prev span {

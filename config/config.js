@@ -9,7 +9,7 @@ var config = {
     app: {
       name: 'kitty-project'
     },
-    port: process.env.PORT || 8080,
+    port: process.env.PORT || 8088,
     db: 'mongodb://admin:admin@ds019254.mlab.com:19254/hackathon'
   },
 
