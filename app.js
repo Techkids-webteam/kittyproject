@@ -89,6 +89,7 @@ app.get('/blog', function (req, res) {
     res.sendFile(__dirname + '/public/blog/src/index.html');
 });
 
+app.use('/testingOnline', express.static(__dirname + '/public/testingOnline/client'));
 
 
 //end server game tanks

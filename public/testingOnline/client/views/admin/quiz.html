@@ -1,0 +1,147 @@
+﻿
+<div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="" ng-click="function.fSwitchPage('add')">Add Quiz</a></li>
+            <li class="active"><a href="" ng-click="function.fSwitchPage('manage')">Manage Quiz</a></li>
+        </ul>
+    </div>
+</div>
+<div ng-if="show.add">
+    <h2 style="text-align:center;">Create Quiz</h2>
+    <div class="form-group">
+        <label for="stimulus">Stimulus:</label>
+        <textarea class="form-control" rows="5" id="stimulus" placeholder="This is the given information for all question below.." ng-model="quiz.stimulus"></textarea>
+    </div>
+
+    <label>Type:
+        <select class="form-control" ng-model="quiz.type" style="width:200px">
+            <option ng-repeat="type in quizType">{{type}}</option>
+        </select>
+        <label>Add new Type<input class="form-control" type="text" id="txtTypeAdd" placeholder="New type.." /> <button ng-click="function.fAddType()">Add <i class="fa fa-plus"></i></button></label>
+    </label>
+
+    <div class="panel panel-default" ng-repeat="subQuiz in quiz.subQuizs">
+        <div class="form-group">
+            <label for="question" style="text-decoration:underline;color:red">Question {{$index + 1}}:</label>
+            <textarea class="form-control" rows="5" id="question" placeholder="Type the question here.." ng-model="subQuiz.stem"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="type">Type:</label>
+            <select class="form-control" id="type" ng-model="subQuiz.type">
+                <option>Text</option>
+                <option>Choice</option>
+            </select>
+        </div>
+        <div class="form-group" ng-if="subQuiz.type == 'Text'">
+            <label>
+                Answer: 
+                <input type="Text" ng-model="subQuiz.rightAnswer[0]" placeholder="Right answer.."/>
+            </label>
+        </div>
+        <div class="form-group" ng-if="subQuiz.type == 'Choice'">
+            <div class="panel" ng-repeat="answer in quiz.subQuizs[$index].answers track by $index">
+                <input type="checkbox" ng-model="quiz.subQuizs[$parent.$index].checkbox[$index]"/>
+                <input type="text" ng-model="quiz.subQuizs[$parent.$index].answers[$index]" placeholder="Answer.." />
+                <button class="btn" ng-if="$index != 0" ng-click="function.fRemoveAnswer(subQuiz, $index)">X</button>
+            </div>
+            <label>
+                <button class="btn" ng-click="function.fAddAnswer(subQuiz)">Add more answer..</button>
+            </label>
+        </div>
+        <button class="btn btn-warning" ng-if="$index != 0" ng-click="function.fRemoveQuiz(quiz, $index)">Remove this question</button>
+    </div>
+    <button class="btn btn-primary" ng-click="function.fAddQuiz(quiz)">Add more question</button>
+    <button class="btn btn-primary" ng-click="function.fCreateQuiz()" id="btnCreateQuiz">Create quiz</button>
+</div>
+
+<div ng-if="show.update">
+    <h2 style="text-align:center;">Update Quiz</h2>
+    <div class="form-group">
+        <label class="form-control">ID: {{quizUpdate._id}}</label>
+        <label class="form-control">Created Date: {{DateTime.convert(quizUpdate.createdDate)}}</label>
+        <label class="form-control">Created By: {{quizUpdate.createdBy}}</label>
+        <label class="form-control" ng-if="quizUpdate.lastUpdate">Last Update: {{DateTime.convert(quizUpdate.lastUpdate)}}</label>
+        <label class="form-control" ng-if="quizUpdate.updatedBy">Update By: {{quizUpdate.updatedBy}}</label>
+    </div>
+    <div class="form-group">
+        <label for="stimulus">Stimulus:</label>
+        <textarea class="form-control" rows="5" id="stimulus" placeholder="This is the given information for all question below.." ng-model="quizUpdate.stimulus"></textarea>
+    </div>
+
+
+    <label>
+        Type:
+        <select class="form-control" ng-model="quizUpdate.type" style="width:200px" >
+            <option ng-repeat="type in quizType">{{type}}</option>
+        </select>
+    </label>
+
+    <div class="panel panel-default" ng-repeat="subQuiz in quizUpdate.subQuizs">
+        <div class="form-group">
+            <label for="question" style="text-decoration:underline;color:red">Question {{$index + 1}}:</label>
+            <textarea class="form-control" rows="5" id="question" placeholder="Type the question here.." ng-model="subQuiz.stem"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="type">Type:</label>
+            <select class="form-control" id="type" ng-model="subQuiz.type">
+                <option>Text</option>
+                <option>Choice</option>
+            </select>
+        </div>
+        <div class="form-group" ng-if="subQuiz.type == 'Text'">
+            <label>
+                Answer:
+                <input type="Text" ng-model="subQuiz.rightAnswer[0]" placeholder="Right answer.." />
+            </label>
+        </div>
+        <div class="form-group" ng-if="subQuiz.type == 'Choice'">
+            <div class="panel" ng-repeat="answer in quizUpdate.subQuizs[$index].answers track by $index">
+                <input type="checkbox" ng-model="quizUpdate.subQuizs[$parent.$index].checkbox[$index]" />
+                <input type="text" ng-model="quizUpdate.subQuizs[$parent.$index].answers[$index]" placeholder="Answer.." />
+                <button class="btn" ng-if="$index != 0" ng-click="function.fRemoveAnswer(subQuiz, $index)">X</button>
+            </div>
+            <label>
+                <button class="btn" ng-click="function.fAddAnswer(subQuiz)">Add more answer..</button>
+            </label>
+        </div>
+        <button class="btn btn-warning" ng-if="$index != 0" ng-click="function.fRemoveQuiz(quizUpdate, $index)">Remove this question</button>
+    </div>
+    <button class="btn btn-primary" ng-click="function.fAddQuiz(quizUpdate)">Add more question</button>
+    <button class="btn btn-primary" ng-click="function.fUpdateQuiz()">Update question</button>
+</div>
+
+<div ng-if="show.manage">
+    <h2 style="text-align:center;">Manage Quiz</h2>
+    <div ng-repeat="quiz in quizs" class="row panel panel-default" style="position:relative;padding-top:30px">
+        <div class="row" style="position:absolute;top:0;right:0;">
+            <button class="col-sm-2" ng-click="function.fShowUpdate(quiz)"><i class="fa fa-pencil-square-o"></i></button>
+            <button class="col-sm-2" ng-click="function.fDeleteQuiz(quiz)"><i class="fa fa-times"></i></button>
+        </div>
+        <label><span style="color:blue;">Given: </span>{{quiz.stimulus}}</label>
+        <br />
+        <div class="row">
+            <div class="col-sm-4">
+                <label class="form-control"><span style="color:brown;">Type: </span>{{quiz.type}}</label>
+                <label class="form-control"><span style="color:brown;">Created Date: </span>{{DateTime.convert(quiz.createdDate, 'dd/MM/yyyy hh:mm')}}</label>
+            </div>
+            <div class="col-sm-8" style="text-align:center">
+                <img class="img-quiz" src="{{quiz.linkImg || 'https://www.trillionfund.com/App_Themes/NewDesign/img/NoImage.png'}}"></img>
+            </div>
+        </div>
+        <div class="panel panel-default" ng-repeat="subQuiz in quiz.subQuizs">
+            <label><span style="color:blue;">Question {{$index + 1}}: </span>{{subQuiz.stem}}</label>
+            <label><span style="color:brown;">Answer type: </span>{{subQuiz.type}}</label>
+            <div ng-repeat="answer in subQuiz.answers"><spam style="text-decoration:underline;">Answer {{$index + 1}}: </spam>{{answer}}</div>
+        </div>
+        <button ng-click="QuizBox.add(quiz)" class="btn btn-info" ng-if="!QuizBox.include(quiz)">Add this quiz group to box >></button>
+        <button ng-click="QuizBox.remove(quiz)" class="btn btn-warning" ng-if="QuizBox.include(quiz)">Remove this from box >></button>
+    </div>
+    <div class="quiz-box panel panel-primary">
+        <div class="panel-body">Quiz Box</div>
+        <div class="panel-heading">
+            <button class="btn btn-default">{{QuizBox.total()}} / {{QuizBox.length()}}</button>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,36 @@
+﻿<div class="">
+    <label>User information</label>
+    <div class="form-group" style="position:relative;padding-top:30px;">
+        <div class="row" style="position:absolute;top:0;right:0;">
+            <button class="col-sm-2" ng-click=""><i class="fa fa-pencil-square-o"></i></button>
+            <button class="col-sm-2" ng-click=""><i class="fa fa-times"></i></button>
+        </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <label class="form-control">
+                    <span style="color:{{user.username ? 'blue' : 'red'}}"> Username: </span>
+                    {{user.username}}
+                </label>
+                <label class="form-control">
+                    <span style="color:{{user.name ? 'blue' : 'red'}}"> Name: </span>
+                    {{user.name}}
+                </label>
+                <label class="form-control">
+                    <span style="color:{{user.email ? 'blue' : 'red'}}"> Email: </span>
+                    {{user.email}}
+                </label>
+                <label class="form-control">
+                    <span style="color:{{user.phone ? 'blue' : 'red'}}"> Phone: </span>
+                    {{user.phone}}
+                </label>
+            </div>
+            <div class="col-sm-5">
+                <label class="form-control">Something else</label>
+            </div>
+            <div class="col-sm-2">
+                <img class="img-user" src="{{user.linkImg || (user.gender == 'Female' ? 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRArsyve4GQi8v6qko-J6RwylrRyb5-0FRAH5fMJm3oc5bGCyFW2g' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvqBc8CfE5GKr0N3H7bKGy4C5qC5JN3eZc_2_DkYKYWKqKYbvyOg')}}" />
+            </div>
+
+        </div>
+    </div>
+</div>

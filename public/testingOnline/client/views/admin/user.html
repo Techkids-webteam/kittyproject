@@ -1,0 +1,101 @@
+﻿
+<div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="" ng-click="function.fSwitchPage('add')">Add User</a></li>
+            <li class="active"><a href="" ng-click="function.fSwitchPage('manage')">Manage User</a></li>
+        </ul>
+    </div>
+</div>
+<div class="" ng-if="show.manage">
+    <h2 style="text-align: center;">Manage user</h2>
+    <div ng-repeat="u in users" class=" panel panel-default" style="padding-top: 50px;position:relative;">
+        <div class="row" style="position:absolute;top:0;right:0;">
+            <button class="col-sm-2" ng-click="function.fUpdate(u)"><i class="fa fa-pencil-square-o"></i></button>
+            <button class="col-sm-2" ng-click=""><i class="fa fa-times"></i></button>
+        </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <label class="form-control">
+                    <span style="color:{{u.username ? 'blue' : 'red'}}"> Username: </span>
+                    {{u.username}}
+                </label>
+                <label class="form-control">
+                    <span style="color:{{u.name ? 'blue' : 'red'}}"> Name: </span>
+                    {{u.name}}
+                </label>
+                <label class="form-control">
+                    <span style="color:{{u.email ? 'blue' : 'red'}}"> Email: </span>
+                    {{u.email}}
+                </label>
+                <label class="form-control">
+                    <span style="color:{{u.phone ? 'blue' : 'red'}}"> Phone: </span>
+                    {{u.phone}}
+                </label>
+            </div>
+            <div class="col-sm-5">
+                <label class="form-control">Something else</label>
+            </div>
+            <div class="col-sm-2">
+                <img class="img-user" src="{{u.linkImg || (u.gender == 'Female' ? 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRArsyve4GQi8v6qko-J6RwylrRyb5-0FRAH5fMJm3oc5bGCyFW2g' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvqBc8CfE5GKr0N3H7bKGy4C5qC5JN3eZc_2_DkYKYWKqKYbvyOg')}}"/>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="" ng-if="show.add">
+    <h2 style="text-align: center;">Add user</h2>
+
+
+</div>
+
+<div class="" ng-if="show.update">
+    <h2 style="text-align: center;">Update user</h2>
+    <div class="row ">
+        <div class="col-sm-5">
+            <label class="form-control">
+                <span style="color:{{userUpdate.username ? 'blue' : 'red'}}"> Username: </span>
+                {{userUpdate.username}}
+            </label>
+            <label class="form-control">
+                <span style="color:{{userUpdate.name ? 'blue' : 'red'}}"> Name: </span>
+                {{userUpdate.name}}
+            </label>
+            <label class="form-control">
+                <span style="color:{{userUpdate.email ? 'blue' : 'red'}}"> Email: </span>
+                {{userUpdate.email}}
+            </label>
+            <label class="form-control">
+                <span style="color:{{userUpdate.phone ? 'blue' : 'red'}}"> Phone: </span>
+                {{userUpdate.phone}}
+            </label>
+        </div>
+        <div class="col-sm-5">
+            <!--<button ng-if="!show.addTest" class="form-control btn btn-primary" ng-click="function.fAddTest()">Open test for {{userUpdate.name}} >></button>-->
+            <label>Open test:</label>
+            <div>
+                <label class="col-xs-10">
+                    Open From: (optional)
+                    <input type="datetime-local" class="form-control" ng-model="open.openFrom" />
+                </label>
+                <label class="col-xs-10">
+                    Open To: (optional)
+                    <input type="datetime-local" class="form-control" ng-model="open.openTo" />
+                </label>
+                <label class="col-sm-6">Test Title:
+                    <select class="form-control" ng-model="open.title">
+                        <option ng-repeat="test in testTitles">{{test.title}}</option>
+                    </select>
+                </label>
+                <button class="col-sm-6 btn btn-primary" style="margin-top:19px;" id="btnAddTest" ng-click="function.fAddTest()">Add</button>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <img class="img-user" src="{{userUpdate.linkImg || (userUpdate.gender == 'Female' ? 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRArsyve4GQi8v6qko-J6RwylrRyb5-0FRAH5fMJm3oc5bGCyFW2g' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvqBc8CfE5GKr0N3H7bKGy4C5qC5JN3eZc_2_DkYKYWKqKYbvyOg')}}" />
+        </div>
+
+    </div>
+
+</div>
