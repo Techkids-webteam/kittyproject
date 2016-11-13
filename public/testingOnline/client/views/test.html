@@ -1,0 +1,77 @@
+
+<div ng-if="show.alert">
+    <h2>Something went wrong, please try again or contact your PM/ teacher for more information!</h2>
+    <!--<table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>TEST</th>
+                <th>TYPE</th>
+                <th>OPEN FROM</th>
+                <th>OPEN TO</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="test in tests" style="text-align:center">
+                <td>{{test.test.title}}</td>
+                <td>{{test.type}}</td>
+                <td>{{test.openFrom}}</td>
+                <td>{{test.openTo}}</td>
+                <td>
+                    <button class="btn btn-default" ng-click="fStart('{{test.test.title}}')">Start</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>-->
+</div>
+
+<div class="row " ng-if="show.doingTest">
+    <div class="col-md-3">
+        <div class="row">
+            <div class="side-bar container">
+                <div class="row">
+                    <div class="test-info col-md-3">
+                        <h4><span class="label label-primary">{{test.title}}</span></h4>
+                        <p>Duration: <span style="color:darkblue">{{test.duration}} mins</span></p>
+                        <p>Time left: <span style="color:red" id="timeleft">00:00:00</span></p>
+                        <p>Type: <span style="color:darkblue">{{test.type}}</span></p>
+                        <button class="btn col-md-3" ng-click="fShowQuiz()" id="btnShowQuiz" style="min-width:120px">Show One</button>
+                        <button class="btn btn-primary col-md-5" ng-click="fSubmit()" id="btnSubmit" style="min-width:120px">Submit test>></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="question-info col-md-3">
+                        <h4><span class="label label-primary">Questions</span></h4>
+                        <div class="single-item" style="max-height:225px; max-width:280px">
+                            <div class="item row" ng-repeat="quizGroup in test.quizGroups">
+                                <div class="col-xs-3" ng-repeat="order in quizGroup" style="margin-bottom: 3px;padding-left:2px;">
+                                    <button class="btn btn-default" ng-click="fFocus(order)">{{order}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="question-content " id="quiz-container">
+            <p><span class="label label-warning">Question</span></p>
+            <div class=" panel panel-default {{'quiz' + quiz.order}}" ng-repeat="quiz in test.quizs">
+                <label> <span style="text-decoration:underline; color:#3333ff">Question {{quiz.order}}:</span> {{quiz.stem}}</label>
+                <input type="text" ng-if="quiz.type == 'Text'" class="form-control" placeholder="Enter your answer here.." ng-model="test.answers[quiz._id]" />
+                <form ng-if="quiz.type != 'Text'" class="form-group">
+                    <label ng-repeat="answer in quiz.answers" class="{{quiz.answers.toString().length > 100 ? 'checkbox' : 'checkbox-inline'}}"
+                           style="background-color:{{quiz.answers.indexOf(answer) % 2 == 0 ? '#ccccff' : '#e6e6ff'}};font-weight:400">
+                        <input type="{{quiz.type == 'Choice' ? 'radio' : 'checkbox'}}" ng-model="test.answers[quiz._id][(quiz.type == 'Choice' ? 0 : $index)]" name="choice" value='{{$index}}'/>{{' ' + answer}}
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="" ng-if="show.result">
+    <h2>Congraturation!</h2>
+    <div id="txtResult" class="alert-success ">User: {{user.name}}. Test: {{test.title}}. Result: <span style="font-size:large;color:red;">{{result.point}}/{{result.total}}.</span></div>
+</div>

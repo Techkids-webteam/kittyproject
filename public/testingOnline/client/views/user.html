@@ -1,0 +1,33 @@
+﻿<div class="col-md-offset-2 col-md-8">
+    <div class="single-item" id="slide-slick">
+        <div class="item" ng-repeat="slick in slicks" ng-if="slicks.length > 0">
+            <img src="{{slick.linkImg}}" alt="" class="imgSlick img-rounded" style="max-height:250px;box-shadow:4px 4px 2px 2px;">
+            <h2>{{slick.name}}</h2>
+            <p>{{slick.slogan}}</p>
+        </div>
+    </div>
+
+    <table class="table table-bordered" ng-if="tests.length > 0">
+        <thead>
+            <tr>
+                <th>TEST</th>
+                <th>TYPE</th>
+                <th>OPEN FROM</th>
+                <th>OPEN TO</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="test in tests" style="text-align:center">
+                <td>{{test.test.title}}</td>
+                <td>{{test.type}}</td>
+                <td>{{test.openFrom || '---------'}}</td>
+                <td>{{test.openTo || '---------'}}</td>
+                <td>
+                    <button class="btn btn-default" id="1" ng-click="fStart(test.test.title)">Start</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h4 ng-if="show.alert">You have no valid test, please contact your PM or teacher to get a test!</h4>
+</div>

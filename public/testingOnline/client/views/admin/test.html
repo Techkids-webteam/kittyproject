@@ -1,0 +1,51 @@
+﻿
+<div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="" ng-click="function.fSwitchPage('add')">Add Test</a></li>
+            <li class="active"><a href="" ng-click="function.fSwitchPage('manage')">Manage Test</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container-fluid" ng-if="show.add">
+    <h2 style="text-decoration:underline; text-align:center;">Add test</h2>
+    <div class="container-fluid" ng-if="QuizBox.length() > 0">
+        <label>
+            <span style="color:red;">Title: </span>
+            <input type="text" ng-model="test.title" class="form-control" placeholder="Test title.."/>
+        </label><br />
+        <label>
+            <span style="color:red;">Duration: </span>
+            <input type="number" ng-model="test.duration" class="form-control" placeholder="(Minute count).." />
+        </label><br />
+        <label><span style="color:red;">Type: </span>{{QuizBox.type()}}</label><br />
+        <label><span style="color:red;">Total: </span>{{QuizBox.total()}} subQuizs / {{QuizBox.length()}} quiz</label>
+        <div class="panel panel-default" ng-repeat="quiz in QuizBox.get()">
+            <label><span style="color:red;" ng-if="quiz.stimulus">Stimulus: </span>{{quiz.stimulus}}</label>
+            <label><span style="color:red;">SubQuizs: </span>{{quiz.subQuizs.length}}</label>
+        </div>
+        <button id='btnCreateTest' class="btn btn-primary" ng-click="function.fCreateTest()">Create test</button>
+    </div>
+    <div class="" ng-if="QuizBox.length() < 1">
+        <label>Try to add more Quiz to Quiz Box for create a Test</label>
+    </div>
+
+    <div class="quiz-box panel panel-primary">
+        <div class="panel-body">Quiz Box</div>
+        <div class="panel-heading">
+            <button class="btn btn-default">{{QuizBox.total()}} / {{QuizBox.length()}}</button>
+        </div>
+    </div>
+</div>
+
+<div class="" ng-if="show.manage">
+    <div ng-repeat="test in tests">
+        <label>{{test.title}}</label>
+    </div>
+</div>
+
+<div class="" ng-if="show.update">
+
+
+</div>

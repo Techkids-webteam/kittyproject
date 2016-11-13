@@ -1,0 +1,163 @@
+
+body, html{
+  height: 100%;
+  /*background: #3498db;*/
+  background-repeat: no-repeat;
+  font-family: 'Oxygen', sans-serif;
+}
+
+body {
+    overflow-y:scroll;
+}
+
+label {
+    text-align:justify;
+}
+
+.main{
+}
+
+h1.title {
+  font-size: 50px;
+  font-family: 'Passion One', cursive;
+  font-weight: 400;
+}
+
+hr{
+  width: 10%;
+  color: #fff;
+}
+
+.form-group{
+  margin-bottom: 15px;
+}
+
+label{
+  margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+  font-size: 11px;
+  padding-top: 3px;
+}
+
+.main-login{
+  background-color: #fff;
+  /* shadows and rounded borders */
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center{
+  margin-top: 30px;
+  margin: 0 auto;
+  max-width: 330px;
+  padding: 40px 40px;
+}
+
+.login-button{
+  margin-top: 5px;
+}
+
+.login-register{
+  font-size: 11px;
+  text-align: center;
+}
+
+table thead tr th{
+  text-align: center;
+}
+
+.single-item{
+  background-position: 200% 0%;
+  background: transparent url('http://cms.fpt.edu.vn/elearning/theme/image.php/essential/theme/1468490443/bg/header') repeat 0% 0%;
+  border: 1px solid #eee;
+  box-shadow: 0px 1px 1px;
+  border-top: 4px solid #30add1;
+  border-bottom: 4px solid #30add1;
+  width: 100%;
+  height: 300px;
+  margin: 15px auto;
+}
+
+.single-item .item {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 20px 50px;
+}
+
+.single-item .item h2 {
+  color: #30add1;
+  font-size: 30px;
+  width: 50%;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.single-item .item p{
+  color: #888;
+  font-size: 15px;
+  line-height: 26px;
+  height: 80px;
+  font-family: "PT Sans",Arial,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.single-item .item img {
+  float: right;
+  width: 200px;
+}
+
+.test-info{
+  /*border: 1px solid black;*/
+  height: 200px;
+}
+
+.question-info{
+  /*border: 1px solid black;*/
+  height: 282px;
+}
+
+.question-content{
+  /*border: 1px solid black;*/
+  min-height: 482px;
+}
+
+.quiz-box {
+    position:fixed;
+    bottom:0;
+    right:0;
+    min-height:60px;
+    min-width:60px;
+}
+
+.img-quiz {
+    max-height:600px;
+    max-width:600px;
+}
+
+.img-user {
+    max-height:200px;
+    max-width:200px;
+}
+
+a {
+    text-decoration:underline;
+    color: blue;
+}
+
+@media screen and (min-width:992px) {
+    .side-bar {
+        position:fixed;
+        top:72px;
+        bottom:70px;
+    }
+}
