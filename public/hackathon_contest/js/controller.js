@@ -4,9 +4,13 @@
 
 
 
-var app = angular.module('hackApp', ['ngCookies']);
+var app = angular.module('hackApp', ['ngCookies','ngSanitize']);
 
-app.controller('hackCtrl', function($scope, $http, $cookieStore) {
+app.controller('hackCtrl', function($scope, $http, $cookieStore, $sce, $q) {
+  $scope.trustSrc = function(src) {
+    return $sce.trustAsResourceUrl(src);
+  };
+
   var user =$cookieStore.get('user');
 
   window.fbAsyncInit = function() {
@@ -71,12 +75,15 @@ app.controller('hackCtrl', function($scope, $http, $cookieStore) {
     }
   };
 
-
   function getdata(data) {
     $http.post('http://techkids.vn:9196/api/hackathon/data', data).success(function (data) {
       $scope.data = data.items ;
-      console.log($scope.data);
       $scope.data.forEach(function (item, i) {
+        item.members = "";
+        item.member.forEach(function (item1, i) {
+          if(i < item.member.length -1) item.members += item1 + ', ';
+          else item.members += item1 ;
+        });
         item.slide_index = 1;
       });
     });
@@ -86,14 +93,17 @@ app.controller('hackCtrl', function($scope, $http, $cookieStore) {
     FB.getLoginStatus(function(response) {
       if (response.status === 'connected') {
         $scope.data.forEach(function (item) {
-          if(item._id == team_id) item.is_like = true;
+          if(item._id == team_id) {
+            item.is_like = true;
+            item.like += 1;
+          }
         });
         var data;
         if(user){
           data = {
             facebook_id : user.facebook_id,
             accessToken : user.accessToken
-          }
+          };
           $cookieStore.put('user', data);
           user =$cookieStore.get('user');
         }
@@ -118,19 +128,26 @@ app.controller('hackCtrl', function($scope, $http, $cookieStore) {
       id: team_id,
       access_token: user.accessToken
     };
-    console.log(data);
+    var $toastContent = $('<span class="vote-dialog">Bạn đã vote thành công</span>');
+    Materialize.toast($toastContent, 5000);
     $http.post('http://techkids.vn:9196/api/hackathon/like', data).success(function (res) {
       getdata(user);
     });
   };
 
   $scope.share = function (team) {
+    var content = team.name + ' do các thành viên: ';
+    team.member.forEach(function (item, index) {
+      if(index == team.member.length -1 ) content += item + ' ';
+      else content += item + ', ';
+    });
+    content += 'thực hiện. ' + team.content;
     FB.ui({
       method: 'share',
       display: 'popup',
-      href: 'http://techkids.vn/hackathon#' + team.id,
+      href: 'http://techkids.vn/hackathon#' + team._id,
       caption: 'Cuộc thi Techkids Hackathon',
-      description: team.content,
+      description: content,
       name: "Techkids",
       picture: team.group_img[0]
 
@@ -138,3 +155,4 @@ app.controller('hackCtrl', function($scope, $http, $cookieStore) {
   }
 
 });
+

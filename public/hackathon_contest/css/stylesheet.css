@@ -37,7 +37,7 @@ h4 {
 }
 
 h5, p {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 ul {
@@ -59,6 +59,17 @@ li {
   font-weight: 600;
   margin-top: 50px;
   font-family: Roboto;
+}
+
+.bold-text div{
+  margin-bottom: 20px;
+}
+
+.bold-text .member-name{
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 0;
 }
 
 .open-san-bold {
@@ -225,9 +236,18 @@ li {
   left: 5%;
 }
 
-.image-wrapper{
+.image-wrapper div{
   display: inline-block;
+  position: relative;
+  left: 10px;
 }
+
+.image-wrapper div p {
+  position: absolute;
+  top: -10px;
+  left: 16px;
+}
+
 
 .rank-wrapper div{
   position: relative;
@@ -245,7 +265,6 @@ li {
 }
 
 .award_rank {
-  left: 1%;
   top: 10%;
   padding: 10px;
   margin: 5px;
@@ -309,6 +328,10 @@ li {
   border-radius: 0 0 2px 2px;
 }
 
+.content p{
+  font-weight: 400;
+}
+
 .roboto-bold{
   font-family: Roboto;
   font-size: 18px;
@@ -318,4 +341,42 @@ li {
 .body-content{
   margin-top: 60px;
   margin-bottom: 100px;
+}
+
+.video {
+  width: 100%;
+  height: 250px;
+}
+
+.vote-dialog{
+  font-size: 18px;
+}
+
+.list
+{
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.list__item
+{
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.equalHMV {
+  width: 32%;
+  margin: 1%;
+}
+
+.equalHMV:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.equalHMV:nth-of-type(3n+1) {
+  margin-left: 0;
 }
