@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title 
+    title
       |TechKids - Coding School
     meta(name="google-site-verification" content="ABlpbOSOCFI7F5iCwtC2DWK-dLXwww7r9Fdh6nW5weA")
     meta(name='google-site-verification', content='ZrcCZXXkZLRpHeqjfpp_QP8aFhc1hpJX90e2UlSJt08')
@@ -9,14 +9,35 @@ html
     meta(property='og:image', content='http://techkids.vn/cms/img/logo.png' )
     meta(property='og:site_name', content='TechKids Coding School' )
     meta(property='og:description', content='Chúng tôi ở đây để tạo ra những con người có thể thay đổi thế giới.' )
-    
+    // Start of Zendesk Chat Script
+    script(type='text/javascript').
+      window.$zopim || (function (d, s) {
+        var z = $zopim = function (c) {
+          z._.push(c)
+        }, $ = z.s =
+          d.createElement(s), e = d.getElementsByTagName(s)[0];
+        z.set = function (o) {
+          z.set._.push(o)
+        };
+        z._ = [];
+        z.set._ = [];
+        $.async = !0;
+        $.setAttribute("charset", "utf-8");
+        $.src = "https://v2.zopim.com/?4N5jkNmB8Zq8PdaPNc5txsXnQX1jNDiO";
+        z.t = +new Date;
+        $.type = "text/javascript";
+        e.parentNode.insertBefore($, e)
+      })(document, "script");
+    // End of Zendesk Chat Script
+
+
     block styles
       // CSS Libs
       link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
       link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css', integrity='sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r', crossorigin='anonymous')
       link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
       link(href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,vietnamese', rel='stylesheet', type='text/css')
-      
+
       linl(rel="stylesheet", href="/cms/css/w3.css")
       // CSS #self
       link(rel='stylesheet', type='text/css', href='/cms/css/style.css')
@@ -110,7 +131,7 @@ html
                 li
                   a(href="/khoa-hoc/code-for-everyone") Code For Everyone
                 li
-                  a(href="/khoa-hoc/code-for-kids") Code For Kids 
+                  a(href="/khoa-hoc/code-for-kids") Code For Kids
               //- ul.dropdown-menu
               //-   li
               //-     a(href='#') Techhub - Free 4th place for IT students
@@ -118,7 +139,7 @@ html
               //-     a(href='#') Học bổng cho 1000 lập trình viên tài năng
               //-   li
               //-     a(href='#') Sự kiện TechKids hàng tháng
-            
+
             li.dropdown
               a.dropdown-toggle(href='/khoa-hoc/Free-Code-Intensive', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
                 | Free Code Intensive
@@ -180,14 +201,13 @@ html
               a(href="/khoa-hoc/") Khóa học tại TechKids
             ul
               li
-                a(href="/khoa-hoc/code-for-kids") Code For Kids      
-              li 
+                a(href="/khoa-hoc/code-for-kids") Code For Kids
+              li
                 a(href='/khoa-hoc/code-for-everyone') Code For Everyone
-              li 
+              li
                 a(href='/khoa-hoc/iOS') Khóa học Lập trình iOS
-              li 
+              li
                 a(href='/khoa-hoc/android') Khóa học Lập trình Android
-              li 
-                a(href='/khoa-hoc/web-fullstack') Khóa học Lập trình Fullstack Web 
-              
-              
+              li
+                a(href='/khoa-hoc/web-fullstack') Khóa học Lập trình Fullstack Web
+

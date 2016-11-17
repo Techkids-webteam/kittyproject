@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Keyframe Animation Demo</title>
+    <style type="text/css">
+
+        /* Container properties */
+        #scene {
+            width: 400px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            /* Solid fallback for old browsers */
+            background: #0099ff;
+            /* Firefox */
+            background: -moz-linear-gradient(top, #0099ff, #00ccff);
+            /* WebKit - Chrome and Safari */
+            background: -webkit-linear-gradient(top, #0099ff, #00ccff);
+            /* Internet Explorer 10 */
+            background: -ms-linear-gradient(top, #0099ff, #00ccff);
+            /* Opera */
+            background: -o-linear-gradient(top, #0099ff, #00ccff);
+            /* general syntax */
+            background: linear-gradient(top, #0099ff, #00ccff);
+        }
+
+        /* Image Properties */
+
+        .blades {
+            /*image is 120 x 120 px*/
+            position: absolute;
+            top: 116px;
+            left: 196px;
+            /* Firefox */
+            -moz-animation: bladeSpin 10s ease-in-out infinite;
+            /* WebKit - Chrome and Safari */
+            -webkit-animation: bladeSpin 10s ease-in-out infinite;
+            /* Opera */
+            -o-animation: bladeSpin 10s ease-in-out infinite;
+            /* general syntax */
+            animation: bladeSpin 10s ease-in-out infinite;
+        }
+
+        .stand {
+            /*image is 12 x 130 px*/
+            position: absolute;
+            top: 170px;
+            left: 250px;
+        }
+
+        .cloud {
+            position: absolute;
+            /* Firefox */
+            -moz-animation: cloudDrift linear infinite;
+            /* WebKit - Chrome and Safari */
+            -webkit-animation: cloudDrift linear infinite;
+            /* Opera */
+            -o-animation: cloudDrift linear infinite;
+            /* general syntax */
+            animation: cloudDrift linear infinite;
+        }
+
+        .lrg {
+            /*width 130px*/
+            top: 40px;
+            left: -140px;
+            /* Firefox */
+            -moz-animation-duration: 40s;
+            /* WebKit - Chrome and Safari */
+            -webkit-animation-duration: 40s;
+            /* Opera */
+            -o-animation-duration: 40s;
+            /* general syntax */
+            animation-duration: 40s;
+        }
+        .sml {
+            /*width 70px*/
+            top: 10px;
+            left: -80px;
+            /* Firefox */
+            -moz-animation-duration: 20s;
+            /* WebKit - Chrome and Safari */
+            -webkit-animation-duration: 20s;
+            /* Opera */
+            -o-animation-duration: 20s;
+            /* general syntax */
+            animation-duration: 20s;
+        }
+        .med {
+            /*width 100px*/
+            top: 80px;
+            left: -110px;
+            /* Firefox */
+            -moz-animation-duration: 30s;
+            /* WebKit - Chrome and Safari */
+            -webkit-animation-duration: 30s;
+            /* Opera */
+            -o-animation-duration: 30s;
+            /* general syntax */
+            animation-duration: 30s;
+        }
+
+        /* Keyframe animations */
+
+        /* Blades Spinning */
+
+        /* Firefox */
+        @-moz-keyframes bladeSpin {
+            from { -moz-transform: rotate(0deg); }
+            to { -moz-transform: rotate(1440deg); }
+        }
+        /* WebKit - Chrome and Safari */
+        @-webkit-keyframes bladeSpin {
+            from { -webkit-transform: rotate(0deg); }
+            to { -webkit-transform: rotate(1440deg); }
+        }
+        /* Opera */
+        @-o-keyframes bladeSpin {
+            from { -o-transform: rotate(0deg); }
+            to { -o-transform: rotate(1440deg); }
+        }
+        /* general syntax */
+        @keyframes bladeSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(1440deg); }
+        }
+
+
+        /* Clouds drifting */
+
+        /* Firefox */
+        @-moz-keyframes cloudDrift {
+            from { -moz-transform: translateX(0px); }
+            to { -moz-transform: translateX(540px); }
+        }
+        /* WebKit - Chrome and Safari */
+        @-webkit-keyframes cloudDrift {
+            from { -webkit-transform: translateX(0px); }
+            to { -webkit-transform: translateX(540px); }
+        }
+        /* Opera */
+        @-o-keyframes cloudDrift {
+            from { -o-transform: translateX(0px); }
+            to { -o-transform: translateX(540px); }
+        }
+        /* general syntax */
+        @keyframes cloudDrift {
+            from { transform: translateX(0px); }
+            to { transform: translateX(540px); }
+        }
+
+    </style>
+</head>
+<body>
+<div id="scene">
+    <img class="cloud sml" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_sml.png" width="70" height="36"/>
+    <img class="cloud med" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_med.png" width="100" height="52"/>
+    <img class="cloud lrg" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_lrg.png" width="130" height="67"/>
+</div>
+</body>
+</html>

@@ -57,68 +57,71 @@
 <div class="body-content">
   <div class="row">
     <div class="col l12 m12 s12">
-      <div class="col l4 m6 s12" ng-repeat="team in data" id={{team._id}} style="padding-left: 25px">
-        <div class="col l10 offset-l1">
-          <div class="card" style="z-index: 1;">
-            <!--rank-->
-            <div style="position: relative">
+      <ul class="list">
+        <li class="col l4 m6 s12" ng-repeat="team in data" id={{team._id}} style="padding-left: 25px">
+          <div class="col l10 offset-l1">
+            <div class="card" style="z-index: 1;">
+              <!--rank-->
+              <div style="position: relative">
 
-              <div class="single-item card-image waves-effect waves-block waves-light">
                 <div class="single-item card-image waves-effect waves-block waves-light">
-                  <div class="w3-content img-list" style="max-width:800px;position:relative">
-                    <a ng-repeat="img in team.group_img" ng-show="team.slide_index == ($index+1)" class="fancybox slide" data-fancybox-type="image" data-fancybox-group="{{'group'+($parent.$index+1)}}" title="{{team.team_name}}" href="{{img}}">
-                      <img src="{{img}}" alt="" />
-                    </a>
-                    <a ng-show="team.slide_index == (team.group_img.length + 1)" class="fancybox video" data-fancybox-type="iframe" data-fancybox-group="{{'group'+($index+1)}}" title="{{team.team_name}}" href="{{trustSrc('https://www.youtube.com/embed/' + team.video )}}">
-                      <img src="{{'http://img.youtube.com/vi/'+ team.video + '/maxresdefault.jpg'}}" alt="" />
-                      <!--<iframe ng-src="{{trustSrc(team.video)}}" frameborder="0" allowfullscreen></iframe>-->
-                    </a>
-                    <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" ng-click="showImg($index, -1)">❮</a>
-                    <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" ng-click="showImg($index, 1)">❯</a>
+                  <div class="single-item card-image waves-effect waves-block waves-light">
+                    <div class="w3-content img-list" style="max-width:800px;position:relative">
+                      <a ng-repeat="img in team.group_img" ng-show="team.slide_index == ($index+1)" class="fancybox slide" data-fancybox-type="image" data-fancybox-group="{{'group'+($parent.$index+1)}}" title="{{team.team_name}}" href="{{img}}">
+                        <img src="{{img}}" alt="" />
+                      </a>
+                      <a ng-show="team.slide_index == (team.group_img.length + 1)" class="fancybox video" data-fancybox-type="iframe" data-fancybox-group="{{'group'+($index+1)}}" title="{{team.team_name}}" href="{{trustSrc('https://www.youtube.com/embed/' + team.video )}}">
+                        <img src="{{'http://img.youtube.com/vi/'+ team.video + '/maxresdefault.jpg'}}" alt="" />
+                        <!--<iframe ng-src="{{trustSrc(team.video)}}" frameborder="0" allowfullscreen></iframe>-->
+                      </a>
+                      <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" ng-click="showImg($index, -1)">❮</a>
+                      <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" ng-click="showImg($index, 1)">❯</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row team-info">
+                  <div class="col s12">
+                    <img class="img-team" src="{{team.team_url}}" alt="thành viên">
+                    <h3 class="bold-blue-text member">{{'Team '+team.team_name}}</h3>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="content">
+                <h3 class="bold-text">
+                  <div>{{team.name}}</div>
+                  Thành viên:
+                  <p style="height: 58px;font-weight: 500;">{{team.members}}</p>
+                </h3>
+                <p ng-bind-html="team.content" class="content-p"></p>
+                <div class="row score_box">
+                  <div class="col s6 m6 image-wrapper">
+
+                  </div>
+                  <div class="col s6 m6 image-wrapper">
+                    <div>
+                      <img src="/hackathon_contest/img/score_box.png" alt="" />
+                      <p class="text_over">{{team.like}}</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="row team-info">
-                <div class="col s12">
-                  <img class="img-team" src="{{team.team_url}}" alt="thành viên">
-                  <h3 class="bold-blue-text member">{{'Team '+team.team_name}}</h3>
-                </div>
+
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Share" class="blue-flat-button" id="shareBtn" ng-click="share(team)"/>
               </div>
-
-            </div>
-
-            <div class="content">
-              <h3 class="bold-text">
-                Thành viên:
-                <p style="height: 58px;font-weight: 500;">{{team.members}}</p>
-              </h3>
-              <p ng-bind-html="team.content" class="content-p" style="height: 210px;"></p>
-              <div class="row score_box">
-                <div class="col s6 m6 image-wrapper">
-
-                </div>
-                <div class="col s6 m6 image-wrapper">
-                  <div>
-                    <img src="/hackathon_contest/img/score_box.png" alt="" />
-                    <p class="text_over">{{team.like}}</p>
-                  </div>
-                </div>
+              <div class="col s6 m6" style="padding:0;">
+                <input type="submit" value="Vote" class="orange-flat-button" ng-click="like(team._id)" ng-if="!team.is_like"/>
+                <input type="submit" value="Voted" class="orange-flat-button disable" ng-if="team.is_like"/>
               </div>
-            </div>
-
-
-            <div class="col s6 m6" style="padding:0;">
-              <input type="submit" value="Share" class="blue-flat-button" id="shareBtn" ng-click="share(team)"/>
-            </div>
-            <div class="col s6 m6" style="padding:0;">
-              <input type="submit" value="Vote" class="orange-flat-button" ng-click="like(team._id)" ng-if="!team.is_like"/>
-              <input type="submit" value="Voted" class="orange-flat-button disable" ng-if="team.is_like"/>
             </div>
           </div>
-        </div>
-        <!--silde ịmg-->
-      </div>
+          <!--silde ịmg-->
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -148,22 +151,6 @@
     });
   });
 </script>
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1935350096690516'); // Insert your pixel ID here.
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1935350096690516&ev=PageView&noscript=1"
-/></noscript>
-<!-- DO NOT MODIFY -->
-<!-- End Facebook Pixel Code -->
-
 </body>
 
 </html>

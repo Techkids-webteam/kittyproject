@@ -162,17 +162,19 @@ a:hover {
 
 .laptop{
     position: absolute;
-    bottom: 30%;
-    width: 32%;
+    bottom: 33%;
     left: 10%;
+}
+
+.laptop img{
+    width: 32%;
 }
 
 .block-1 .text{
     font-family: 'Source Sans Pro', sans-serif;
     color: #ffffff;
-    right: 16%;
-    left: 46%;
-    bottom: 25%;
+    position: relative;
+    bottom: 80px;
     text-align: center;
 }
 
@@ -276,7 +278,7 @@ h3{
 }
 
 .item p{
-    font-size: 2.4rem;
+    font-size: 2.0rem;
     text-align: center;
     padding: 30px;
 
@@ -370,12 +372,17 @@ h3{
 }
 
 .person-info{
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+.person-info .class{
+    font-size: 2.4rem;
+    font-weight: 600;
 }
 
 .quote-person {
     font-family: 'Roboto', sans-serif;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     font-style: italic;
     font-weight: 400;
 }
@@ -385,7 +392,7 @@ h3{
     margin: auto;
     padding-top: 17%;
     position: absolute;
-    top: 5%;
+    top: 19%;
     left: 0;
     right: 0
 }
@@ -412,7 +419,7 @@ h3{
     top: -4px;
     color: #ffffff;
     text-align: center;
-    padding: 90px 0 20px 0;
+    padding: 40px 0 20px 0;
 }
 
 .course-info{
@@ -482,7 +489,7 @@ h3{
 
 .block-7 .container {
     font-family: 'Roboto', sans-serif;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
 }
 
 .block-7 .container p {

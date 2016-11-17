@@ -6,8 +6,6 @@
 
 var app = angular.module('hackApp', ['ngCookies','ngSanitize']);
 
-
-
 app.controller('hackCtrl', function($scope, $http, $cookieStore, $sce, $q) {
   $scope.trustSrc = function(src) {
     return $sce.trustAsResourceUrl(src);
@@ -78,7 +76,7 @@ app.controller('hackCtrl', function($scope, $http, $cookieStore, $sce, $q) {
   };
 
   function getdata(data) {
-    $http.post('http://210.245.95.50:9196/api/hackathon/data', data).success(function (data) {
+    $http.post('http://techkids.vn:9196/api/hackathon/data', data).success(function (data) {
       $scope.data = data.items ;
       $scope.data.forEach(function (item, i) {
         item.members = "";
@@ -130,8 +128,12 @@ app.controller('hackCtrl', function($scope, $http, $cookieStore, $sce, $q) {
       id: team_id,
       access_token: user.accessToken
     };
-    var $toastContent = $('<span class="vote-dialog">Time out</span>');
-    Materialize.toast($toastContent, 5000);  };
+    var $toastContent = $('<span class="vote-dialog">Bạn đã vote thành công</span>');
+    Materialize.toast($toastContent, 5000);
+    $http.post('http://techkids.vn:9196/api/hackathon/like', data).success(function (res) {
+      getdata(user);
+    });
+  };
 
   $scope.share = function (team) {
     var content = team.name + ' do các thành viên: ';

@@ -202,9 +202,7 @@ app.get('/hackathon', function (req, res) {
     res.sendFile(__dirname + '/public/hackathon_contest/index.html');
 });
 
-app.get('/c4k', function (req, res) {
-    res.sendFile(__dirname + '/public/c4k/index.html');
-});
+app.use('/khoa-hoc/code-for-kids', express.static('public/c4k'))
 
 app.get('/connect', function (req, res) {
     res.sendFile(__dirname + '/public/Techkids Connect/index.html');
@@ -494,9 +492,9 @@ router_courses.get('/web-fullstack/register', function (req, res) {
 router_courses.get('/web-fullstack/register-successful', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/web-register-sucessful.html');
 });
-router_courses.get('/code-for-kids', function (req, res) {
-    res.render('courses-5');
-});
+//router_courses.get('/code-for-kids', function (req, res) {
+//    res.render('courses-5');
+//});
 router_courses.get('/code-for-kids/register', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/c4k-register.html');
 });
