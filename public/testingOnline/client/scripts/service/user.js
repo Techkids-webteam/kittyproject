@@ -8,7 +8,7 @@ angular.module('authService', [])
         authFactory.login = function (data, callback) {
 
             // return the promise object and its data
-            return $http.post('http://techkids.vn:3000/api/signin', {data: data, cache: false})
+            return $http.post('http://techkids.vn:3000/api/signin', data)
                 .success(function (res) {
                     if (res.code) {
                         AuthToken.setToken(res.result.access_token, res.result.user);
