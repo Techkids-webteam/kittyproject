@@ -85,8 +85,15 @@ app.get('/games/tanks', function (req, res) {
     res.sendFile(__dirname + '/public/games/tanks/index.html');
 });
 
+app.get('/testingOnline/user', function(req, res){
+  console.log('>>user');
+  res.redirect(req.url.replace('/testingOnline/user', '/testingOnline/#/user'));
+});
+app.get('/testingOnline/admin', function(req, res){
+  console.log('>>admin');
+  res.redirect(req.url.replace('/testingOnline/admin', '/testingOnline/#/admin'));
+});
 app.use('/testingOnline', express.static(__dirname + '/public/testingOnline/client'));
-
 
 //end server game tanks
 

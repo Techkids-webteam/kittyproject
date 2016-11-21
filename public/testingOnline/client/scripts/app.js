@@ -22,7 +22,7 @@ angular
         'quizServices',
         'loadingMaskServices'
     ])
-    .config(function ($routeProvider, $httpProvider) {
+    .config(function ($routeProvider, $httpProvider, $locationProvider) {
         $httpProvider.interceptors.push('AuthInterceptor');
         $httpProvider.defaults.headers.delete = { "Content-Type": "application/json;charset=utf-8" };
         //$httpProvider.defaults.headers.put = { "Content-Type": "application/json;charset=utf-8" };
@@ -80,4 +80,16 @@ angular
             .otherwise({
                 redirectTo: '/'
             });
+        //check browser support
+        if (window.history && window.history.pushState) {
+            //$locationProvider.html5Mode(true); will cause an error $location in HTML5 mode requires a  tag to be present! Unless you set baseUrl tag after head tag like so: <head> <base href="/">
+
+            // to know more about setting base URL visit: https://docs.angularjs.org/error/$location/nobase
+
+            // if you don't wish to set base URL then use this
+            $locationProvider.html5Mode({
+                enabled: true,
+                requireBase: false
+            });
+        }
     });

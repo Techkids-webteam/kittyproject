@@ -196,7 +196,7 @@ angular.module('quizApp')
             if (isLoggedIn) {
                 init();
             } else {
-                $window.location.href = '#/';
+                $window.location.href = '/';
             }
         });
 

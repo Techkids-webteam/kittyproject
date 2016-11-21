@@ -8,7 +8,7 @@ angular.module('authService', [])
         authFactory.login = function (data, callback) {
 
             // return the promise object and its data
-            return $http.post('http://techkids.vn:3000/api/signin', data)
+            return $http.post('/api/signin', data)
                 .success(function (res) {
                     if (res.code) {
                         AuthToken.setToken(res.result.access_token, res.result.user);
@@ -30,7 +30,7 @@ angular.module('authService', [])
             if (data.name && data.username && data.email && data.password && data.confirm
                 && (data.phone = parseInt(data.phone)) && data.DOB) {
                 if (data.password == data.confirm) {
-                    $http.post('http://techkids.vn:3000/api/signup', data)
+                    $http.post('/api/signup', data)
                         .success(function (res) {
                             console.log(res);
                             if (res.code) {
@@ -97,7 +97,7 @@ angular.module('authService', [])
         };
 
         authFactory.checkToken = function (token, cb) {
-            $http.get('http://techkids.vn:3000/api/token/check/' + token)
+            $http.get('/api/token/check/' + token)
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null, res.result);
@@ -194,7 +194,7 @@ angular.module('authService', [])
         var userFactory = {};
         userFactory.get = function (skip, cb) {
             skip = parseInt(skip) || 0;
-            $http.get('http://techkids.vn:3000/api/admin/user/find/' + skip)
+            $http.get('/api/admin/user/find/' + skip)
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null, res.result);
@@ -202,12 +202,12 @@ angular.module('authService', [])
                         cb(res.err || res.error || new Error(res.message || 'Something went wrong!'));
                     }
                 }, function (res) {
-                    cb((res = res.data).err || res.error || new Error(res.message || 'Something went wrong!'));
+                    cb((res = res.data || res).err || res.error || new Error(res.message || 'Something went wrong!'));
                 });
         }
 
         userFactory.openTestForUser = function (data, cb) {
-            $http.post('http://techkids.vn:3000/api/admin/user/open', data)
+            $http.post('/api/admin/user/open', data)
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null, res.result);
@@ -215,7 +215,7 @@ angular.module('authService', [])
                         cb(res.err || res.error || new Error(res.message || 'Something went wrong!'));
                     }
                 }, function (res) {
-                    cb((res = res.data).err || res.error || new Error(res.message || 'Something went wrong!'));
+                    cb((res = res.data || res).err || res.error || new Error(res.message || 'Something went wrong!'));
                 });
         }
         return userFactory;

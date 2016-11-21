@@ -49,7 +49,7 @@ angular.module('quizApp')
             if (isLoggedIn) {
                 init();
             } else {
-                $window.location.href = '#/';
+                $window.location.href = '/';
             }
         });
 
@@ -77,6 +77,6 @@ angular.module('quizApp')
         }
 
         $scope.fStart = function (testTitle) {
-            window.location.assign('/#/test?title=' + testTitle);
+            window.location.assign('/test?title=' + testTitle);
         };
   });
