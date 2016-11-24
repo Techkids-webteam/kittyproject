@@ -506,6 +506,9 @@ router_courses.get('/register-new', function (req, res) {
 router_courses.get('/Free-Code-Intensive', function (req, res) {
     res.render('courses-code-intensive');
 });
+router_courses.get('/sholarship-fund', function (req, res) {
+    res.render('TSF');
+});
 router_courses.get('/test', function (req, res) {
     res.render('test');
 });
