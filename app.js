@@ -320,6 +320,9 @@ app.get('/about-us', function (req, res) {
 app.get('/ve-chung-toi', function (req, res) {
     res.render('about-us');
 });
+app.get('/sholarship-fund', function (req, res) {
+    res.render('TSF');
+});
 // create a route to render the courses.jade file.
 app.get('/courses', function (req, res) {
     res.render('courses');
@@ -505,9 +508,6 @@ router_courses.get('/register-new', function (req, res) {
 });
 router_courses.get('/Free-Code-Intensive', function (req, res) {
     res.render('courses-code-intensive');
-});
-router_courses.get('/sholarship-fund', function (req, res) {
-    res.render('TSF');
 });
 router_courses.get('/test', function (req, res) {
     res.render('test');
