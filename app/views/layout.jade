@@ -1,0 +1,195 @@
+﻿doctype html
+html
+  head
+    title
+      |TechKids - Coding School
+    meta(name="google-site-verification" content="ABlpbOSOCFI7F5iCwtC2DWK-dLXwww7r9Fdh6nW5weA")
+    meta(name='google-site-verification', content='ZrcCZXXkZLRpHeqjfpp_QP8aFhc1hpJX90e2UlSJt08')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    meta(property='og:image', content='http://techkids.vn/cms/img/logo.png' )
+    meta(property='og:site_name', content='TechKids Coding School' )
+    meta(property='og:description', content='Chúng tôi ở đây để tạo ra những con người có thể thay đổi thế giới.' )
+
+    block styles
+      // CSS Libs
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css', integrity='sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r', crossorigin='anonymous')
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+      link(href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,vietnamese', rel='stylesheet', type='text/css')
+
+      linl(rel="stylesheet", href="/cms/css/w3.css")
+      // CSS #self
+      link(rel='stylesheet', type='text/css', href='/cms/css/style.css')
+      link(rel='stylesheet', type='text/css', href='/cms/css/fadeIn.css')
+      link(rel='stylesheet', type='text/css', href='/cms/css/layout.css')
+      link(rel='stylesheet', type='text/css', href='/cms/css/rolling.css')
+      link(rel='stylesheet', type='text/css', href='/cms/css/bar.css')
+    block scripts
+      // JS Libs
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+      // JS #self
+      script(src='/cms/js/core.js')
+      script(src='/cms/js/scrollSpy.js')
+      script(src='/cms/js/fixbug.js')
+      script(src='/cms/js/form.js')
+      script(src='/cms/js/bar.js')
+      script(src='/cms/js/modal.js')
+      script.
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         ga('create', 'UA-78355215-1', 'auto');
+         ga('send', 'pageview');
+  body
+    #fb-root
+      script.
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        // Facebook Pixel Code
+      script.
+         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+         n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+         n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+         t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+         document,'script','https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '1602436916719502'); // Insert your pixel ID here.
+         fbq('track', 'PageView');
+      noscript
+         img(height='1', width='1', style='display:none', src="https://www.facebook.com/tr?id=1602436916719502&ev=PageView&noscript=1")
+      // End Facebook Pixel Code
+    nav#main_nav.navbar.navbar-default.navbar-fixed-top.block.nav_optional.endblock(class='{% %}{% %}')
+      nav.navbar.navbar-inverse.navbar_secondary.hidden-xs
+        .container
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href="/") TRANG CHỦ
+            li
+              a(href="/lien-he") LIÊN HỆ
+            li
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href="/")
+            span.brand_logo(style="")
+              img(src='/cms/img/TechkidBrandColor.png', alt='TechKids')
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.dropdown
+              a.dropdown-toggle(href="/ve-chung-toi", data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Về Chúng Tôi
+                span.visible-xs-inline-block.caret
+              ul.dropdown-menu
+                li
+                  a(href="/ve-chung-toi") Giới thiệu  chung
+                li
+                  a(href="/ve-chung-toi#sumenh-tamnhin") Sứ mệnh, tầm nhìn, giá trị cốt lõi
+            li.dropdown
+              a.dropdown-toggle(href="/khoa-hoc", data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Các Khóa Học
+                span.visible-xs-inline-block.caret
+              ul.dropdown-menu
+                li
+                  a(href="/khoa-hoc/iOS") Lập Trình iOS
+                li
+                  a(href="/khoa-hoc/android") Lập Trình Android
+                li
+                  a(href="/khoa-hoc/web-fullstack") Lập trình Full-stack Web
+                li
+                  a(href="/khoa-hoc/code-for-everyone") Code For Everyone
+                li
+                  a(href="/khoa-hoc/code-for-kids") Code For Kids
+              //- ul.dropdown-menu
+              //-   li
+              //-     a(href='#') Techhub - Free 4th place for IT students
+              //-   li
+              //-     a(href='#') Học bổng cho 1000 lập trình viên tài năng
+              //-   li
+              //-     a(href='#') Sự kiện TechKids hàng tháng
+
+            li.dropdown
+              a.dropdown-toggle(href='/khoa-hoc/Free-Code-Intensive', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Free Code Intensive
+                span.visible-xs-inline-block.caret
+            li.dropdown
+              a.dropdown-toggle(href='/hoc-vien', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Học viên TechKids
+                span.visible-xs-inline-block.caret
+            li.dropdown
+              a.dropdown-toggle(href='/chuong-trinh/', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Các Sự Kiện
+                span.visible-xs-inline-block.caret
+              //- ul.dropdown-menu
+              //-   li
+              //-     a(href='#') Tài liệu học lập trình
+              //-   li
+              //-     a(href='#') Kinh nghiệm lập trình
+              //-   li
+              //-     a(href='#') I'm a coder, I have no life
+          .visible-xs-block
+            form.navbar-form.navbar-right.visible-xs-block(role='search')
+              .form-group
+                input.form-control(type='text', placeholder='Search')
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(href='/') TRANG CHỦ
+              li
+                a(href='/ve-chung-toi') VỀ CHÚNG TÔI
+              li
+                a(href='/lien-he') LIÊN HỆ
+    block content
+    footer.footer
+      .container
+        .row
+          .col-sm-3
+            img.footer_logo(src='/cms/img/TechkidBrandGrey.png')
+            p.socials_list
+              a.fa.fa-google-plus-square.col-sm-2(href='https://plus.google.com/u/2/')
+              a.fa.fa-facebook-square.col-sm-2(href='https://www.facebook.com/Techkids.Code.the.Change')
+              a.fa.fa-youtube.col-sm-2(href='https://www.youtube.com/channel/UCkuxJcFwR-iFgThUPKwM_JA') <br><br>
+              .fb-page(data-href='https://www.facebook.com/Techkids.Code.the.Change/', data-small-header='true', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true',data-show-posts='false')
+                .fb-xfbml-parse-ignore
+                  blockquote(cite='https://www.facebook.com/Techkids.Code.the.Change/')
+                    a(href='https://www.facebook.com/Techkids.Code.the.Change/') Techkids - Coding school
+
+          .col-sm-3
+            h5 Về chúng tôi
+            p
+              |Chúng tôi ở đây để tạo ra những con người có thể thay đổi thế giới. TechKids không phải là một trung tâm đi dạy Lập trình kiếm tiền, hay một trường học chỉ đọc, chép từ bao thế hệ. Đây là một cộng đồng toàn cầu của những người sẵn sàng trở thành những người giỏi nhất, khác biệt nhất trong thế giới công nghệ.
+          .col-sm-3
+            h5 Tìm TechKids tại
+            ul
+              li TechHub Chùa Láng: Số 10, ngõ 121, Chùa Láng
+              li TechHub Chùa Bộc: Số 101D, ngõ 95, Chùa Bộc
+            p Hotline: Ms. Ha: 0165 300 5670
+            p Email: Techkidsvn@gmail.com
+          .col-sm-3
+            h5
+              a(href="/khoa-hoc/") Khóa học tại TechKids
+            ul
+              li
+                a(href="/khoa-hoc/code-for-kids") Code For Kids
+              li
+                a(href='/khoa-hoc/code-for-everyone') Code For Everyone
+              li
+                a(href='/khoa-hoc/iOS') Khóa học Lập trình iOS
+              li
+                a(href='/khoa-hoc/android') Khóa học Lập trình Android
+              li
+                a(href='/khoa-hoc/web-fullstack') Khóa học Lập trình Fullstack Web
+
+script(type='text/javascript').
+  window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",53404]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);
+
