@@ -14,6 +14,22 @@
   <link href="/register-page/static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="/register-page/static/css/navbar.less" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="/register-page/static/css/drop-down.less" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!--Google analytics-->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-78355215-1', 'auto');
+    ga('send', 'pageview');
+  </script>
   <!-- Hotjar Tracking Code for http://www.techkids.vn/ -->
   <script>
     (function(h, o, t, j, a, r) {
@@ -31,6 +47,7 @@
       a.appendChild(r);
     })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
   </script>
+
   <!-- Facebook Pixel Code -->
   <script>
     ! function(f, b, e, v, n, t, s) {
@@ -228,52 +245,52 @@
         </div>
         <div class="col-sm-3">
           <h5>Về chúng tôi</h5>
-          <p>Chúng tôi ở đây để tạo ra những con người có thể thay đổi thế giới. TechKids không phải là một trung tâm đi dạy Lập trình kiếm tiền, hay một trường học chỉ đọc, chép từ bao thế hệ. Đây là một cộng đồng toàn cầu của những người sẵn sàng trở thành
-            những người giỏi nhất, khác biệt nhất trong thế giới công nghệ.</p>
-        </div>
-        <div class="col-sm-3">
-          <h5>Tìm TechKids tại</h5>
-          <ul>
-            <li>TechHub Chùa Láng: Số 10, ngõ 121, Chùa Láng</li>
-            <li>TechHub Chùa Bộc: Số 101D, ngõ 95, Chùa Bộc</li>
-          </ul>
-          <p>Hotline: Ms. Ha: 0165 300 5670</p>
-          <p>Email: Techkidsvn@gmail.com</p>
-        </div>
-        <div class="col-sm-3">
-          <h5><a href="/khoa-hoc/">Khóa học tại TechKids</a></h5>
-          <ul>
-            <li><a href="/khoa-hoc/code-for-kids">Code For Kids      </a></li>
-            <li> <a href="/khoa-hoc/code-for-everyone">Code For Everyone</a></li>
-            <li> <a href="/khoa-hoc/iOS">Khóa học Lập trình iOS</a></li>
-            <li> <a href="/khoa-hoc/android">Khóa học Lập trình Android</a></li>
-            <li> <a href="/khoa-hoc/web-fullstack">Khóa học Lập trình Fullstack Web </a></li>
-          </ul>
-        </div>
+            <p>Chúng tôi ở đây để tạo ra những con người có thể thay đổi thế giới. TechKids không phải là một trung tâm đi dạy Lập trình kiếm tiền, hay một trường học chỉ đọc, chép từ bao thế hệ. Đây là một cộng đồng toàn cầu của những người sẵn sàng trở
+              thành những người giỏi nhất, khác biệt nhất trong thế giới công nghệ.</p>
+          </div>
+          <div class="col-sm-3">
+            <h5>Tìm TechKids tại</h5>
+            <ul>
+              <li>TechHub Chùa Láng: Số 10, ngõ 121, Chùa Láng</li>
+              <li>TechHub Chùa Bộc: Số 101D, ngõ 95, Chùa Bộc</li>
+            </ul>
+            <p>Hotline: Ms. Ha: 0165 300 5670</p>
+            <p>Email: Techkidsvn@gmail.com</p>
+          </div>
+          <div class="col-sm-3">
+            <h5><a href="/khoa-hoc/">Khóa học tại TechKids</a></h5>
+            <ul>
+              <li><a href="/khoa-hoc/code-for-kids">Code For Kids      </a></li>
+              <li> <a href="/khoa-hoc/code-for-everyone">Code For Everyone</a></li>
+              <li> <a href="/khoa-hoc/iOS">Khóa học Lập trình iOS</a></li>
+              <li> <a href="/khoa-hoc/android">Khóa học Lập trình Android</a></li>
+              <li> <a href="/khoa-hoc/web-fullstack">Khóa học Lập trình Fullstack Web </a></li>
+            </ul>
+          </div>
       </div>
     </div>
-  </footer>
+    </footer>
 
 
-  <!--  Scripts-->
-  <script src="/register-page/js/jquery-2.1.1.min.js"></script>
-  <script src="/register-page/static/js/materialize.js"></script>
-  <script src="/register-page/static/js/init.js"></script>
-  <!-- <script src="/register-page/static/js/form-android.js"></script> -->
-  <script src='/register-page/static/js/form-c4k.js'></script>
-  <script src='https://www.google.com/recaptcha/api.js'></script>
-  <script type="text/javascript">
-    $('.datepicker').pickadate({
-      selectMonths: true, // Creates a dropdown to control month
-      selectYears: 100 // Creates a dropdown of 15 years to control year
-    });
-
-    $(document).ready(function() {
-      $('.slider').slider({
-        full_width: true
+    <!--  Scripts-->
+    <script src="/register-page/js/jquery-2.1.1.min.js"></script>
+    <script src="/register-page/static/js/materialize.js"></script>
+    <script src="/register-page/static/js/init.js"></script>
+    <!-- <script src="/register-page/static/js/form-android.js"></script> -->
+    <script src='/register-page/static/js/form-c4k.js'></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script type="text/javascript">
+      $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 100 // Creates a dropdown of 15 years to control year
       });
-    });
-  </script>
+
+      $(document).ready(function() {
+        $('.slider').slider({
+          full_width: true
+        });
+      });
+    </script>
 
 
 </body>

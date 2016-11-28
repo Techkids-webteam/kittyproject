@@ -32,7 +32,7 @@ angular.module('quizApp')
                 if (err) {
                     alert(err);
                 } else {
-                    $window.location.href = ('#/' + $scope.user.role || '');
+                    $location.path('#/' + $scope.user.role || '');
                 }
             });
         };
@@ -55,7 +55,7 @@ angular.module('quizApp')
                     alert(err);
                 } else {
                     $scope.show.login = true;
-                    $scope.show.register = false;   
+                    $scope.show.register = false;
                     $scope.formData.username = $scope.formRegister.username;
                 }
             });
@@ -65,9 +65,11 @@ angular.module('quizApp')
                 if (isLoggedIn) {
                     var x = $scope;
                     if ($rootScope.user.role == 'admin') {
-                        $window.location.href = ('#/admin');
+                      var url = "http://" + $window.location.host + "/admin";
+                      $window.location.href = url;
                     } else {
-                        $window.location.href = ('#/user');
+                      var url = "http://" + $window.location.host + "/user";
+                      $window.location.href = url;
                     }
                 } else
                     $scope.show.login = true;

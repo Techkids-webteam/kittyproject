@@ -89,8 +89,13 @@ app.get('/blog', function (req, res) {
     res.sendFile(__dirname + '/public/blog/src/index.html');
 });
 
+app.get('/testingOnline/user', function(req, res){
+  res.redirect(req.url.replace('/testingOnline/user', '/testingOnline/#/user'));
+});
+app.get('/testingOnline/admin', function(req, res){
+  res.redirect(req.url.replace('/testingOnline/admin', '/testingOnline/#/admin'));
+});
 app.use('/testingOnline', express.static(__dirname + '/public/testingOnline/client'));
-
 
 //end server game tanks
 
@@ -320,6 +325,9 @@ app.get('/about-us', function (req, res) {
 });
 app.get('/ve-chung-toi', function (req, res) {
     res.render('about-us');
+});
+app.get('/sholarship-fund', function (req, res) {
+    res.render('TSF');
 });
 // create a route to render the courses.jade file.
 app.get('/courses', function (req, res) {

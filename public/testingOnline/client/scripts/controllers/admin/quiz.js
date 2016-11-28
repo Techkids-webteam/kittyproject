@@ -18,7 +18,7 @@ angular.module('quizApp')
             if (isAdmin) {
                 init();
             } else {
-                $location.path('#/');
+                $location.path('/');
             }
         });
 

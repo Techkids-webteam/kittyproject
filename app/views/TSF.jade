@@ -1,0 +1,509 @@
+extends layout
+append scripts
+  script.
+    (function(h,e,a,t,m,p) {
+    m=e.createElement(a);m.async=!0;m.src=t;
+    p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+    })(window,document,'script','https://u.heatmap.it/log.js');
+block content
+  section#page_title.page_title.stars
+      .container
+        .row.fade_up.text-center
+          h3.section_title.col-sm-5.col-xs-9 Thông tin
+          p.section_subtitle TechKids Scholarship Fund (TSF)
+    section
+      .container
+        hr.content_divider
+        article.row
+          aside.course_summary.fly_right_md.col-md-4
+            .item
+              h3.column_title CÁC KHÓA HỌC CỦA TECHKIDS
+              p
+                a(href="/khoa-hoc/ios") iOS development 
+              hr.sub_divider
+              p   
+                a(href="/khoa-hoc/android") Android development
+              hr.sub_divider
+              p  Game development (Coming soon)
+              hr.sub_divider
+              p  
+                a(href="/khoa-hoc/code-for-everyone") Code for everyone (link)
+              hr.sub_divider
+              p  
+                a(href="/khoa-hoc/code-for-kids") Code for Kids (link)
+              hr.sub_divider
+              a.btn.btn-danger.btn-block(href='https://docs.google.com/forms/d/e/1FAIpQLSceWwgH0LpKuJLiCixNlnPgOjFFw0ohLFN7WniIitvlkkEYbw/viewform') ỨNG TUYỂN NGAY
+              hr
+            .item
+              h3.column_title Giảng viên
+              ul.users_list
+                li
+                  .user_thumbnail
+                    a(href="/giang-vien/nguyen-si-thanh-son")
+                      img(src="/cms/img/thanhson.jpg")
+                  h5
+                    a(href="/giang-vien/nguyen-si-thanh-son") Nguyễn Sỹ Thanh Sơn
+                  p Back-end Developer
+                li
+                  .user_thumbnail
+                    a(href="/giang-vien/ton-hong-duc")
+                      img(src="/cms/img/tonhongduc.jpg")
+                  h5
+                    a(href="/giang-vien/ton-hong-duc") Tôn Hồng Đức
+                  p  Front-end Developer
+                li
+                  .user_thumbnail
+                    a(href="/giang-vien/cuong-nguyen")
+                      img(src="/cms/img/cuong-nguyen.jpg")
+                  h5
+                    a(href="/giang-vien/cuong-nguyen") Cương Nguyễn
+                  p Fullstack Developer
+                li
+                  .user_thumbnail
+                    a(href="/giang-vien/tran-quang-hiep")
+                      img(src="/cms/img/tranquanghiep.jpg")
+                  h5
+                    a(href="/giang-vien/tran-quang-hiep") Trần Quang Hiệp
+                  p Front-end Developer
+                  sub
+          .col-md-8.fly_right_md
+            img.title_image(src="/cms/img/TSF1.png")
+            section
+              .article_title_wrapper.row
+                .item
+                  h3.section_title.col-sm-5.col-xs-9 Thông tin khóa học
+                  p(dir='ltr' style='font-style: italic;')
+                    span 2016, TechKids đã trao 30 suất học bổng với Tổng giá trị 120.000.000vnd cho những bạn xuất sắc hoặc có hoàn cảnh khó khăn, có nỗ lực vượt bậc. Với 90+ suất Học bổng cho năm 2017, tổng giá trị lên đến 450.000.000vnd cùng với sự hỗ trợ của 5 công ty đối tác chiến lược, TechKids Scholarship Fund (TSF) chính thức được mở cho năm 2017.
+                  hr
+                .item
+                  h3(dir='ltr')
+                    span 1. VÌ SAO NÊN THAM GIA?
+                  p(dir='ltr')
+                    span
+                      | - Được miễn giảm Học phí tùy vào giá trị Học bổng nhận được. 
+                  p(dir='ltr')
+                    span - Được giới thiệu việc làm trong hoặc sau khóa học. Hơn 30 đối tác tại TechKids chưa bao giờ từ chối các sinh viên từng được Học bổng.
+                  p(dir='ltr')
+                    span - Được hỗ trợ ở lại ăn ngủ (nếu cần)
+                  p(dir='ltr')
+                    span - Được tham gia vào những lớp học đặc biệt của TechKids: biến nền tảng Lập trình của mình thành những sản phẩm hữu dụng với số đông, trong một môi trường của những bạn trẻ tài năng luôn cố gắng vươn lên và sẵn sàng chia sẻ. Điều này bạn có thể hỏi hơn 300 học viên TechKids, đây là một trải nghiệm khó tìm thấy ở bất cứ đâu!
+                  hr
+                .item
+                  h3(dir='ltr')
+                    span 2. CÁCH THỨC THAM GIA
+                  p(dir='ltr')
+                    span
+                      | - Vòng 1: Đăng ký Online tại đây: 
+                    a(href='http://bit.ly/TechKids_Scholarship_Fund')
+                      span http://bit.ly/TechKids_Scholarship_Fund 
+                  p(dir='ltr')
+                    span - Vòng 2: Kiểm tra tư duy bằng giấy và kiểm tra thái độ bằng phỏng vấn 
+                  p(dir='ltr')
+                    span
+                      | - Vòng 3: Live code (dành cho các khóa iOS, Android, Full-stack Web, Game)
+                  hr
+                .item
+                  h3(dir='ltr')
+                    span 3. CÁC LOẠI HỌC BỔNG TSF:
+                  p(dir='ltr')
+                    h4 3.1. TSF dành cho sinh viên tài năng:
+                  p(dir='ltr')
+                    span ** ĐỐI TƯỢNG THAM GIA: (không giới hạn độ tuổi, giới tính)     
+                  p(dir='ltr')
+                    span - Cấp 3: đã từng được giải cấp Thành Phố/Tỉnh, Quốc Gia, Quốc Tế Tin học, Toán, Vật Lý là một lợi thế lớn
+                  p(dir='ltr')
+                    span - Hoặc ĐH: từng được giải các cuộc thi như ACM, Hackathon,... là một lợi thế lớn
+                  p(dir='ltr')
+                    span
+                      | - Hoặc từng phát triển ít nhất 1 sản phẩm (đơn giản) trước đó (web, app, game,...) là một lợi thế lớn
+                  p(dir='ltr')
+                    span - Hoặc vượt qua xuất sắc bài kiểm tra đầu vào tư duy (10%), live code (70%), phỏng vấn thái độ (20%) của TechKids (thực tế là rất nhiều bạn đã được nhận Học bổng nhờ thể hiện tốt ở phần thi đầu vào, mặc dù trước đó không có thành tích gì nổi bật trước đó. Nên các bạn cố gắng nhé!)
+                  p(dir='ltr')
+                    span
+                      | - Dù giỏi đến mấy, điều quan trọng nhất ở TechKids là thái độ cầu thị, khiêm tốn, ham học hỏi, biết sẻ chia. 
+                  p(dir='ltr')
+                    span
+                      | ** SỐ LƯỢNG HỌC BỔNG:
+                  p(dir='ltr')
+                    span 50 suất Học bổng có giá trị từ 20 - 30 - 75 - 100%
+                  p(dir='ltr')
+                    span ** CÁC KHÓA HỌC ĐƯỢC ÁP DỤNG
+                    span
+                      | Chỉ 4 khóa iOS, Android, Full-stack web, Game Development
+                  h3 3.2. TSF dành cho sinh viên có hoàn cảnh khó khăn, nỗ lực vượt bậc
+                  p(dir='ltr')
+                    span ** ĐỐI TƯỢNG THAM GIA:
+                  p(dir='ltr')
+                    span - Học sinh/Sinh viên có hoàn cảnh Tài chính gia đình khó khăn (Có giấy xác nhận) hoặc có vấn đề về sức khỏe (Tự kỷ, Bệnh về xương, tim...)
+                  p(dir='ltr')
+                    span - Có tinh thần cầu tiến, luôn cố gắng vươn lên.
+                  p(dir='ltr')
+                    span - Vượt qua vòng phỏng vấn đầu vào như mọi học sinh khác của TechKids để đảm bảo chất lượng lớp học
+                  p(dir='ltr')
+                    span ** SỐ LƯỢNG HỌC BỔNG:
+                  p(dir='ltr')
+                    span - 40 suất Học bổng có giá trị từ 30 - 50 - 75 - 100%
+                  p(dir='ltr')
+                    span ** CÁC KHÓA HỌC ĐƯỢC ÁP DỤNG
+                  p(dir='ltr')
+                    span - Tất cả các khóa iOS, Android, Full-stack web, Game development, Code for everyone, Code for Kids
+                  h3 3.3. TechKids Women Techmakers Scholarships
+                  p(dir='ltr')
+                    span ** ĐỐI TƯỢNG THAM GIA:
+                  p(dir='ltr')
+                    span - Chỉ cần là con gái
+                  p(dir='ltr')
+                    span - Có tinh thần cầu tiến, luôn cố gắng vươn lên.
+                  p(dir='ltr')
+                    span - Vượt qua vòng phỏng vấn đầu vào như mọi học sinh khác của TechKids để đảm bảo chất lượng lớp học
+                  p(dir='ltr')
+                    span ** SỐ LƯỢNG HỌC BỔNG:
+                  p(dir='ltr')
+                    span - Không giới hạn Học bổng 10%. 
+                  p(dir='ltr')
+                    span - Có thể nhận thêm 2 Học bổng phía trên.
+                  p(dir='ltr')
+                    span ** CÁC KHÓA HỌC ĐƯỢC ÁP DỤNG
+                  p(dir='ltr')
+                    span - 5 khóa iOS, Android, Full-stack web, Game development, Code for Kids.
+                  hr
+                .item
+                  p(dir='ltr',style='font-style: italic;')
+                    span Đây có thể là cơ hội thay đổi của bạn. Đây có thể là cơ hội để bạn sống hết mình, làm những điều có ý nghĩa. Hay chỉ đơn giản, đây là cơ hội để bạn được đến Techkids 1 lần trong đời, và biết thế nào là Chăm chơi, chăm học, là ăn ngủ vạ vật cùng anh em.
+                  p(dir='ltr',style='font-style: italic;')
+                    span ĐỪNG CHẦN CHỪ. TECHKIDS CHỜ ĐÓN BẠN!
+                    hr
+                div(style="text-align:center;margin: 20px auto; width: 33%;")
+                    a.btn.btn-danger.btn-block(href='https://docs.google.com/forms/d/e/1FAIpQLSceWwgH0LpKuJLiCixNlnPgOjFFw0ohLFN7WniIitvlkkEYbw/viewform') ỨNG TUYỂN NGAY
+            //- section
+            //-   .item.syllabus  
+            //-     .article_title_wrapper.row
+            //-       h3.section_title.col-sm-5.col-xs-9 CODE INTENSIVE WITH JS
+            //-     ul.list-group
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 1. Javascript fundamental & Git Basic
+            //-         p.list-group-item-text
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 2. Javascript fundamental with OOP
+            //-         p.list-group-item-text
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 3. Canvas & Game development introduction 
+            //-         p.list-group-item-text
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 4. Player & Weapon 
+            //-         p.list-group-item-text
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 5. Enemy & Enemy Weapon
+            //-         p.list-group-item-text
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 6. Collision detection & Handling
+            //-         p.list-group-item-text
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 7. Scene transition
+            //-         p.list-group-item-text
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 8. Project execution - Question & Answer
+            //-         p.list-group-item-text
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 9. Hackathon
+            //-         p.list-group-item-text
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 10. Demo Day
+            //-         p.list-group-item-text
+            //-         
+            //-       h3.section_title.col-sm-5.col-xs-9 Front End
+            //-     ul.list-group
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 11. Introduction
+            //-         p.list-group-item-text
+            //-           | + Setup environment
+            //-           |+ Using Webstorm, notepad++ editor
+            //-           |+ Git, Github
+            //-           |+ Git basic 
+            //-           |+ Git flow
+            //-           |+ Create github repository
+            //-           |+ Practice
+            //- 
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 12. Git Lab:
+            //-         p.list-group-item-text
+            //-           |+ Using Source Tree tool
+            //-           |+ commit, push, pull, merge (rebase) 
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 13. HTML 
+            //-         p.list-group-item-text
+            //-           |+ Introduction
+            //-           |+ Basic HTML tags: h1, h2, p, input…
+            //-           |+ HTML Tag with attributes: img, a, input…
+            //-           |+ Div and HTML5 tags
+            //-           |+ Practice
+            //-       li.list-group-item
+            //-           h5.list-group-item-heading 14. CSS basic 
+            //-           p.list-group-item-text
+            //-             |+ Include CSS into HTML
+            //-             |+ CSS syntax
+            //-             |+ CSS selectors
+            //-             |+ Bowser developer tool (chrome, firefox, IE)
+            //-             |+ Practice 
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 15. HTML, CSS Lab 1:
+            //-         p.list-group-item-text
+            //-           |+ Create Login Page
+            //-           |+ Create Home menu
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 16. CSS advance
+            //-         p.list-group-item-text
+            //-           |+ Position
+            //-           |+ Display
+            //-           |+ Float
+            //-           |+ Sizing
+            //-           |+ Animations
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 17. HTML, CSS Lab 2
+            //-         p.list-group-item-text
+            //-           |+ Create Home Page example
+            //-           |+ Bootstrap introduction
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 18. Javascript 
+            //-         p.list-group-item-text
+            //-           |+ Introduction
+            //-           |+ Include javascript into HTML
+            //-           |+ DOM object
+            //-           |+ DOM events
+            //-           |+ Practice: Handle login button in login page
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 19. Javascript language
+            //-         p.list-group-item-text
+            //-           |+ Variable
+            //-           |+ Object
+            //-           |+ Operator: +-*/
+            //-           |+ Array & Loop
+            //-           |+ Function
+            //- 
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 20. Javascript Lab:
+            //-         p.list-group-item-text 
+            //-           |+ Create Stop watch Page
+            //-           | + Jquery introduction & practice
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 21. AngularJS Part 1
+            //-         p.list-group-item-text
+            //-           |+ Introduction
+            //-           |+ Include Angular JS into Project
+            //-           |+ MVVM
+            //-           |+ Practice
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 22. AngularJS Part 2
+            //-         p.list-group-item-text
+            //-           |+ Directive
+            //-           |+ Services
+            //-           |+ Routing
+            //-       
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 23. AngularJS Lab 
+            //-         p.list-group-item-text
+            //-           |+ Create custom Directive (Navbar)
+            //-           |+ Create List Page
+            //-           |+ Create New Post page
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 24. Mini Hackathon 
+            //-         p.list-group-item-text
+            //-           | Full-day
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 25. Node JS
+            //-         p.list-group-item-text 
+            //-           |+ Setup environment
+            //-           |+ Nodejs basic
+            //-           |+ Node module export, require
+            //-           |+ Path, FS module
+            //-           |+ NPM
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 26. NodeJS web
+            //-         p.list-group-item-text 
+            //-           |+ Express
+            //-           |+ Web server with Express
+            //-           |+ Express Router
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 27. NodeJS Lab
+            //-         p.list-group-item-text
+            //-           |+ Bower introduction
+            //-           |+ Create full project with Nodejs + Express, AngularJS, Bootstrap
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 28. Preprocessor & Build
+            //-         p.list-group-item-text
+            //-           |+ Jade 
+            //-           |+ Sass
+            //-           |+ Gulp
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 29. Preprocessor & Build Lab
+            //-         p.list-group-item-text
+            //-           |+ Create Gulp task (build, run, Jade compile, Sass Compile…)
+            //-           |+ Convert Home page to using Jade, Sass
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 30. Hackathon (Full weekend day)
+            //-         p.list-group-item-text
+            //-           | 
+            //-       h3.section_title.col-sm-5.col-xs-9 Back End 
+            //-     ul.list-group      
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 31. Setup Working Environment
+            //-         p.list-group-item-text
+            //-           |+ Install Virtualbox
+            //-           |+ Install Vagrant
+            //-           |+ Basic Linux command line
+            //-           |+ Install NPM on Ubuntu Trusty
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 32. Build the first  API
+            //-         p.list-group-item-text
+            //-           |+ Manage packages with NPM
+            //-           |+ Introduce Restful API
+            //-           |+ Build the first API
+            //-           |+ Manage Logs
+            //-           |+ Manage Config
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 33. Working with MongoDB
+            //-         p.list-group-item-text 
+            //-           |+ Choose NoSQL or SQL
+            //-           |+ Install MongoDB on Ubuntu Trusty
+            //-           |+ Connect MongoDB from ExpressJS
+            //-           |+ Build User Register API
+            //- 
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 34. Complete  User Management API
+            //-         p.list-group-item-text
+            //-           |+ Build Login API
+            //-           |+ Build  API getUserDetails, getListUsers
+            //-           |+ Writing Unit Test
+            //-           |+ Document API with Swagger
+            //-           |+ Authorize APIs  with Token based Authentication
+            //- 
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 35. LAB: Build Update User API 
+            //-         p.list-group-item-text
+            //-           |+ Build  API
+            //-           |+ Write Unittest
+            //-           |+ Compose Swagger
+            //- 
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 36. LAB: Build Create/Update Product API
+            //-         p.list-group-item-text
+            //-           |+ Build  API
+            //-           |+ Write Unittest
+            //-           |+ Compose Swagger
+            //- 
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 37. LAB: Build get/getList Product API
+            //-         p.list-group-item-text
+            //-           |+ Build  API
+            //-           |+ Write Unittest
+            //-           |+ Compose Swagger
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 38. Mini Hackaton
+            //-         p.list-group-item-text
+            //-           |Full-day
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 39. Working with Cache, Queue
+            //-         p.list-group-item-text
+            //-           |+ Upload Avatar
+            //-           |+ Working with Queue to send Registration Email
+            //-           |+ Build Get Config API
+            //-           |+ Apply Cache for Get Config API
+            //-           
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 40. LAB: Build Create/Update Config API
+            //-         p.list-group-item-text
+            //-           |+ Build Create Config API
+            //-           |+ Build Delete Config API
+            //-           |+ Manage Cache in Config API
+            //- 
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 41. LAB: Using Queue to create thumbnails
+            //-         p.list-group-item-text
+            //-           |+ Writing Producer
+            //-           |+ Writing Consumer to create thumbnail
+            //- 
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 42. Deployment
+            //-         p.list-group-item-text
+            //-           |+ Install and Use PM2
+            //-           |+ Configure webserver Nginx
+            //-           |+ Introduce CI/CD
+            //-           |+ Introduce DevOps
+            //- 
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 43. LAB: Using Jenkins for the deployment
+            //-         p.list-group-item-text
+            //-           |+ Install Virtual Machine and Jenkins
+            //-           |+ Config Jenkins to deploy the product
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 44. Final Hackathon (Full weekend day)
+            //-         p.list-group-item-text
+            //-       li.list-group-item
+            //-         h5.list-group-item-heading 45. Demo Day
+            //-         p.list-group-item-text
+                //div(style="height:50px")
+              
+    section#register-bar.register-bar
+      .bar-content
+        i.fa.fa-envelope-o(aria-hidden='true')
+        |     Nhận chương trình học miễn phí
+        a#submit-button-modal.button-register
+          | ĐĂNG KÍ NGAY
+      button.button-close
+        i#button-close.fa.fa-times
+    #myModal.modal
+        .modal-content-course
+            button.button-close 
+              i#close-btn.fa.fa-times
+            .row3.text-center
+              h3.section_title_3.col-sm-5.col-xs-9 ĐĂNG KÍ NHẬN CHƯƠNG TRÌNH HỌC
+            form#register-form.container.container-form-advice
+              .centering-block
+                .row.form-info
+                 .col-xs-6.col-sm-4
+                  input(type='text', name='Name', placeholder='Họ và tên', required='')
+                 .col-xs-6.col-sm-4
+                  input(type='text', name='Tel', placeholder='Số điện thoại', required='')
+                 .clearfix.visible-xs-block
+                 .col-xs-6.col-sm-4
+                  input(type='email', name='Email', placeholder='Email', required='') 
+                .form-group
+                  p Bạn muốn đăng kí nhận chương trình học nào?
+                  .row
+                    .col-xs-6.col-sm-4
+                      input#iOS(type='checkbox', name='iOS', value='x')
+                      label(for='iOS') iOS
+                    .col-xs-6.col-sm-4
+                      input#Android(type='checkbox', name='Android', value='x')
+                      label(for='Android') Android
+                    // Optional: clear the XS cols if their content doesn't match in height
+                    .clearfix.visible-xs-block
+                    .col-xs-6.col-sm-4
+                      input#web(type='checkbox', name='Full-stack Web', value='x')
+                      label(for='web') Full-stack Web  
+                    .col-xs-6
+                      input#c4k(type='checkbox', name='Code for Kids', value='x')
+                      label(for='c4k') Code for Kids (C4K)  
+                    .col-xs-6
+                      input#c4e(type='checkbox', name='Code for Everyone', value='x')
+                      label(for='c4e') Code for Everyone (C4E)  
+                .text-center#advice
+                  input#sure(type='checkbox', name='Nhận tư vấn khóa học', value='Có')
+                  label(for='sure') Bạn có muốn nhận tư vấn về các khóa học không?    
+                button#submit-button.btn.btn-form(type='submit')
+                  font(size='2.5').span#submit-text NHẬN CHƯƠNG TRÌNH HỌC  
+                h4#notification.notification
+                #form-loader.uil-rolling-css
+                  div
+                    div
+                    div
+
+        
+    //- section#register-bar.register-bar
+    //-   .bar-content
+    //-     i.fa.fa-envelope-o(aria-hidden='true')
+    //-     |     Nhận chương trình học miễn phí
+    //-     a.button-register(href='https://docs.google.com/forms/d/1HyXntmq1lx7H4qD0UxsbxY9Kxta-Pv7y3LpPR4MauyA/viewform')
+    //-       | ĐĂNG KÍ NGAY
+    //-   button.button-close
+    //-     i#button-close.fa.fa-times

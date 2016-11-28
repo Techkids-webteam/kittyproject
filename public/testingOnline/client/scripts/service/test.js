@@ -5,7 +5,7 @@
         var testFactory = {};
 
         testFactory.getUserValidTest = function (cb) {
-            return $http.get('http://techkids.vn:3000/api/user/available')
+            return $http.get('/api/user/available')
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null, res.result);
@@ -14,12 +14,12 @@
                     }
                 },
                 function (res) {
-                    cb((res = res.data).err || new Error('Something went wrong!') );
+                    cb((res = res.data || res).err || new Error('Something went wrong!') );
                 });
         };
 
         testFactory.submitTest = function (testTitle, test, cb) {
-            return $http.post('http://techkids.vn:3000/api/user/test/match/' + testTitle, test)
+            return $http.post('/api/user/test/match/' + testTitle, test)
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null, res.result);
@@ -28,12 +28,12 @@
                     }
                 },
                 function (res) {
-                    cb((res = res.data || {}).err || new Error('Something went wrong!'));
+                    cb((res = res.data || res).err || new Error('Something went wrong!'));
                 });
         };
 
         testFactory.getUserResult = function (cb) {
-            return $http.get('http://techkids.vn:3000/api/user/result')
+            return $http.get('/api/user/result')
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null, res.result);
@@ -42,12 +42,12 @@
                     }
                 },
                 function (res) {
-                    cb((res = res.data || {}).err || new Error('Something went wrong!'));
+                    cb((res = res.data || res).err || new Error('Something went wrong!'));
                 });
         };
 
         testFactory.get = function (skip, cb) {
-            return $http.get('http://techkids.vn:3000/api/user/test')
+            return $http.get('/api/user/test')
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null, res.result);
@@ -56,12 +56,12 @@
                     }
                 },
                 function (res) {
-                    cb((res = res.data || {}).err || new Error('Something went wrong!'));
+                    cb((res = res.data || res).err || new Error('Something went wrong!'));
                 });
         };
 
         testFactory.getTitle = function (cb) {
-            return $http.get('http://techkids.vn:3000/api/admin/test/title')
+            return $http.get('/api/admin/test/title')
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null, res.result);
@@ -75,7 +75,7 @@
 
         testFactory.getByTitle = function (testTitle, cb) {
             if (testTitle)
-                return $http.get('http://techkids.vn:3000/api/user/test/' + testTitle)
+                return $http.get('/api/user/test/' + testTitle)
                     .then(function (res) {
                         if ((res = res.data).code) {
                             cb(null, res.result);
@@ -90,7 +90,7 @@
         };
 
         testFactory.getSlick = function (cb) {
-            var linkSrc = "http://techkids.vn:3000/public/images/";
+            var linkSrc = "/public/images/";
             cb(null, [
                 { name: "Xêkô", slogan: "'Vì một thế giới hết sida! Đừng như tôi!'", linkImg: linkSrc +  "xeko.jpg" },
                 { name: "Nguyễn Thanh Tùng", slogan: "", linkImg: linkSrc + "tunggia.jpg" },
@@ -99,7 +99,7 @@
         }
 
         testFactory.add = function (cb, data) {
-            return $http.post('http://techkids.vn:3000/api/admin/test', data)
+            return $http.post('/api/admin/test', data)
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null);
@@ -113,7 +113,7 @@
         }
 
         testFactory.find = function (content, cb) {
-            $http.get('http://techkids.vn:3000/user/test/')
+            $http.get('/user/test/')
                 .then(function (res) {
 
                 }, function (res) {

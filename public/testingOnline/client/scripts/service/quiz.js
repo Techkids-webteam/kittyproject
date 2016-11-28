@@ -5,7 +5,7 @@
         var quizFactory = {};
 
         quizFactory.get = function (skip, cb) {
-            $http.get('http://techkids.vn:3000/api/admin/quiz')
+            $http.get('/api/admin/quiz')
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null, res.result);
@@ -19,7 +19,7 @@
         }
 
         quizFactory.getType = function (cb) {
-            $http.get('http://techkids.vn:3000/api/admin/quiz/type')
+            $http.get('/api/admin/quiz/type')
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null, res.result);
@@ -32,7 +32,7 @@
         }
 
         quizFactory.add = function (data, cb) {
-            $http.post('http://techkids.vn:3000/api/admin/quiz', data)
+            $http.post('/api/admin/quiz', data)
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null);
@@ -45,7 +45,7 @@
         };
 
         quizFactory.remove = function (data, cb) {
-            $http.delete('http://techkids.vn:3000/api/admin/quiz', {data: data})
+            $http.delete('/api/admin/quiz', {data: data})
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null);
@@ -58,7 +58,7 @@
         };
 
         quizFactory.update = function (data, cb) {
-            $http.put('http://techkids.vn:3000/api/admin/quiz', data)
+            $http.put('/api/admin/quiz', data)
                 .then(function (res) {
                     if ((res = res.data).code) {
                         cb(null);
