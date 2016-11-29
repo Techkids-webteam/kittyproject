@@ -53,6 +53,7 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.static(__dirname + "/pokemonquiz"));
+app.use(express.static(__dirname + "/dashboard"));
 app.set('view engine', 'jade');
 app.engine('jade', require('jade').__express);
 //upload folder
@@ -83,6 +84,9 @@ var http = require('http').Server(app);
 
 app.get('/games/tanks', function (req, res) {
     res.sendFile(__dirname + '/public/games/tanks/index.html');
+});
+app.get('/blog', function (req, res) {
+    res.sendFile(__dirname + '/public/blog/src/index.html');
 });
 
 app.get('/testingOnline/user', function(req, res){
@@ -202,6 +206,8 @@ app.get('/portfolio', function (req, res) {
 app.get('/hackathon', function (req, res) {
     res.sendFile(__dirname + '/public/hackathon_contest/index.html');
 });
+
+app.use('/khoa-hoc/code-for-kids', express.static('public/c4k'))
 
 app.get('/connect', function (req, res) {
     res.sendFile(__dirname + '/public/Techkids Connect/index.html');
@@ -494,9 +500,9 @@ router_courses.get('/web-fullstack/register', function (req, res) {
 router_courses.get('/web-fullstack/register-successful', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/web-register-sucessful.html');
 });
-router_courses.get('/code-for-kids', function (req, res) {
-    res.render('courses-5');
-});
+//router_courses.get('/code-for-kids', function (req, res) {
+//    res.render('courses-5');
+//});
 router_courses.get('/code-for-kids/register', function (req, res) {
     res.sendFile(__dirname + '/public/register-page/register/c4k-register.html');
 });
